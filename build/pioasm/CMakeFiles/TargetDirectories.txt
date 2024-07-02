@@ -1,0 +1,3 @@
+/Users/attilio/Desktop/Code/rp2040_kernel/build/pioasm/CMakeFiles/pioasm.dir
+/Users/attilio/Desktop/Code/rp2040_kernel/build/pioasm/CMakeFiles/edit_cache.dir
+/Users/attilio/Desktop/Code/rp2040_kernel/build/pioasm/CMakeFiles/rebuild_cache.dir

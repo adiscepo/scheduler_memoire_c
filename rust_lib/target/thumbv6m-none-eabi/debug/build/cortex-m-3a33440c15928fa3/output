@@ -1,0 +1,4 @@
+cargo:rustc-link-lib=static=cortex-m
+cargo:rustc-link-search=/Users/attilio/Desktop/Code/rp2040_kernel/rust_lib/target/thumbv6m-none-eabi/debug/build/cortex-m-3a33440c15928fa3/out
+cargo:rustc-cfg=cortex_m
+cargo:rustc-cfg=armv6m

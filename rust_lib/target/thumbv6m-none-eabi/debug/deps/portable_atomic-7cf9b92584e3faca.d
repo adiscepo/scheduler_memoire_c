@@ -1,0 +1,10 @@
+/Users/attilio/Desktop/Code/rp2040_kernel/rust_lib/target/thumbv6m-none-eabi/debug/deps/libportable_atomic-7cf9b92584e3faca.rmeta: /Users/attilio/.cargo/registry/src/index.crates.io-6f17d22bba15001f/portable-atomic-1.6.0/src/lib.rs /Users/attilio/.cargo/registry/src/index.crates.io-6f17d22bba15001f/portable-atomic-1.6.0/src/cfgs.rs /Users/attilio/.cargo/registry/src/index.crates.io-6f17d22bba15001f/portable-atomic-1.6.0/src/utils.rs /Users/attilio/.cargo/registry/src/index.crates.io-6f17d22bba15001f/portable-atomic-1.6.0/src/gen/utils.rs /Users/attilio/.cargo/registry/src/index.crates.io-6f17d22bba15001f/portable-atomic-1.6.0/src/imp/mod.rs /Users/attilio/.cargo/registry/src/index.crates.io-6f17d22bba15001f/portable-atomic-1.6.0/src/imp/core_atomic.rs
+
+/Users/attilio/Desktop/Code/rp2040_kernel/rust_lib/target/thumbv6m-none-eabi/debug/deps/portable_atomic-7cf9b92584e3faca.d: /Users/attilio/.cargo/registry/src/index.crates.io-6f17d22bba15001f/portable-atomic-1.6.0/src/lib.rs /Users/attilio/.cargo/registry/src/index.crates.io-6f17d22bba15001f/portable-atomic-1.6.0/src/cfgs.rs /Users/attilio/.cargo/registry/src/index.crates.io-6f17d22bba15001f/portable-atomic-1.6.0/src/utils.rs /Users/attilio/.cargo/registry/src/index.crates.io-6f17d22bba15001f/portable-atomic-1.6.0/src/gen/utils.rs /Users/attilio/.cargo/registry/src/index.crates.io-6f17d22bba15001f/portable-atomic-1.6.0/src/imp/mod.rs /Users/attilio/.cargo/registry/src/index.crates.io-6f17d22bba15001f/portable-atomic-1.6.0/src/imp/core_atomic.rs
+
+/Users/attilio/.cargo/registry/src/index.crates.io-6f17d22bba15001f/portable-atomic-1.6.0/src/lib.rs:
+/Users/attilio/.cargo/registry/src/index.crates.io-6f17d22bba15001f/portable-atomic-1.6.0/src/cfgs.rs:
+/Users/attilio/.cargo/registry/src/index.crates.io-6f17d22bba15001f/portable-atomic-1.6.0/src/utils.rs:
+/Users/attilio/.cargo/registry/src/index.crates.io-6f17d22bba15001f/portable-atomic-1.6.0/src/gen/utils.rs:
+/Users/attilio/.cargo/registry/src/index.crates.io-6f17d22bba15001f/portable-atomic-1.6.0/src/imp/mod.rs:
+/Users/attilio/.cargo/registry/src/index.crates.io-6f17d22bba15001f/portable-atomic-1.6.0/src/imp/core_atomic.rs:

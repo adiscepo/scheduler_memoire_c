@@ -25,7 +25,8 @@ target_link_libraries(kernel pico_stdlib
 # ${RUST_LIB_PATH}/lib${RUST_LIB}.a
 )
 
-pico_enable_stdio_usb(kernel 0)
-pico_enable_stdio_uart(kernel 1)
+
+pico_enable_stdio_usb(kernel 0) # Désactive la communication par USB (debug)
+pico_enable_stdio_uart(kernel 1) # Active la communication UART (debug)
 
 pico_add_extra_outputs(kernel)

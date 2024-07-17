@@ -24,6 +24,7 @@ void end_task(void);
 // Fonctions définies en assembleur
 extern void setup_systick(void);
 extern void start_scheduler(void);
+extern void isr_pendsv(void);
 extern void isr_systick(void);
 
 int main() {

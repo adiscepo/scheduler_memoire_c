@@ -45,3 +45,7 @@ void end_task() {
     __asm("CPSIE I");
     while(1);
 }
+
+void select_next_task() {
+    current_task = current_task->next;
+}

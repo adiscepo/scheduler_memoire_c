@@ -13,6 +13,8 @@
 .equ SYSTICK_PRIORITY_MASK, 0xc0000000
 .equ SYSTICK_PRIORITY, 3
 
+.equ PENDSV_BASE, 0xe000ed04
+
 // J'aurais pu utiliser des fonctions proposées par le sdk du rpi pico (pour définir les
 // exceptions, les valeurs de systick, etc.) mais j'ai préféré les faire en assembleur
 // afin de saisir la substantifique moelle du fonctionnement de la puce
@@ -67,6 +69,18 @@ start_scheduler:
 .type isr_systick, %function
 isr_systick:
     cpsid i
+    
+    ldr r1, =PENDSV_BASE    // Charge le registre de gestion des interruptions (pg. 85 rp2040)
+    ldr r0, =0x10000000     // Met le 28ème bit à 1 -> Active l'interruption PendSV
+    str r0, [r1]
+
+    cpsie i
+    bx lr
+
+.global isr_pendsv
+.type isr_pendsv, %function
+isr_pendsv:
+    cpsid i
 
 @ @ .ifdef DEBUG_DEMO
 @     push {lr}
@@ -90,7 +104,7 @@ isr_systick:
     mov r7, r11
     push {r4-r7}
 
-    mov r2, sp              // Sauve le sp courant (Redondant avec le mov sp, r2)
+    mov r2, sp              // Sauve le sp courant
     ldr r1, =current_task   // r1 = &current_task
     ldr r0, [r1]            // current_task->stack = &sp
     str r2, [r0]

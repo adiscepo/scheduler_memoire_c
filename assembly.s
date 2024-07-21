@@ -15,6 +15,13 @@
 
 .equ PENDSV_BASE, 0xe000ed04
 
+.equ PROCESS_SIZE, 0x1010   // | TOS      | 4 bytes
+                            // | STACK    | 4 * STACK_SIZE (1024) bytes
+                            // |   ....   |
+                            // | WCET     | 4 bytes
+                            // | DEADLINE | 4 bytes
+                            // | STATE    | 4 bytes
+
 // J'aurais pu utiliser des fonctions proposées par le sdk du rpi pico (pour définir les
 // exceptions, les valeurs de systick, etc.) mais j'ai préféré les faire en assembleur
 // afin de saisir la substantifique moelle du fonctionnement de la puce
@@ -53,10 +60,13 @@ start_scheduler:
     CPSID i
     
     
-    ldr r0, =current_task   // r0 = &current_task
-    ldr r1, [r0]            // r1 = current_task
-    ldr r2, [r1]            // r2 = current_task->stack_ptr
-    
+    ldr r0, =scheduler
+    ldr r1, [r0]
+    ldr r3, =PROCESS_SIZE
+    muls r3, r1
+    adds r3, #4
+    ldr r2, [r0, r3]
+
     // Bascule en mode Thread
     @ mov sp, r2             // Place le pointeur de la pile de tâche en tant que psp
     msr psp, r2             // Place le pointeur de la pile de tâche en tant que psp
@@ -82,6 +92,11 @@ start_scheduler:
 isr_systick:
     cpsid i
     
+    ldr r1, =tick
+    ldr r2, [r1]
+    adds r2, #1
+    str r2, [r1]
+
     ldr r1, =PENDSV_BASE    // Charge le registre de gestion des interruptions (pg. 85 rp2040)
     ldr r0, =0x10000000     // Met le 28ème bit à 1 -> Active l'interruption PendSV
     str r0, [r1]
@@ -104,16 +119,30 @@ isr_pendsv:
     stmia r0!, {r4-r7}      // Sauve les registres r8-r11
     subs r0, #32            // On ramène le pointeur de pile au bon endroit (il a été modifié par l'opération stmia)
 
-    ldr r1, =current_task   // r1 = &current_task
-    ldr r2, [r1]            // r2 = current_task
-    str r0, [r2]            // current_task->stack = r0 (PSP)
+    @ ldr r1, =current_task   // r1 = &current_task
+    @ ldr r2, [r1]            // r2 = current_task
+    @ str r0, [r2]            // current_task->stack = r0 (PSP)
+       
+    ldr r1, =scheduler
+    ldr r2, [r1]            // r2 contient l'indice de la tâche courante
+    ldr r3, =PROCESS_SIZE
+    muls r3, r2
+    adds r3, #4
+    str r0, [r1, r3]        // r2 contient le TOS de la tâche courante 
+
+    @ str r0, [r1, r3]            // On met à jour le pointeur de haut de pile de la tâche interrompue
 
     // Calcul de la tâche suivante
     mov r3, lr              // Récupère la valeur de lr avant d'entrer dans la fonction
     push {r3}               // Sauve lr sur la pile
-    bl next_task            // Appel à la fonction de calcul de tâche suivante (stockée dans r0)
-    str r0, [r1]            // Défini la tâche suivante comme tâche courante (r1 = current_task)
-    ldr r0, [r0]            // Récupère le pointeur de pile de la tâche
+    bl schedule             // Appel à la fonction de calcul de tâche suivante (stockée dans r0)
+    @ str r0, [r1]            // Défini la tâche suivante comme tâche courante (r1 = current_task)
+    @ ldr r0, [r0]            // Récupère le pointeur de pile de la tâche
+    ldr r1, =scheduler
+    ldr r3, =PROCESS_SIZE
+    muls r3, r0             // r0 contient l'indice de la tâche suivante (retournée par la fonction schedule)
+    adds r3, #4
+    ldr r0, [r1, r3]        // r0 contient le TOS de la tâche courante 
     pop {r3}                // Récupère la valeur de lr stockée sur la pile
     mov lr, r3
 

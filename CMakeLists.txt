@@ -14,6 +14,8 @@ pico_sdk_init()
 add_executable(kernel
     kernel.c
     task.c
+    scheduler.c
+    process.c
     assembly.s
 )
 

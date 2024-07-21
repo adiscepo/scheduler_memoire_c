@@ -42,7 +42,9 @@
         "gpio.h": "c",
         "config.h": "c",
         "stdint.h": "c",
-        "stdlib.h": "c"
+        "stdlib.h": "c",
+        "process.h": "c",
+        "scheduler.h": "c"
     },
     "cortex-debug.variableUseNaturalFormat": false
 }

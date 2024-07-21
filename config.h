@@ -6,6 +6,7 @@
 
 // #define KERNEL_STACK (RAM_START + RAM_SIZE) // Position de la stack utilisée par le kernel (MSP)
 #define TASK_STACK_SIZE 1024 // 1KB
+#define PROCESS_STACK_SIZE 1024 // 1KB
 
 #define N_TASKS 3
 #define MAX_PROCESSES 10

@@ -1,46 +1,38 @@
 #ifndef _SCHEDULER_
 #define _SCHEDULER_
 
-#include "process.h"
 #include "config.h"
+#include "stdint.h"
+#include "stddef.h"
+
+typedef enum {
+    UNDEFINED,
+    READY,
+    RUNNING,
+    BLOCKED,
+    SUSPENDED
+} state_t;
 
 typedef struct {
-    process_t processes[MAX_PROCESSES];
+    uint32_t *tos;
+    uint32_t stack[PROCESS_STACK_SIZE];
+    uint32_t wcet;
+    uint32_t absolute_deadline;
+    state_t state;
+} process_t;
+
+typedef struct {
     size_t current_process;
+    process_t processes[MAX_PROCESSES];
 } scheduler_t;
 
-scheduler_t scheduler;
+extern scheduler_t scheduler;
+extern uint32_t tick;
 
-void interrupt() {
-
-}
-
-void add_process(scheduler_t &scheduler, process_t process) {
-    size_t current = scheduler.current_process;
-    for (size_t i = 0; i < MAX_PROCESSES; i++) {
-        if (scheduler.processes[i].state == UNDEFINED) {
-            scheduler.processes[i] = process;
-            if (process.absolute_deadline < scheduler.processes[current].absolute_deadline)
-                scheduler.current_process = i;
-        }
-    }
-}
+void create_process(uint32_t wcet, uint32_t absolute_deadline, void(*fn)(void*));
+void end_task();
 
 // Earliest-Deadline First
-size_t schedule() {
-    size_t index = -1;
-    uint32_t earliest_deadline = UINT32_MAX;
-
-    for (size_t i = 0; i < MAX_PROCESSES; i++) {
-        process_t *process = &scheduler.processes[i];
-        if (!process->state == state_t::RUNNING && process->absolute_deadline < earliest_deadline) {
-            earliest_deadline = process->absolute_deadline;
-            index = i;
-        }
-    }
-
-    if (index != -1) return index;
-    return -1; // TODO: Modif with IDLE process, there is nothing to schedule anymore
-}
+size_t schedule();
 
 #endif

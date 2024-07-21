@@ -5,6 +5,7 @@
 #include "hardware/pll.h"
 #include "pico/stdlib.h"
 #include "task.h"
+#include "scheduler.h"
 
 const uint LED_PIN = PICO_DEFAULT_LED_PIN;
 const uint LED_PIN_T1 = 10;
@@ -27,6 +28,8 @@ extern void start_scheduler(void);
 extern void isr_pendsv(void);
 extern void isr_systick(void);
 
+extern scheduler_t scheduler;
+
 int main() {
     gpio_init(LED_PIN);
     gpio_init(LED_PIN_T1);
@@ -39,14 +42,17 @@ int main() {
     stdio_init_all();
     setup_systick();
 
-    add_task(1, task1, task1_stack, 128);
-    add_task(2, task2, task2_stack, 128);
-    add_task(3, task3, task3_stack, 128);
+    // add_task(1, task1, task1_stack, 128);
+    // add_task(2, task2, task2_stack, 128);
+    // add_task(3, task3, task3_stack, 128);
     
-    
+    create_process(10, 100, task1);
+    create_process(20, 200, task2);
+
+    printf("Task: %d\n", schedule());
 
     // current_task = &tasks[0];
-    // start_scheduler();
+    start_scheduler();
 
     // while (true);
     return 0;
@@ -54,24 +60,26 @@ int main() {
 
 // Task 1
 void task1(void) {
-    printf("[ TASK 1 ]\n");
-    while (1) {
+    while (task1_val < 1000000) {
         gpio_put(LED_PIN_T1, 1);
         task1_val += 1;
-        if (task1_val % 100000 == 0) { 
-            printf("Task 1\n");
-        }
+        // if (task1_val % 100000 == 0) { 
+        //     printf("Task 1\n");
+        // }
     }
+    task1_val = 0;
+    end_task();
 }
 
 // Task 2
 void task2(void) {
     printf("[ TASK 2 ]\n");
-    while(true) {
+    while(task2_val < 2000000) {
         gpio_put(LED_PIN_T2, 1);
         task2_val += 1;
         if (task2_val % 100000 == 0) printf("Task 2\n");
     }
+    return;
 }
 
 int i = 0;

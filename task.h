@@ -19,7 +19,7 @@ extern uint32_t number_threads;
 
 void init_tasks();
 void add_task(uint32_t priority, void(*fn)(void*), uint32_t* stack, uint32_t stack_size);
-void end_task(); 
+// void end_task(); 
 
 void select_next_task();
 

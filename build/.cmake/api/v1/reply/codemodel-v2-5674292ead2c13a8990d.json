@@ -1135,7 +1135,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "ELF2UF2Build::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-ELF2UF2Build-Debug-9a68f34bffb1e289d292.json",
+					"jsonFile" : "target-ELF2UF2Build-Debug-f2719d973337f81b8977.json",
 					"name" : "ELF2UF2Build",
 					"projectIndex" : 0
 				},
@@ -1177,7 +1177,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "kernel::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-kernel-Debug-9a4eebf39751213bfaa4.json",
+					"jsonFile" : "target-kernel-Debug-7f9d21e52e08b27c60ec.json",
 					"name" : "kernel",
 					"projectIndex" : 0
 				}

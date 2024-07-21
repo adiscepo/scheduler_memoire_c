@@ -11,14 +11,20 @@ void add_task(uint32_t priority, void(*fn)(void*), uint32_t* stack, uint32_t sta
     stack[stack_size - 1] = 0x01000000;             // Défini le xPSR sur Thumb
     stack[stack_size - 2] = (uint32_t)fn;           // PC de la pile pointe vers le code de la fonction
     stack[stack_size - 3] = (uint32_t)(end_task);   // LR : Fonction de retour (ne fonctionne pas, mais pg car while(1) dans les tasks)
-    stack[stack_size - 4] = 0x44444444;             // Permet de contrôler en mémoire lors du débug
-    stack[stack_size - 5] = 0x55555555;
-    stack[stack_size - 6] = 0x66666666;
-    stack[stack_size - 7] = 0x77777777;
-    stack[stack_size - 8] = 0x88888888;
-    stack[stack_size - 9] = 0x99999999;
+    stack[stack_size - 4] = 0x12121212;             // Permet de contrôler en mémoire lors du débug
+    stack[stack_size - 5] = 0x33333333;
+    stack[stack_size - 6] = 0x22222222;
+    stack[stack_size - 7] = 0x11111111;
+    stack[stack_size - 8] = 0x00000000;
+    stack[stack_size - 9] = 0x11111111;
     stack[stack_size - 10] = 0x10101010;
-    stack[stack_size - 11] = 0x11111111;
+    stack[stack_size - 11] = 0x99999999;
+    stack[stack_size - 12] = 0x88888888;
+    stack[stack_size - 13] = 0x77777777;
+    stack[stack_size - 14] = 0x66666666;
+    stack[stack_size - 15] = 0x55555555;
+    stack[stack_size - 16] = 0x44444444;
+    // for (size_t i = 17; i < stack_size; ++i) stack[stack_size - i] = 0xdeadbeef;     // Rempli toute la pile avec des données bidons
     new_task->stack = &stack[stack_size - 16];      // Défini le pointeur vers le haut de la pile
     new_task->pid = number_threads;
     new_task->priority = priority;

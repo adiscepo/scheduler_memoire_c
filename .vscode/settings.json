@@ -41,7 +41,8 @@
         "systick.h": "c",
         "gpio.h": "c",
         "config.h": "c",
-        "stdint.h": "c"
+        "stdint.h": "c",
+        "stdlib.h": "c"
     },
     "cortex-debug.variableUseNaturalFormat": false
 }

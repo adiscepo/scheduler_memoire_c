@@ -28,7 +28,6 @@ extern void isr_pendsv(void);
 extern void isr_systick(void);
 
 int main() {
-    sleep_ms(2000);
     gpio_init(LED_PIN);
     gpio_init(LED_PIN_T1);
     gpio_init(LED_PIN_T2);
@@ -44,10 +43,12 @@ int main() {
     add_task(2, task2, task2_stack, 128);
     add_task(3, task3, task3_stack, 128);
     
-    current_task = &tasks[0];
-    start_scheduler();
+    
 
-    while (true);
+    // current_task = &tasks[0];
+    // start_scheduler();
+
+    // while (true);
     return 0;
 }
 
@@ -57,8 +58,9 @@ void task1(void) {
     while (1) {
         gpio_put(LED_PIN_T1, 1);
         task1_val += 1;
-        if (task1_val % 100000 == 0) 
+        if (task1_val % 100000 == 0) { 
             printf("Task 1\n");
+        }
     }
 }
 
@@ -94,4 +96,8 @@ void context_switch_led_on() {
 
 void context_switch_led_off() {
     gpio_put(LED_PIN, 0);
+}
+
+task_t* next_task() {
+    return current_task->next;
 }

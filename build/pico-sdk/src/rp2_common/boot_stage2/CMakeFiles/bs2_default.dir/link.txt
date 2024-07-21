@@ -1,1 +1,0 @@
-/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb -Og -g -Wl,--build-id=none --specs=nosys.specs -nostartfiles -Wl,--script=/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/boot_stage2/boot_stage2.ld -Wl,-Map=bs2_default.elf.map CMakeFiles/bs2_default.dir/compile_time_choice.S.obj -o bs2_default.elf

@@ -8,5 +8,6 @@
 #define TASK_STACK_SIZE 1024 // 1KB
 
 #define N_TASKS 3
+#define MAX_PROCESSES 10
 
 #endif

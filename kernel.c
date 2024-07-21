@@ -68,7 +68,7 @@ void task1(void) {
         // }
     }
     task1_val = 0;
-    end_task();
+    // end_task();
 }
 
 // Task 2

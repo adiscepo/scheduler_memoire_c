@@ -72,18 +72,33 @@ start_scheduler:
     msr psp, r2             // Place le pointeur de la pile de tâche en tant que psp
     isb
     mrs r0, control
-    ldr r0, =#0x2          // Défini le 2ème bit de CONTROL à 1 -> Passe en mode thread 
+    ldr r0, =0x2          // Défini le 2ème bit de CONTROL à 1 -> Passe en mode thread 
     msr control, r0
     isb
 
-    ldr r3, [r2, #56]         // Récupère l'adresse d'entrée de la fonction, le contenu de la stack n'est pas nécessaire à récupérer car bidon
-    @ pop {r4-r7}             // Récupère le contexte de la pile
-    @ pop {r4-r7}
-    @ pop {r0-r3}
-    @ pop {r0-r1}
-    @ pop {r3}
-    mov lr, r3                // Récupère l'adresse de la fonction à exécuter (se trouve en stack_size - 3)
-    @ pop {r3}
+    @ ldr r3, [r2, #56]         // Récupère l'adresse d'entrée de la fonction, le contenu de la stack n'est pas nécessaire à récupérer car bidon
+    @ @ pop {r4-r7}             // Récupère le contexte de la pile
+    @ @ pop {r4-r7}
+    @ @ pop {r0-r3}
+    @ @ pop {r0-r1}
+    @ @ pop {r3}
+    @ mov lr, r3                // Récupère l'adresse de la fonction à exécuter (se trouve en stack_size - 3)
+    @ @ pop {r3}
+
+    mrs r0, psp
+    adds r0, #16            // On place le curseur de pile sur les registres r8 à r11
+    ldmia r0!, {r4-r7}      // On restore les registres r8 à r11
+    mov r8, r4
+    mov r9, r5
+    mov r10, r6
+    mov r11, r7
+    subs r0, #32            // On remet le curseur de pile sur les registres r4 à r7
+    ldmia r0!, {r4-r7}      // On restore les registres r4 à r7
+    adds r0, #16            // On remet le pointeur de la pile à la bonne place (celle où se trouvent les registres sauvés automatiquement)
+    msr psp, r0             // Met à jour le PSP avec le pointeur de pile de la tâche suivante
+
+    ldr r3, [r0, #24]
+    mov lr, r3
     cpsie i
     bx  lr                  // Branchement vers la fonction référencée dans la pile
 

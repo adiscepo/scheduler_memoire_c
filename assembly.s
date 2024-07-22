@@ -15,11 +15,12 @@
 
 .equ PENDSV_BASE, 0xe000ed04
 
-.equ PROCESS_SIZE, 0x1010   // | TOS      | 4 bytes
+.equ PROCESS_SIZE, 0x1018   // | TOS      | 4 bytes
                             // | STACK    | 4 * STACK_SIZE (1024) bytes
                             // |   ....   |
                             // | WCET     | 4 bytes
                             // | DEADLINE | 4 bytes
+                            // | RELEASE  | 4 bytes
                             // | STATE    | 4 bytes
 
 // J'aurais pu utiliser des fonctions proposées par le sdk du rpi pico (pour définir les
@@ -76,14 +77,14 @@ start_scheduler:
     msr control, r0
     isb
 
-    @ ldr r3, [r2, #56]         // Récupère l'adresse d'entrée de la fonction, le contenu de la stack n'est pas nécessaire à récupérer car bidon
-    @ @ pop {r4-r7}             // Récupère le contexte de la pile
-    @ @ pop {r4-r7}
-    @ @ pop {r0-r3}
-    @ @ pop {r0-r1}
-    @ @ pop {r3}
-    @ mov lr, r3                // Récupère l'adresse de la fonction à exécuter (se trouve en stack_size - 3)
-    @ @ pop {r3}
+    ldr r3, [r2, #56]         // Récupère l'adresse d'entrée de la fonction, le contenu de la stack n'est pas nécessaire à récupérer car bidon
+    @ pop {r4-r7}             // Récupère le contexte de la pile
+    @ pop {r4-r7}
+    @ pop {r0-r3}
+    @ pop {r0-r1}
+    @ pop {r3}
+    mov lr, r3                // Récupère l'adresse de la fonction à exécuter (se trouve en stack_size - 3)
+    @ pop {r3}
 
     mrs r0, psp
     adds r0, #16            // On place le curseur de pile sur les registres r8 à r11
@@ -106,6 +107,8 @@ start_scheduler:
 .type isr_systick, %function
 isr_systick:
     cpsid i
+    mov r3, lr
+    push {r3}
     
     ldr r1, =tick
     ldr r2, [r1]
@@ -117,6 +120,8 @@ isr_systick:
     str r0, [r1]
 
     cpsie i
+    pop {r3}
+    mov lr, r3
     bx lr
 
 .global isr_pendsv

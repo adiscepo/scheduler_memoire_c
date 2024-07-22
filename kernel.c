@@ -41,45 +41,43 @@ int main() {
     gpio_set_dir(LED_PIN_T3, GPIO_OUT);
     stdio_init_all();
     setup_systick();
+    init_scheduler();
 
-    // add_task(1, task1, task1_stack, 128);
-    // add_task(2, task2, task2_stack, 128);
-    // add_task(3, task3, task3_stack, 128);
-    
-    create_process(10, 100, task1);
-    create_process(20, 200, task2);
+    create_process(150, 1000, task1);
+    create_process(20, 2000, task2);
 
-    printf("Task: %d\n", schedule());
+    printf("Task: %d\n", scheduler.current_process);
 
     // current_task = &tasks[0];
     start_scheduler();
-
+    
     // while (true);
     return 0;
 }
 
 // Task 1
 void task1(void) {
+    printf("[ Début tâche 1 ] : %dms\n", to_ms_since_boot(get_absolute_time()));
+    gpio_put(LED_PIN_T1, 1);
     while (task1_val < 1000000) {
-        gpio_put(LED_PIN_T1, 1);
         task1_val += 1;
-        // if (task1_val % 100000 == 0) { 
-        //     printf("Task 1\n");
-        // }
+        if (task1_val % 100000 == 0) { 
+            printf("Task 1\n");
+        }
     }
+    gpio_put(LED_PIN_T1, 0);
+    printf("[ Fin tâche 1 ] : %dms\n", to_ms_since_boot(get_absolute_time()));
     task1_val = 0;
-    // end_task();
 }
 
 // Task 2
 void task2(void) {
-    printf("[ TASK 2 ]\n");
-    while(task2_val < 2000000) {
-        gpio_put(LED_PIN_T2, 1);
+    gpio_put(LED_PIN_T2, 1);
+    while(task2_val < 1000000) {
         task2_val += 1;
         if (task2_val % 100000 == 0) printf("Task 2\n");
     }
-    return;
+    gpio_put(LED_PIN_T2, 0);
 }
 
 int i = 0;

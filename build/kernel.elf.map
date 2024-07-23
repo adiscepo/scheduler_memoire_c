@@ -83,6 +83,8 @@ Discarded input sections
                 0x00000000       0xdb /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/crt0.o
  .ARM.attributes
                 0x00000000       0x1b /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/crt0.o
+ .data          0x00000000        0x0 CMakeFiles/kernel.dir/assembly.s.obj
+ .bss           0x00000000        0x0 CMakeFiles/kernel.dir/assembly.s.obj
  .text          0x00000000        0x0 CMakeFiles/kernel.dir/kernel.c.obj
  .data          0x00000000        0x0 CMakeFiles/kernel.dir/kernel.c.obj
  .bss           0x00000000        0x0 CMakeFiles/kernel.dir/kernel.c.obj
@@ -141,8 +143,6 @@ Discarded input sections
  .comment       0x00000000       0x45 CMakeFiles/kernel.dir/process.c.obj
  .ARM.attributes
                 0x00000000       0x2c CMakeFiles/kernel.dir/process.c.obj
- .data          0x00000000        0x0 CMakeFiles/kernel.dir/assembly.s.obj
- .bss           0x00000000        0x0 CMakeFiles/kernel.dir/assembly.s.obj
  .text          0x00000000        0x0 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdlib/stdlib.c.obj
  .data          0x00000000        0x0 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdlib/stdlib.c.obj
  .bss           0x00000000        0x0 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdlib/stdlib.c.obj
@@ -1316,9 +1316,9 @@ Discarded input sections
                 0x00000000        0x4 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .binary_info.__bi_ptr54
                 0x00000000        0x4 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
- .text          0x00000000        0x0 /var/folders/wp/brddfq2d1sg_blc0_vr5g4z80000gn/T//ccQuVEJb.o
- .data          0x00000000        0x0 /var/folders/wp/brddfq2d1sg_blc0_vr5g4z80000gn/T//ccQuVEJb.o
- .bss           0x00000000        0x0 /var/folders/wp/brddfq2d1sg_blc0_vr5g4z80000gn/T//ccQuVEJb.o
+ .text          0x00000000        0x0 /var/folders/wp/brddfq2d1sg_blc0_vr5g4z80000gn/T//cchyS2Ya.o
+ .data          0x00000000        0x0 /var/folders/wp/brddfq2d1sg_blc0_vr5g4z80000gn/T//cchyS2Ya.o
+ .bss           0x00000000        0x0 /var/folders/wp/brddfq2d1sg_blc0_vr5g4z80000gn/T//cchyS2Ya.o
  .data          0x00000000        0x0 /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .bss           0x00000000        0x0 /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .text          0x00000000        0x0 /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-calloc.o)
@@ -1637,11 +1637,11 @@ LOAD /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/1
 .boot2          0x10000000      0x100
                 0x10000000                        __boot2_start__ = .
  *(.boot2)
- .boot2         0x10000000      0x100 /var/folders/wp/brddfq2d1sg_blc0_vr5g4z80000gn/T//ccQuVEJb.o
+ .boot2         0x10000000      0x100 /var/folders/wp/brddfq2d1sg_blc0_vr5g4z80000gn/T//cchyS2Ya.o
                 0x10000100                        __boot2_end__ = .
                 0x00000001                        ASSERT (((__boot2_end__ - __boot2_start__) == 0x100), ERROR: Pico second stage bootloader must be 256 bytes in size)
 
-.text           0x10000100     0x49f0
+.text           0x10000100     0x4a50
                 0x10000100                        __logical_binary_start = .
  *(.vectors)
  .vectors       0x10000100       0xd4 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/crt0.S.obj
@@ -1703,486 +1703,487 @@ LOAD /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/1
                 0x100002bc       0x28 /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtbegin.o
  .text.frame_dummy
                 0x100002e4       0x24 /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtbegin.o
+ .text          0x10000308      0x154 CMakeFiles/kernel.dir/assembly.s.obj
+                0x10000308                setup_systick
+                0x10000330                start_scheduler
+                0x1000037a                isr_systick
+                0x10000396                isr_pendsv
+                0x100003e8                set_process_idle
  .text.to_ms_since_boot
-                0x10000308       0x1c CMakeFiles/kernel.dir/kernel.c.obj
- .text.task2    0x10000324       0x4c CMakeFiles/kernel.dir/kernel.c.obj
-                0x10000324                task2
+                0x1000045c       0x1c CMakeFiles/kernel.dir/kernel.c.obj
  .text.update_us_since_boot
-                0x10000370       0x24 CMakeFiles/kernel.dir/kernel.c.obj
+                0x10000478       0x24 CMakeFiles/kernel.dir/kernel.c.obj
  .text.get_absolute_time
-                0x10000394       0x22 CMakeFiles/kernel.dir/kernel.c.obj
- *fill*         0x100003b6        0x2 
- .text.task1    0x100003b8       0x8c CMakeFiles/kernel.dir/kernel.c.obj
-                0x100003b8                task1
- .text.main     0x10000444       0x7c CMakeFiles/kernel.dir/kernel.c.obj
-                0x10000444                main
+                0x1000049c       0x22 CMakeFiles/kernel.dir/kernel.c.obj
+ *fill*         0x100004be        0x2 
+ .text.task1    0x100004c0       0x8c CMakeFiles/kernel.dir/kernel.c.obj
+                0x100004c0                task1
+ .text.task2    0x1000054c       0x8c CMakeFiles/kernel.dir/kernel.c.obj
+                0x1000054c                task2
+ .text.main     0x100005d8       0x80 CMakeFiles/kernel.dir/kernel.c.obj
+                0x100005d8                main
  .text.to_ms_since_boot
-                0x100004c0       0x1c CMakeFiles/kernel.dir/scheduler.c.obj
- .text.idle     0x100004dc        0x4 CMakeFiles/kernel.dir/scheduler.c.obj
-                0x100004dc                idle
+                0x10000658       0x1c CMakeFiles/kernel.dir/scheduler.c.obj
  .text.update_us_since_boot
-                0x100004e0       0x24 CMakeFiles/kernel.dir/scheduler.c.obj
- .text.end_task
-                0x10000504      0x18c CMakeFiles/kernel.dir/scheduler.c.obj
-                0x10000504                end_task
+                0x10000674       0x24 CMakeFiles/kernel.dir/scheduler.c.obj
  .text.get_absolute_time
-                0x10000690       0x22 CMakeFiles/kernel.dir/scheduler.c.obj
- *fill*         0x100006b2        0x2 
+                0x10000698       0x22 CMakeFiles/kernel.dir/scheduler.c.obj
+ *fill*         0x100006ba        0x2 
+ .text.idle     0x100006bc       0x24 CMakeFiles/kernel.dir/scheduler.c.obj
+                0x100006bc                idle
  .text.init_scheduler
-                0x100006b4       0x68 CMakeFiles/kernel.dir/scheduler.c.obj
-                0x100006b4                init_scheduler
+                0x100006e0       0x68 CMakeFiles/kernel.dir/scheduler.c.obj
+                0x100006e0                init_scheduler
  .text.create_process
-                0x1000071c      0x1b8 CMakeFiles/kernel.dir/scheduler.c.obj
-                0x1000071c                create_process
+                0x10000748      0x1d8 CMakeFiles/kernel.dir/scheduler.c.obj
+                0x10000748                create_process
+ .text.end_task
+                0x10000920      0x11c CMakeFiles/kernel.dir/scheduler.c.obj
+                0x10000920                end_task
  .text.schedule
-                0x100008d4       0x44 CMakeFiles/kernel.dir/scheduler.c.obj
-                0x100008d4                schedule
- .text          0x10000918      0x108 CMakeFiles/kernel.dir/assembly.s.obj
-                0x10000918                setup_systick
-                0x10000940                start_scheduler
-                0x1000098a                isr_systick
-                0x100009a6                isr_pendsv
+                0x10000a3c       0x44 CMakeFiles/kernel.dir/scheduler.c.obj
+                0x10000a3c                schedule
  .text.gpio_set_function
-                0x10000a20       0x30 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x10000a20                gpio_set_function
+                0x10000a80       0x30 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x10000a80                gpio_set_function
  .text.gpio_init
-                0x10000a50       0x16 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.obj
-                0x10000a50                gpio_init
- *fill*         0x10000a66        0x2 
+                0x10000ab0       0x16 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x10000ab0                gpio_init
+ *fill*         0x10000ac6        0x2 
  .text.running_on_fpga
-                0x10000a68       0x14 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.c.obj
-                0x10000a68                running_on_fpga
+                0x10000ac8       0x14 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.c.obj
+                0x10000ac8                running_on_fpga
  .text.hw_claim_lock
-                0x10000a7c       0x18 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.obj
-                0x10000a7c                hw_claim_lock
+                0x10000adc       0x18 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.obj
+                0x10000adc                hw_claim_lock
  .text.hw_claim_unlock
-                0x10000a94       0x14 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.obj
-                0x10000a94                hw_claim_unlock
+                0x10000af4       0x14 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.obj
+                0x10000af4                hw_claim_unlock
  .text.hw_claim_or_assert
-                0x10000aa8       0x32 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.obj
-                0x10000aa8                hw_claim_or_assert
- *fill*         0x10000ada        0x2 
+                0x10000b08       0x32 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.obj
+                0x10000b08                hw_claim_or_assert
+ *fill*         0x10000b3a        0x2 
  .text.spin_locks_reset
-                0x10000adc       0x20 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.obj
-                0x10000adc                spin_locks_reset
+                0x10000b3c       0x20 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.obj
+                0x10000b3c                spin_locks_reset
  .text.next_striped_spin_lock_num
-                0x10000afc       0x1c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.obj
-                0x10000afc                next_striped_spin_lock_num
+                0x10000b5c       0x1c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.obj
+                0x10000b5c                next_striped_spin_lock_num
  .text.set_raw_irq_handler_and_unlock
-                0x10000b18       0x28 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000b78       0x28 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
  .text.resolve_branch
-                0x10000b40       0x30 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000ba0       0x30 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
  .text.make_branch
-                0x10000b70       0x48 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000bd0       0x48 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
  .text.insert_branch_and_link
-                0x10000bb8       0x40 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000c18       0x40 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
  .text.irq_is_enabled
-                0x10000bf8       0x18 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
-                0x10000bf8                irq_is_enabled
+                0x10000c58       0x18 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000c58                irq_is_enabled
  .text.irq_set_mask_enabled
-                0x10000c10       0x20 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
-                0x10000c10                irq_set_mask_enabled
+                0x10000c70       0x20 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000c70                irq_set_mask_enabled
  .text.irq_set_enabled
-                0x10000c30        0xe CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
-                0x10000c30                irq_set_enabled
- *fill*         0x10000c3e        0x2 
+                0x10000c90        0xe CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000c90                irq_set_enabled
+ *fill*         0x10000c9e        0x2 
  .text.irq_get_vtable_handler
-                0x10000c40       0x10 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
-                0x10000c40                irq_get_vtable_handler
+                0x10000ca0       0x10 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000ca0                irq_get_vtable_handler
  .text.irq_set_exclusive_handler
-                0x10000c50       0x54 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
-                0x10000c50                irq_set_exclusive_handler
+                0x10000cb0       0x54 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000cb0                irq_set_exclusive_handler
  .text.irq_remove_handler
-                0x10000ca4      0x188 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
-                0x10000ca4                irq_remove_handler
+                0x10000d04      0x188 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000d04                irq_remove_handler
  .text.irq_add_tail_to_free_list
-                0x10000e2c       0xf0 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
-                0x10000e2c                irq_add_tail_to_free_list
+                0x10000e8c       0xf0 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000e8c                irq_add_tail_to_free_list
  .text.irq_init_priorities
-                0x10000f1c       0x1c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
-                0x10000f1c                irq_init_priorities
+                0x10000f7c       0x1c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+                0x10000f7c                irq_init_priorities
  .text.lock_init
-                0x10000f38       0x10 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.c.obj
-                0x10000f38                lock_init
+                0x10000f98       0x10 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.c.obj
+                0x10000f98                lock_init
  .text.mutex_init
-                0x10000f48       0x1a CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
-                0x10000f48                mutex_init
+                0x10000fa8       0x1a CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
+                0x10000fa8                mutex_init
  .text.recursive_mutex_init
-                0x10000f62       0x1e CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
-                0x10000f62                recursive_mutex_init
+                0x10000fc2       0x1e CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
+                0x10000fc2                recursive_mutex_init
  .text.time_reached
-                0x10000f80       0x28 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x10000fe0       0x28 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .text.get_entry
-                0x10000fa8       0x38 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x10001008       0x38 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .text.timer_pool_entry_comparator
-                0x10000fe0       0x2e CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
-                0x10000fe0                timer_pool_entry_comparator
- *fill*         0x1000100e        0x2 
+                0x10001040       0x2e CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x10001040                timer_pool_entry_comparator
+ *fill*         0x1000106e        0x2 
  .text.update_us_since_boot
-                0x10001010       0x24 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x10001070       0x24 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .text.delayed_by_us
-                0x10001034       0x34 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x10001094       0x34 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .text.ph_get_node
-                0x10001068       0x30 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x100010c8       0x30 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .text.ph_contains_node
-                0x10001098       0x1e CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x100010f8       0x1e CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .text.ph_new_node
-                0x100010b6       0x28 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
- *fill*         0x100010de        0x2 
+                0x10001116       0x28 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+ *fill*         0x1000113e        0x2 
  .text.ph_add_child_node
-                0x100010e0       0x6c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x10001140       0x6c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .text.ph_merge_nodes
-                0x1000114c       0x3e CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
- *fill*         0x1000118a        0x2 
+                0x100011ac       0x3e CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+ *fill*         0x100011ea        0x2 
  .text.ph_insert_node
-                0x1000118c       0x3c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x100011ec       0x3c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .text.ph_free_node
-                0x100011c8       0x5c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x10001228       0x5c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .text.get_entry_id_high
-                0x10001224       0x30 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x10001284       0x30 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .text.alarm_pool_post_alloc_init
-                0x10001254       0x40 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x100012b4       0x40 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .text.sleep_until_callback
-                0x10001294       0x30 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x100012f4       0x30 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .text.get_absolute_time
-                0x100012c4       0x22 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
- *fill*         0x100012e6        0x2 
+                0x10001324       0x22 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+ *fill*         0x10001346        0x2 
  .text.add_alarm_under_lock
-                0x100012e8       0x94 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x10001348       0x94 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .text.alarm_pool_alarm_callback
-                0x1000137c      0x210 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x100013dc      0x210 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .text.alarm_pool_init_default
-                0x1000158c       0x40 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
-                0x1000158c                alarm_pool_init_default
+                0x100015ec       0x40 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x100015ec                alarm_pool_init_default
  .text.alarm_pool_get_default
-                0x100015cc       0x2c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
-                0x100015cc                alarm_pool_get_default
+                0x1000162c       0x2c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x1000162c                alarm_pool_get_default
  .text.alarm_pool_add_alarm_at
-                0x100015f8      0x10e CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
-                0x100015f8                alarm_pool_add_alarm_at
+                0x10001658      0x10e CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x10001658                alarm_pool_add_alarm_at
  .text.add_alarm_at
-                0x10001706       0x2e CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x10001766       0x2e CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .text.alarm_pool_cancel_alarm
-                0x10001734       0xa8 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
-                0x10001734                alarm_pool_cancel_alarm
+                0x10001794       0xa8 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x10001794                alarm_pool_cancel_alarm
  .text.cancel_alarm
-                0x100017dc       0x10 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x1000183c       0x10 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .text.best_effort_wfe_or_timeout
-                0x100017ec       0x44 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
-                0x100017ec                best_effort_wfe_or_timeout
+                0x1000184c       0x44 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x1000184c                best_effort_wfe_or_timeout
  .text.update_us_since_boot
-                0x10001830       0x24 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001890       0x24 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
  .text.hardware_alarm_irq_handler
-                0x10001854       0x8c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
+                0x100018b4       0x8c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
  .text.hardware_alarm_claim
-                0x100018e0       0x18 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
-                0x100018e0                hardware_alarm_claim
+                0x10001940       0x18 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001940                hardware_alarm_claim
  .text.time_us_64
-                0x100018f8       0x18 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
-                0x100018f8                time_us_64
+                0x10001958       0x18 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001958                time_us_64
  .text.busy_wait_until
-                0x10001910       0x28 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
-                0x10001910                busy_wait_until
+                0x10001970       0x28 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001970                busy_wait_until
  .text.busy_wait_us
-                0x10001938       0x3a CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
-                0x10001938                busy_wait_us
- *fill*         0x10001972        0x2 
+                0x10001998       0x3a CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001998                busy_wait_us
+ *fill*         0x100019d2        0x2 
  .text.hardware_alarm_set_callback
-                0x10001974       0x90 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
-                0x10001974                hardware_alarm_set_callback
+                0x100019d4       0x90 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
+                0x100019d4                hardware_alarm_set_callback
  .text.hardware_alarm_set_target
-                0x10001a04       0xe8 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
-                0x10001a04                hardware_alarm_set_target
+                0x10001a64       0xe8 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001a64                hardware_alarm_set_target
  .text.hardware_alarm_cancel
-                0x10001aec       0x40 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
-                0x10001aec                hardware_alarm_cancel
+                0x10001b4c       0x40 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
+                0x10001b4c                hardware_alarm_cancel
  .text.ph_get_node
-                0x10001b2c       0x30 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
+                0x10001b8c       0x30 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
  .text.ph_add_child_node
-                0x10001b5c       0x6c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
+                0x10001bbc       0x6c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
  .text.ph_merge_nodes
-                0x10001bc8       0x3e CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
+                0x10001c28       0x3e CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
  .text.ph_clear
-                0x10001c06       0x34 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
-                0x10001c06                ph_clear
+                0x10001c66       0x34 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
+                0x10001c66                ph_clear
  .text.ph_post_alloc_init
-                0x10001c3a        0xe CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
-                0x10001c3a                ph_post_alloc_init
+                0x10001c9a        0xe CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
+                0x10001c9a                ph_post_alloc_init
  .text.ph_merge_two_pass
-                0x10001c48       0x5c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
-                0x10001c48                ph_merge_two_pass
+                0x10001ca8       0x5c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
+                0x10001ca8                ph_merge_two_pass
  .text.ph_remove_any_head
-                0x10001ca4       0xc0 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
+                0x10001d04       0xc0 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
  .text.ph_remove_head
-                0x10001d64       0x14 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
-                0x10001d64                ph_remove_head
+                0x10001dc4       0x14 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
+                0x10001dc4                ph_remove_head
  .text.ph_remove_and_free_node
-                0x10001d78       0xa0 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
-                0x10001d78                ph_remove_and_free_node
+                0x10001dd8       0xa0 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
+                0x10001dd8                ph_remove_and_free_node
  .text.uart_disable_before_lcr_write
-                0x10001e18       0x48 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_uart/uart.c.obj
+                0x10001e78       0x48 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_uart/uart.c.obj
  .text.uart_write_lcr_bits_masked
-                0x10001e60       0x22 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_uart/uart.c.obj
- *fill*         0x10001e82        0x2 
+                0x10001ec0       0x22 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_uart/uart.c.obj
+ *fill*         0x10001ee2        0x2 
  .text.uart_set_baudrate
-                0x10001e84       0x5c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_uart/uart.c.obj
-                0x10001e84                uart_set_baudrate
+                0x10001ee4       0x5c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_uart/uart.c.obj
+                0x10001ee4                uart_set_baudrate
  .text.uart_set_format
-                0x10001ee0       0x2c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_uart/uart.c.obj
-                0x10001ee0                uart_set_format
+                0x10001f40       0x2c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_uart/uart.c.obj
+                0x10001f40                uart_set_format
  .text.uart_set_translate_crlf
-                0x10001f0c       0x28 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_uart/uart.c.obj
-                0x10001f0c                uart_set_translate_crlf
+                0x10001f6c       0x28 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_uart/uart.c.obj
+                0x10001f6c                uart_set_translate_crlf
  .text.uart_init
-                0x10001f34       0x80 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_uart/uart.c.obj
-                0x10001f34                uart_init
+                0x10001f94       0x80 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_uart/uart.c.obj
+                0x10001f94                uart_init
  .text.clock_configure
-                0x10001fb4      0x108 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x10001fb4                clock_configure
+                0x10002014      0x108 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x10002014                clock_configure
  .text.clocks_init
-                0x100020bc      0x100 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x100020bc                clocks_init
+                0x1000211c      0x100 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x1000211c                clocks_init
  .text.clock_get_hz
-                0x100021bc        0xc CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
-                0x100021bc                clock_get_hz
+                0x1000221c        0xc CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x1000221c                clock_get_hz
  .text.pll_init
-                0x100021c8      0x120 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.obj
-                0x100021c8                pll_init
+                0x10002228      0x120 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.obj
+                0x10002228                pll_init
  .text.watchdog_start_tick
-                0x100022e8       0x10 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.c.obj
-                0x100022e8                watchdog_start_tick
+                0x10002348       0x10 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.c.obj
+                0x10002348                watchdog_start_tick
  .text.xosc_init
-                0x100022f8       0x28 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.c.obj
-                0x100022f8                xosc_init
- .text._exit    0x10002320        0x4 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
-                0x10002320                _exit
- .text.exit     0x10002324        0x6 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
-                0x10002324                exit
- *fill*         0x1000232a        0x2 
+                0x10002358       0x28 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.c.obj
+                0x10002358                xosc_init
+ .text._exit    0x10002380        0x4 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10002380                _exit
+ .text.exit     0x10002384        0x6 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
+                0x10002384                exit
+ *fill*         0x1000238a        0x2 
  .text.__assert_func
-                0x1000232c       0x38 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
-                0x1000232c                __assert_func
+                0x1000238c       0x38 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
+                0x1000238c                __assert_func
  .text.runtime_init
-                0x10002364       0xf8 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
-                0x10002364                runtime_init
- .text.panic    0x1000245c       0x30 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
-                0x1000245c                panic
+                0x100023c4       0xf8 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
+                0x100023c4                runtime_init
+ .text.panic    0x100024bc       0x30 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
+                0x100024bc                panic
  .text._out_null
-                0x1000248c        0x2 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
+                0x100024ec        0x2 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
  .text._out_fct
-                0x1000248e        0xe CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
- .text._atoi    0x1000249c       0x24 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
+                0x100024ee        0xe CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
+ .text._atoi    0x100024fc       0x24 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
  .text._out_rev
-                0x100024c0       0xae CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
+                0x10002520       0xae CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
  .text._ntoa_format
-                0x1000256e      0x110 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
+                0x100025ce      0x110 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
  .text._ntoa_long
-                0x1000267e       0xbc CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
+                0x100026de       0xbc CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
  .text._ntoa_long_long
-                0x1000273a      0x10e CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
- .text._etoa    0x10002848      0x420 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
- .text._ftoa    0x10002c68      0x354 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
+                0x1000279a      0x10e CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
+ .text._etoa    0x100028a8      0x420 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
+ .text._ftoa    0x10002cc8      0x354 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
  .text._vsnprintf
-                0x10002fbc      0x668 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
+                0x1000301c      0x668 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
  .text.vfctprintf
-                0x10003624       0x20 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
-                0x10003624                vfctprintf
- .text          0x10003644       0x10 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+                0x10003684       0x20 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
+                0x10003684                vfctprintf
+ .text          0x100036a4       0x10 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
  .text.rom_func_lookup
-                0x10003654       0x10 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x10003654                rom_func_lookup
+                0x100036b4       0x10 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x100036b4                rom_func_lookup
  .text.rom_data_lookup
-                0x10003664       0x10 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x10003664                rom_data_lookup
+                0x100036c4       0x10 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x100036c4                rom_data_lookup
  .text.rom_funcs_lookup
-                0x10003674       0x36 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.obj
-                0x10003674                rom_funcs_lookup
- *fill*         0x100036aa        0x2 
+                0x100036d4       0x36 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x100036d4                rom_funcs_lookup
+ *fill*         0x1000370a        0x2 
  .text.__wrap___aeabi_idiv
-                0x100036ac       0x50 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_divider/divider.S.obj
-                0x100036ac                __wrap___aeabi_idivmod
-                0x100036ac                divmod_s32s32
-                0x100036ac                div_s32s32
-                0x100036ac                __wrap___aeabi_idiv
-                0x100036b4                divmod_s32s32_unsafe
-                0x100036e0                divmod_s32s32_savestate
+                0x1000370c       0x50 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_divider/divider.S.obj
+                0x1000370c                __wrap___aeabi_idivmod
+                0x1000370c                divmod_s32s32
+                0x1000370c                div_s32s32
+                0x1000370c                __wrap___aeabi_idiv
+                0x10003714                divmod_s32s32_unsafe
+                0x10003740                divmod_s32s32_savestate
  .text.__wrap___aeabi_uidiv
-                0x100036fc       0x4c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_divider/divider.S.obj
-                0x100036fc                __wrap___aeabi_uidiv
-                0x100036fc                __wrap___aeabi_uidivmod
-                0x100036fc                div_u32u32
-                0x100036fc                divmod_u32u32
-                0x10003704                divmod_u32u32_unsafe
-                0x1000372c                divmod_u32u32_savestate
+                0x1000375c       0x4c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_divider/divider.S.obj
+                0x1000375c                __wrap___aeabi_uidiv
+                0x1000375c                __wrap___aeabi_uidivmod
+                0x1000375c                div_u32u32
+                0x1000375c                divmod_u32u32
+                0x10003764                divmod_u32u32_unsafe
+                0x1000378c                divmod_u32u32_savestate
  .text.__wrap___aeabi_ldiv
-                0x10003748      0x424 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_divider/divider.S.obj
-                0x10003748                __wrap___aeabi_ldivmod
-                0x10003748                div_s64s64
-                0x10003748                divmod_s64s64
-                0x10003778                divmod_u64u64
-                0x10003778                div_u64u64
-                0x10003778                __wrap___aeabi_uldivmod
-                0x10003788                divmod_u64u64_savestate
-                0x100037a8                divmod_s64s64_unsafe
-                0x10003830                divmod_u64u64_unsafe
+                0x100037a8      0x424 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_divider/divider.S.obj
+                0x100037a8                __wrap___aeabi_ldivmod
+                0x100037a8                div_s64s64
+                0x100037a8                divmod_s64s64
+                0x100037d8                divmod_u64u64
+                0x100037d8                div_u64u64
+                0x100037d8                __wrap___aeabi_uldivmod
+                0x100037e8                divmod_u64u64_savestate
+                0x10003808                divmod_s64s64_unsafe
+                0x10003890                divmod_u64u64_unsafe
  .text.__wrap___aeabi_darithmetic
-                0x10003b6c       0x80 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10003b6c                __wrap___aeabi_drsub
-                0x10003b72                __wrap___aeabi_dsub
-                0x10003b84                __wrap___aeabi_dadd
-                0x10003b96                __wrap___aeabi_ddiv
-                0x10003bd2                __wrap___aeabi_dmul
+                0x10003bcc       0x80 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10003bcc                __wrap___aeabi_drsub
+                0x10003bd2                __wrap___aeabi_dsub
+                0x10003be4                __wrap___aeabi_dadd
+                0x10003bf6                __wrap___aeabi_ddiv
+                0x10003c32                __wrap___aeabi_dmul
  .text.__wrap___aeabi_cdcmple
-                0x10003bec       0x6c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10003bec                __wrap___aeabi_cdrcmple
-                0x10003bfc                __wrap___aeabi_cdcmple
-                0x10003bfc                __wrap___aeabi_cdcmpeq
+                0x10003c4c       0x6c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10003c4c                __wrap___aeabi_cdrcmple
+                0x10003c5c                __wrap___aeabi_cdcmple
+                0x10003c5c                __wrap___aeabi_cdcmpeq
  .text.__wrap___aeabi_dcmplt
-                0x10003c58        0xc CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10003c58                __wrap___aeabi_dcmplt
+                0x10003cb8        0xc CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10003cb8                __wrap___aeabi_dcmplt
  .text.__wrap___aeabi_dcmple
-                0x10003c64       0x10 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10003c64                __wrap___aeabi_dcmple
+                0x10003cc4       0x10 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10003cc4                __wrap___aeabi_dcmple
  .text.__wrap___aeabi_dcmpge
-                0x10003c74       0x10 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10003c74                __wrap___aeabi_dcmpge
+                0x10003cd4       0x10 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10003cd4                __wrap___aeabi_dcmpge
  .text.__wrap___aeabi_dcmpgt
-                0x10003c84        0xa CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10003c84                __wrap___aeabi_dcmpgt
+                0x10003ce4        0xa CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10003ce4                __wrap___aeabi_dcmpgt
  .text.__wrap___aeabi_dcmpun
-                0x10003c8e       0x1c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10003c8e                __wrap___aeabi_dcmpun
- *fill*         0x10003caa        0x2 
+                0x10003cee       0x1c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10003cee                __wrap___aeabi_dcmpun
+ *fill*         0x10003d0a        0x2 
  .text.__wrap___aeabi_i2d
-                0x10003cac       0x38 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10003cac                __wrap___aeabi_ui2d
-                0x10003cb4                __wrap___aeabi_i2d
+                0x10003d0c       0x38 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10003d0c                __wrap___aeabi_ui2d
+                0x10003d14                __wrap___aeabi_i2d
  .text.__wrap___aeabi_d2iz
-                0x10003ce4       0x48 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10003ce4                __wrap___aeabi_d2iz
-                0x10003ce4                double2int_z
+                0x10003d44       0x48 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10003d44                __wrap___aeabi_d2iz
+                0x10003d44                double2int_z
  .text.__wrap___aeabi_d2uiz
-                0x10003d2c       0x18 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
-                0x10003d2c                double2uint
-                0x10003d2c                __wrap___aeabi_d2uiz
+                0x10003d8c       0x18 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x10003d8c                double2uint
+                0x10003d8c                __wrap___aeabi_d2uiz
  .text.__aeabi_double_init
-                0x10003d44       0xcc CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.obj
-                0x10003d44                __aeabi_double_init
+                0x10003da4       0xcc CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x10003da4                __aeabi_double_init
  .text.double_table_shim_on_use_helper
-                0x10003e10       0x34 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x10003e10                double_table_shim_on_use_helper
+                0x10003e70       0x34 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10003e70                double_table_shim_on_use_helper
  .text.__wrap___aeabi_dsub
-                0x10003e44       0x10 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x10003e44                drsub_shim
-                0x10003e4a                dsub_shim
+                0x10003ea4       0x10 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10003ea4                drsub_shim
+                0x10003eaa                dsub_shim
  .text.dadd_shim
-                0x10003e54      0x15c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x10003e54                dadd_shim
+                0x10003eb4      0x15c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10003eb4                dadd_shim
  .text.dmul_shim
-                0x10003fb0      0x15c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x10003fb0                dmul_shim
+                0x10004010      0x15c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x10004010                dmul_shim
  .text.ddiv_shim
-                0x1000410c      0x1b0 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x1000410c                ddiv_shim
+                0x1000416c      0x1b0 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x1000416c                ddiv_shim
  .text.double2uint_shim
-                0x100042bc        0xe CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x100042bc                double2uint_shim
-                0x100042be                double2ufix_shim
- *fill*         0x100042ca        0x2 
+                0x1000431c        0xe CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x1000431c                double2uint_shim
+                0x1000431e                double2ufix_shim
+ *fill*         0x1000432a        0x2 
  .text.double2uint64_shim
-                0x100042cc       0x70 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x100042cc                double2uint64_shim
-                0x100042ce                double2ufix64_shim
-                0x100042ee                d2fix_a
+                0x1000432c       0x70 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x1000432c                double2uint64_shim
+                0x1000432e                double2ufix64_shim
+                0x1000434e                d2fix_a
  .text.dunpacks
-                0x1000433c       0x3c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
-                0x1000433c                dunpacks
+                0x1000439c       0x3c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x1000439c                dunpacks
  .text.__aeabi_lmul
-                0x10004378       0x32 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
-                0x10004378                __wrap___aeabi_lmul
- *fill*         0x100043aa        0x2 
+                0x100043d8       0x32 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+                0x100043d8                __wrap___aeabi_lmul
+ *fill*         0x1000440a        0x2 
  .text.__aeabi_float_init
-                0x100043ac       0xfc CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.obj
-                0x100043ac                __aeabi_float_init
+                0x1000440c       0xfc CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x1000440c                __aeabi_float_init
  .text.float_table_shim_on_use_helper
-                0x100044a8       0x34 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
-                0x100044a8                float_table_shim_on_use_helper
- .text          0x100044dc       0x10 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x100044dc                __aeabi_mem_init
- .text.memcpy   0x100044ec        0xc CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
-                0x100044ec                __wrap___aeabi_memcpy
-                0x100044ec                __wrap_memcpy
+                0x10004508       0x34 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+                0x10004508                float_table_shim_on_use_helper
+ .text          0x1000453c       0x10 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x1000453c                __aeabi_mem_init
+ .text.memcpy   0x1000454c        0xc CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x1000454c                __wrap___aeabi_memcpy
+                0x1000454c                __wrap_memcpy
  .text.stdio_out_chars_no_crlf
-                0x100044f8        0xe CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
- *fill*         0x10004506        0x2 
+                0x10004558        0xe CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+ *fill*         0x10004566        0x2 
  .text.stdio_out_chars_crlf
-                0x10004508       0x80 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10004568       0x80 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_stack_buffer_flush
-                0x10004588       0x44 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+                0x100045e8       0x44 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_buffered_printer
-                0x100045cc       0x20 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+                0x1000462c       0x20 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
  .text.update_us_since_boot
-                0x100045ec       0x24 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+                0x1000464c       0x24 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
  .text.get_absolute_time
-                0x10004610       0x22 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
- *fill*         0x10004632        0x2 
+                0x10004670       0x22 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+ *fill*         0x10004692        0x2 
  .text.delayed_by_ms
-                0x10004634       0x44 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10004694       0x44 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
  .text.make_timeout_time_ms
-                0x10004678       0x20 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+                0x100046d8       0x20 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdout_serialize_begin
-                0x10004698       0x20 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
-                0x10004698                stdout_serialize_begin
+                0x100046f8       0x20 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+                0x100046f8                stdout_serialize_begin
  .text.stdout_serialize_end
-                0x100046b8       0x10 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
-                0x100046b8                stdout_serialize_end
+                0x10004718       0x10 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10004718                stdout_serialize_end
  .text.stdio_put_string
-                0x100046c8       0x98 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10004728       0x98 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
  .text.stdio_set_driver_enabled
-                0x10004760       0x2c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
-                0x10004760                stdio_set_driver_enabled
+                0x100047c0       0x2c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+                0x100047c0                stdio_set_driver_enabled
  .text.stdio_flush
-                0x1000478c       0x20 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
-                0x1000478c                stdio_flush
+                0x100047ec       0x20 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+                0x100047ec                stdio_flush
  .text.__wrap_puts
-                0x100047ac       0x1e CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
-                0x100047ac                __wrap_puts
- *fill*         0x100047ca        0x2 
+                0x1000480c       0x1e CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+                0x1000480c                __wrap_puts
+ *fill*         0x1000482a        0x2 
  .text.__wrap_vprintf
-                0x100047cc       0x40 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
-                0x100047cc                __wrap_vprintf
+                0x1000482c       0x40 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+                0x1000482c                __wrap_vprintf
  .text.__wrap_printf
-                0x1000480c       0x18 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
-                0x1000480c                __wrap_printf
+                0x1000486c       0x18 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+                0x1000486c                __wrap_printf
  .text.stdio_init_all
-                0x10004824        0xa CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
-                0x10004824                stdio_init_all
- *fill*         0x1000482e        0x2 
+                0x10004884        0xa CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10004884                stdio_init_all
+ *fill*         0x1000488e        0x2 
  .text.uart_putc
-                0x10004830       0x60 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x10004890       0x60 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .text.uart_getc
-                0x10004890       0x24 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x100048f0       0x24 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .text.stdio_uart_out_chars
-                0x100048b4       0x20 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x10004914       0x20 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .text.stdio_uart_in_chars
-                0x100048d4       0x5c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-                0x100048d4                stdio_uart_in_chars
+                0x10004934       0x5c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x10004934                stdio_uart_in_chars
  .text.on_uart_rx
-                0x10004930       0x28 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x10004990       0x28 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .text.stdio_uart_set_chars_available_callback
-                0x10004958       0x8c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x100049b8       0x8c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .text.stdio_uart_init_full
-                0x100049e4       0x44 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-                0x100049e4                stdio_uart_init_full
+                0x10004a44       0x44 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x10004a44                stdio_uart_init_full
  .text.stdio_uart_init
-                0x10004a28       0x28 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-                0x10004a28                stdio_uart_init
- .text.strlen   0x10004a50       0x5c /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strlen-stub.o)
-                0x10004a50                strlen
+                0x10004a88       0x28 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x10004a88                stdio_uart_init
+ .text.strlen   0x10004ab0       0x5c /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strlen-stub.o)
+                0x10004ab0                strlen
  *(.fini)
- .fini          0x10004aac        0x4 /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crti.o
-                0x10004aac                _fini
- .fini.__stub   0x10004ab0       0x40 linker stubs
+ .fini          0x10004b0c        0x4 /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crti.o
+                0x10004b0c                _fini
+ .fini.__stub   0x10004b10       0x40 linker stubs
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o *crtend?.o) .ctors)
@@ -2194,264 +2195,266 @@ LOAD /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/1
  *(SORT_BY_NAME(.dtors.*))
  *(.dtors)
  *(.eh_frame*)
- .eh_frame      0x10004af0        0x0 /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtbegin.o
-                0x10004af0                        . = ALIGN (0x4)
+ .eh_frame      0x10004b50        0x0 /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtbegin.o
+                0x10004b50                        . = ALIGN (0x4)
 
-.glue_7         0x10004af0        0x0
- .glue_7        0x10004af0        0x0 linker stubs
+.glue_7         0x10004b50        0x0
+ .glue_7        0x10004b50        0x0 linker stubs
 
-.glue_7t        0x10004af0        0x0
- .glue_7t       0x10004af0        0x0 linker stubs
+.glue_7t        0x10004b50        0x0
+ .glue_7t       0x10004b50        0x0 linker stubs
 
-.vfp11_veneer   0x10004af0        0x0
- .vfp11_veneer  0x10004af0        0x0 linker stubs
+.vfp11_veneer   0x10004b50        0x0
+ .vfp11_veneer  0x10004b50        0x0 linker stubs
 
-.v4_bx          0x10004af0        0x0
- .v4_bx         0x10004af0        0x0 linker stubs
+.v4_bx          0x10004b50        0x0
+ .v4_bx         0x10004b50        0x0 linker stubs
 
-.iplt           0x10004af0        0x0
- .iplt          0x10004af0        0x0 /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtbegin.o
+.iplt           0x10004b50        0x0
+ .iplt          0x10004b50        0x0 /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtbegin.o
 
-.rodata         0x10004af0      0xf44
+.rodata         0x10004b50      0xfdc
  *(EXCLUDE_FILE(*libm.a: *libc.a:*lib_a-mem*.o *libgcc.a:) .rodata*)
- .rodata.task2.str1.4
-                0x10004af0      0xa70 CMakeFiles/kernel.dir/kernel.c.obj
-                                  0x7 (size before relaxing)
  .rodata.update_us_since_boot.str1.4
-                0x10005560       0x69 CMakeFiles/kernel.dir/kernel.c.obj
+                0x10004b50      0xb08 CMakeFiles/kernel.dir/kernel.c.obj
+                                 0x69 (size before relaxing)
  .rodata.task1.str1.4
-                0x10005560       0x3d CMakeFiles/kernel.dir/kernel.c.obj
+                0x10005658       0x3d CMakeFiles/kernel.dir/kernel.c.obj
+ .rodata.task2.str1.4
+                0x10005658       0x3d CMakeFiles/kernel.dir/kernel.c.obj
  .rodata.main.str1.4
-                0x10005560        0xa CMakeFiles/kernel.dir/kernel.c.obj
+                0x10005658        0xa CMakeFiles/kernel.dir/kernel.c.obj
  .rodata.__func__.0
-                0x10005560       0x15 CMakeFiles/kernel.dir/kernel.c.obj
+                0x10005658       0x15 CMakeFiles/kernel.dir/kernel.c.obj
  .rodata.update_us_since_boot.str1.4
-                0x10005575       0x69 CMakeFiles/kernel.dir/scheduler.c.obj
- .rodata.end_task.str1.4
-                0x10005575        0xe CMakeFiles/kernel.dir/scheduler.c.obj
+                0x1000566d       0x69 CMakeFiles/kernel.dir/scheduler.c.obj
+ .rodata.idle.str1.4
+                0x1000566d       0x10 CMakeFiles/kernel.dir/scheduler.c.obj
  .rodata.create_process.str1.4
-                0x10005575       0x4e CMakeFiles/kernel.dir/scheduler.c.obj
+                0x1000566d       0x6e CMakeFiles/kernel.dir/scheduler.c.obj
+ .rodata.end_task.str1.4
+                0x1000566d       0x3f CMakeFiles/kernel.dir/scheduler.c.obj
  .rodata.schedule.str1.4
-                0x10005575       0x1e CMakeFiles/kernel.dir/scheduler.c.obj
- *fill*         0x10005575        0x3 
+                0x1000566d       0x1e CMakeFiles/kernel.dir/scheduler.c.obj
+ *fill*         0x1000566d        0x3 
  .rodata.__func__.0
-                0x10005578       0x15 CMakeFiles/kernel.dir/scheduler.c.obj
- *fill*         0x1000558d        0x3 
+                0x10005670       0x15 CMakeFiles/kernel.dir/scheduler.c.obj
+ *fill*         0x10005685        0x3 
  .rodata.__func__.1
-                0x10005590        0xf CMakeFiles/kernel.dir/scheduler.c.obj
+                0x10005688        0xf CMakeFiles/kernel.dir/scheduler.c.obj
  .rodata.resolve_branch.str1.4
-                0x1000559f       0x5d CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+                0x10005697       0x5d CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
  .rodata.make_branch.str1.4
-                0x1000559f       0x30 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+                0x10005697       0x30 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
  .rodata.insert_branch_and_link.str1.4
-                0x1000559f       0x10 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+                0x10005697       0x10 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
  .rodata.irq_set_exclusive_handler.str1.4
-                0x1000559f       0x36 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+                0x10005697       0x36 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
  .rodata.irq_remove_handler.str1.4
-                0x1000559f       0x3a CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+                0x10005697       0x3a CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
  .rodata.irq_add_tail_to_free_list.str1.4
-                0x1000559f       0x3a CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x1000559f        0x1 
+                0x10005697       0x3a CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x10005697        0x1 
  .rodata.__func__.0
-                0x100055a0       0x1a CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x100055ba        0x2 
+                0x10005698       0x1a CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x100056b2        0x2 
  .rodata.__func__.1
-                0x100055bc       0x17 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x100055d3        0x1 
+                0x100056b4       0x17 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x100056cb        0x1 
  .rodata.__func__.2
-                0x100055d4       0x13 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x100055e7        0x1 
+                0x100056cc       0x13 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x100056df        0x1 
  .rodata.__func__.3
-                0x100055e8        0xc CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+                0x100056e0        0xc CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
  .rodata.__func__.4
-                0x100055f4        0xf CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
- *fill*         0x10005603        0x1 
+                0x100056ec        0xf CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+ *fill*         0x100056fb        0x1 
  .rodata.__func__.6
-                0x10005604       0x1a CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+                0x100056fc       0x1a CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
  .rodata.str1.4
-                0x1000561e       0x91 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
- *fill*         0x1000561e        0x2 
+                0x10005716       0x91 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
+ *fill*         0x10005716        0x2 
  .rodata.__func__.1
-                0x10005620        0xb CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
- *fill*         0x1000562b        0x1 
+                0x10005718        0xb CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
+ *fill*         0x10005723        0x1 
  .rodata.__func__.3
-                0x1000562c       0x18 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
+                0x10005724       0x18 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
  .rodata.get_entry.str1.4
-                0x10005644       0x63 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x1000573c       0x63 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .rodata.update_us_since_boot.str1.4
-                0x10005644       0x69 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x1000573c       0x69 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .rodata.ph_get_node.str1.4
-                0x10005644       0x6e CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x1000573c       0x6e CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .rodata.ph_add_child_node.str1.4
-                0x10005644       0x2e CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x1000573c       0x2e CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .rodata.ph_insert_node.str1.4
-                0x10005644        0x3 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x1000573c        0x3 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .rodata.ph_free_node.str1.4
-                0x10005644       0x38 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x1000573c       0x38 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .rodata.add_alarm_under_lock.str1.4
-                0x10005644       0x28 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x1000573c       0x28 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .rodata.alarm_pool_alarm_callback.str1.4
-                0x10005644       0x60 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x1000573c       0x60 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .rodata.alarm_pool_get_default.str1.4
-                0x10005644       0x21 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x1000573c       0x21 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .rodata.alarm_pool_cancel_alarm.str1.4
-                0x10005644       0x27 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x1000573c       0x27 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .rodata.__func__.1
-                0x10005644       0x18 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x1000573c       0x18 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .rodata.__func__.3
-                0x1000565c       0x17 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
- *fill*         0x10005673        0x1 
+                0x10005754       0x17 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+ *fill*         0x1000576b        0x1 
  .rodata.__func__.4
-                0x10005674       0x12 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
- *fill*         0x10005686        0x2 
+                0x1000576c       0x12 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+ *fill*         0x1000577e        0x2 
  .rodata.__func__.5
-                0x10005688        0xd CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
- *fill*         0x10005695        0x3 
+                0x10005780        0xd CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+ *fill*         0x1000578d        0x3 
  .rodata.__func__.6
-                0x10005698       0x12 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
- *fill*         0x100056aa        0x2 
+                0x10005790       0x12 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+ *fill*         0x100057a2        0x2 
  .rodata.__func__.7
-                0x100056ac        0xf CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
- *fill*         0x100056bb        0x1 
+                0x100057a4        0xf CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+ *fill*         0x100057b3        0x1 
  .rodata.__func__.8
-                0x100056bc        0xc CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x100057b4        0xc CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .rodata.__func__.9
-                0x100056c8       0x15 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
- *fill*         0x100056dd        0x3 
+                0x100057c0       0x15 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+ *fill*         0x100057d5        0x3 
  .rodata.__func__.10
-                0x100056e0       0x15 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
- *fill*         0x100056f5        0x3 
+                0x100057d8       0x15 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+ *fill*         0x100057ed        0x3 
  .rodata.__func__.11
-                0x100056f8       0x1a CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
- *fill*         0x10005712        0x2 
+                0x100057f0       0x1a CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+ *fill*         0x1000580a        0x2 
  .rodata.__func__.12
-                0x10005714        0xa CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x1000580c        0xa CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .rodata.update_us_since_boot.str1.4
-                0x1000571e       0x69 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
+                0x10005816       0x69 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
  .rodata.hardware_alarm_claim.str1.4
-                0x1000571e       0x22 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
+                0x10005816       0x22 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
  .rodata.hardware_alarm_set_target.str1.4
-                0x1000571e       0x6d CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
- *fill*         0x1000571e        0x2 
+                0x10005816       0x6d CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
+ *fill*         0x10005816        0x2 
  .rodata.__func__.0
-                0x10005720       0x1a CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
- *fill*         0x1000573a        0x2 
+                0x10005818       0x1a CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
+ *fill*         0x10005832        0x2 
  .rodata.__func__.1
-                0x1000573c       0x15 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
+                0x10005834       0x15 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
  .rodata.ph_get_node.str1.4
-                0x10005751       0x6e CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
+                0x10005849       0x6e CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
  .rodata.ph_add_child_node.str1.4
-                0x10005751       0x2e CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
+                0x10005849       0x2e CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
  .rodata.ph_remove_any_head.str1.4
-                0x10005751       0xa8 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
+                0x10005849       0xa8 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
  .rodata.ph_remove_and_free_node.str1.4
-                0x10005751       0x26 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
- *fill*         0x10005751        0x3 
+                0x10005849       0x26 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
+ *fill*         0x10005849        0x3 
  .rodata.__func__.0
-                0x10005754       0x18 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
+                0x1000584c       0x18 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
  .rodata.__func__.1
-                0x1000576c       0x13 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
- *fill*         0x1000577f        0x1 
+                0x10005864       0x13 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
+ *fill*         0x10005877        0x1 
  .rodata.__func__.2
-                0x10005780       0x12 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
- *fill*         0x10005792        0x2 
+                0x10005878       0x12 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
+ *fill*         0x1000588a        0x2 
  .rodata.__func__.3
-                0x10005794        0xc CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
+                0x1000588c        0xc CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
  .rodata.clock_configure.str1.4
-                0x100057a0       0x5f CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x10005898       0x5f CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
  .rodata.__func__.1
-                0x100057a0       0x10 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x10005898       0x10 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
  .rodata.pll_init.str1.4
-                0x100057b0      0x12c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.obj
+                0x100058a8      0x12c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.obj
  .rodata.__func__.0
-                0x100057b0        0x9 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.obj
+                0x100058a8        0x9 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.obj
  .rodata.__assert_func.str1.4
-                0x100057b9       0x43 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
+                0x100058b1       0x43 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
  .rodata.runtime_init.str1.4
-                0x100057b9       0x69 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
+                0x100058b1       0x69 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
  .rodata.panic.str1.4
-                0x100057b9       0x12 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
- *fill*         0x100057b9        0x3 
+                0x100058b1       0x12 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
+ *fill*         0x100058b1        0x3 
  .rodata.__func__.2
-                0x100057bc        0xd CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
+                0x100058b4        0xd CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
  .rodata._ftoa.str1.4
-                0x100057c9       0x15 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
- *fill*         0x100057c9        0x3 
+                0x100058c1       0x15 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
+ *fill*         0x100058c1        0x3 
  .rodata._vsnprintf
-                0x100057cc      0x19c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
+                0x100058c4      0x19c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
  .rodata.pow10.0
-                0x10005968       0x50 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
+                0x10005a60       0x50 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
  .rodata.__aeabi_double_init.str1.4
-                0x100059b8       0xa4 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x10005ab0       0xa4 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.obj
  .rodata.__func__.0
-                0x100059b8       0x14 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x10005ab0       0x14 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.obj
  .rodata.__aeabi_float_init.str1.4
-                0x100059cc       0x86 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x10005ac4       0x86 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.obj
  .rodata.__func__.0
-                0x100059cc       0x13 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x10005ac4       0x13 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.obj
  .rodata.str1.4
-                0x100059df       0x3c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
- *fill*         0x100059df        0x1 
+                0x10005ad7       0x3c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
+ *fill*         0x10005ad7        0x1 
  .rodata.__bi_81
-                0x100059e0        0xc CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10005ad8        0xc CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_75
-                0x100059ec        0xc CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10005ae4        0xc CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.__bi_44
-                0x100059f8        0xc CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10005af0        0xc CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
  .rodata.update_us_since_boot.str1.4
-                0x10005a04       0x69 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10005afc       0x69 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
  .rodata.crlf_str.2
-                0x10005a04        0x2 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
- *fill*         0x10005a06        0x2 
+                0x10005afc        0x2 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+ *fill*         0x10005afe        0x2 
  .rodata.__func__.3
-                0x10005a08       0x15 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+                0x10005b00       0x15 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
  .rodata.str1.4
-                0x10005a1d       0x2c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
- *fill*         0x10005a1d        0x3 
+                0x10005b15       0x2c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+ *fill*         0x10005b15        0x3 
  .rodata.__bi_33.4
-                0x10005a20        0xc CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x10005b18        0xc CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .rodata.__bi_34.5
-                0x10005a2c        0x8 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-                0x10005a34                        . = ALIGN (0x4)
+                0x10005b24        0x8 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x10005b2c                        . = ALIGN (0x4)
  *(SORT_BY_ALIGNMENT(SORT_BY_NAME(.flashdata*)))
-                0x10005a34                        . = ALIGN (0x4)
+                0x10005b2c                        . = ALIGN (0x4)
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x10005a34                        __exidx_start = .
+                0x10005b2c                        __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x10005a34                        __exidx_end = .
-                0x10005a34                        . = ALIGN (0x4)
-                0x10005a34                        __binary_info_start = .
+                0x10005b2c                        __exidx_end = .
+                0x10005b2c                        . = ALIGN (0x4)
+                0x10005b2c                        __binary_info_start = .
 
-.binary_info    0x10005a34       0x24
+.binary_info    0x10005b2c       0x24
  *(.binary_info.keep.*)
  .binary_info.keep.__bi_ptr81
-                0x10005a34        0x4 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10005b2c        0x4 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr75
-                0x10005a38        0x4 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10005b30        0x4 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr50
-                0x10005a3c        0x4 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10005b34        0x4 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr44
-                0x10005a40        0x4 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10005b38        0x4 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr38
-                0x10005a44        0x4 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10005b3c        0x4 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr30
-                0x10005a48        0x4 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10005b40        0x4 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
  .binary_info.keep.__bi_ptr22
-                0x10005a4c        0x4 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
+                0x10005b44        0x4 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
  *(.binary_info.*)
  .binary_info.__bi_ptr34
-                0x10005a50        0x4 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x10005b48        0x4 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .binary_info.__bi_ptr33
-                0x10005a54        0x4 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-                0x10005a58                        __binary_info_end = .
+                0x10005b4c        0x4 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x10005b50                        __binary_info_end = .
 
-.rel.dyn        0x10005a58        0x0
- .rel.iplt      0x10005a58        0x0 /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtbegin.o
-                0x10005a58                        . = ALIGN (0x4)
+.rel.dyn        0x10005b50        0x0
+ .rel.iplt      0x10005b50        0x0 /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtbegin.o
+                0x10005b50                        . = ALIGN (0x4)
 
 .ram_vector_table
                 0x20000000       0xc0
@@ -2460,7 +2463,7 @@ LOAD /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/1
                 0x20000000       0xc0 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
                 0x20000000                ram_vector_table
 
-.data           0x200000c0      0x244 load address 0x10005a58
+.data           0x200000c0      0x244 load address 0x10005b50
                 0x200000c0                        __data_start__ = .
  *(vtable)
  *(.time_critical*)
@@ -2544,36 +2547,36 @@ LOAD /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/1
  *(.jcr)
                 0x20000304                        . = ALIGN (0x4)
                 0x20000304                        __data_end__ = .
-                0x10005a58                        __etext = LOADADDR (.data)
+                0x10005b50                        __etext = LOADADDR (.data)
 
 .tm_clone_table
-                0x20000304        0x0 load address 0x10005c9c
+                0x20000304        0x0 load address 0x10005d94
  .tm_clone_table
                 0x20000304        0x0 /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtbegin.o
  .tm_clone_table
                 0x20000304        0x0 /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtend.o
 
-.igot.plt       0x20000304        0x0 load address 0x10005c9c
+.igot.plt       0x20000304        0x0 load address 0x10005d94
  .igot.plt      0x20000304        0x0 /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtbegin.o
 
 .uninitialized_data
-                0x20000304        0x0 load address 0x10005c9c
+                0x20000304        0x0 load address 0x10005d94
                 0x20000304                        . = ALIGN (0x4)
  *(.uninitialized_data*)
 
-.scratch_x      0x20040000        0x0 load address 0x10005c9c
+.scratch_x      0x20040000        0x0 load address 0x10005d94
                 0x20040000                        __scratch_x_start__ = .
  *(.scratch_x.*)
                 0x20040000                        . = ALIGN (0x4)
                 0x20040000                        __scratch_x_end__ = .
-                0x10005c9c                        __scratch_x_source__ = LOADADDR (.scratch_x)
+                0x10005d94                        __scratch_x_source__ = LOADADDR (.scratch_x)
 
-.scratch_y      0x20041000        0x0 load address 0x10005c9c
+.scratch_y      0x20041000        0x0 load address 0x10005d94
                 0x20041000                        __scratch_y_start__ = .
  *(.scratch_y.*)
                 0x20041000                        . = ALIGN (0x4)
                 0x20041000                        __scratch_y_end__ = .
-                0x10005c9c                        __scratch_y_source__ = LOADADDR (.scratch_y)
+                0x10005d94                        __scratch_y_source__ = LOADADDR (.scratch_y)
 
 .bss            0x20000308     0xb4ec
                 0x20000308                        . = ALIGN (0x4)
@@ -2648,8 +2651,8 @@ LOAD /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/1
  *(.stack*)
  .stack         0x20041000      0x800 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/crt0.S.obj
 
-.flash_end      0x10005c9c        0x0
-                0x10005c9c                        PROVIDE (__flash_binary_end = .)
+.flash_end      0x10005d94        0x0
+                0x10005d94                        PROVIDE (__flash_binary_end = .)
                 0x20040000                        __StackLimit = (ORIGIN (RAM) + LENGTH (RAM))
                 0x20041000                        __StackOneTop = (ORIGIN (SCRATCH_X) + LENGTH (SCRATCH_X))
                 0x20042000                        __StackTop = (ORIGIN (SCRATCH_Y) + LENGTH (SCRATCH_Y))
@@ -2658,11 +2661,11 @@ LOAD /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/1
                 0x20042000                        PROVIDE (__stack = __StackTop)
                 0x00000001                        ASSERT ((__StackLimit >= __HeapLimit), region RAM overflowed)
                 0x00000001                        ASSERT (((__binary_info_header_end - __logical_binary_start) <= 0x100), Binary info must be in first 256 bytes of the binary)
+LOAD CMakeFiles/kernel.dir/assembly.s.obj
 LOAD CMakeFiles/kernel.dir/kernel.c.obj
 LOAD CMakeFiles/kernel.dir/task.c.obj
 LOAD CMakeFiles/kernel.dir/scheduler.c.obj
 LOAD CMakeFiles/kernel.dir/process.c.obj
-LOAD CMakeFiles/kernel.dir/assembly.s.obj
 LOAD CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdlib/stdlib.c.obj
 LOAD CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.obj
 LOAD CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.c.obj
@@ -2708,7 +2711,7 @@ LOAD CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico
 LOAD CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
 LOAD CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
 LOAD CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-LOAD /var/folders/wp/brddfq2d1sg_blc0_vr5g4z80000gn/T//ccQuVEJb.o
+LOAD /var/folders/wp/brddfq2d1sg_blc0_vr5g4z80000gn/T//cchyS2Ya.o
 LOAD /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libstdc++.a
 LOAD /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libm.a
 START GROUP
@@ -2733,11 +2736,11 @@ LOAD linker stubs
  .ARM.attributes
                 0x0000001e       0x2c /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/crtbegin.o
  .ARM.attributes
-                0x0000004a       0x2c CMakeFiles/kernel.dir/kernel.c.obj
+                0x0000004a       0x21 CMakeFiles/kernel.dir/assembly.s.obj
  .ARM.attributes
-                0x00000076       0x2c CMakeFiles/kernel.dir/scheduler.c.obj
+                0x0000006b       0x2c CMakeFiles/kernel.dir/kernel.c.obj
  .ARM.attributes
-                0x000000a2       0x21 CMakeFiles/kernel.dir/assembly.s.obj
+                0x00000097       0x2c CMakeFiles/kernel.dir/scheduler.c.obj
  .ARM.attributes
                 0x000000c3       0x2c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.obj
  .ARM.attributes
@@ -2805,7 +2808,7 @@ LOAD linker stubs
  .ARM.attributes
                 0x000005df       0x2c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
  .ARM.attributes
-                0x0000060b       0x22 /var/folders/wp/brddfq2d1sg_blc0_vr5g4z80000gn/T//ccQuVEJb.o
+                0x0000060b       0x22 /var/folders/wp/brddfq2d1sg_blc0_vr5g4z80000gn/T//cchyS2Ya.o
  .ARM.attributes
                 0x0000062d       0x1e /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
  .ARM.attributes
@@ -2841,138 +2844,150 @@ LOAD linker stubs
  .comment       0x00000044       0x45 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
  .comment       0x00000044       0x45 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
 
-.debug_info     0x00000000    0x15747
- .debug_info    0x00000000     0x10df CMakeFiles/kernel.dir/kernel.c.obj
- .debug_info    0x000010df      0x63c CMakeFiles/kernel.dir/scheduler.c.obj
- .debug_info    0x0000171b       0x25 CMakeFiles/kernel.dir/assembly.s.obj
- .debug_info    0x00001740     0x184b CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.obj
- .debug_info    0x00002f8b      0x1fb CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.c.obj
- .debug_info    0x00003186      0x69a CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.obj
- .debug_info    0x00003820      0x5fa CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.obj
- .debug_info    0x00003e1a     0x1c43 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
- .debug_info    0x00005a5d      0x1a3 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.c.obj
- .debug_info    0x00005c00     0x1d29 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
- .debug_info    0x00007929     0x33f9 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
- .debug_info    0x0000ad22     0x145b CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
- .debug_info    0x0000c17d      0xe82 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
- .debug_info    0x0000cfff      0xd98 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_uart/uart.c.obj
- .debug_info    0x0000dd97      0xfe7 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
- .debug_info    0x0000ed7e      0x505 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.obj
- .debug_info    0x0000f283      0x4d8 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.c.obj
- .debug_info    0x0000f75b      0x1c7 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.c.obj
- .debug_info    0x0000f922      0xf23 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
- .debug_info    0x00010845     0x19db CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
- .debug_info    0x00012220       0x23 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
- .debug_info    0x00012243      0x331 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.obj
- .debug_info    0x00012574       0x23 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_divider/divider.S.obj
- .debug_info    0x00012597       0x23 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
- .debug_info    0x000125ba      0x33b CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.obj
- .debug_info    0x000128f5       0x23 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
- .debug_info    0x00012918       0x24 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
- .debug_info    0x0001293c       0x23 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_aeabi.S.obj
- .debug_info    0x0001295f      0x34f CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.obj
- .debug_info    0x00012cae       0x23 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
- .debug_info    0x00012cd1       0x23 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
- .debug_info    0x00012cf4       0x23 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/crt0.S.obj
- .debug_info    0x00012d17      0x2b8 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
- .debug_info    0x00012fcf     0x1743 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
- .debug_info    0x00014712     0x1035 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+.debug_line     0x00000000     0xf0f3
+ .debug_line    0x00000000       0xe6 CMakeFiles/kernel.dir/assembly.s.obj
+ .debug_line    0x000000e6      0x890 CMakeFiles/kernel.dir/kernel.c.obj
+ .debug_line    0x00000976      0x628 CMakeFiles/kernel.dir/scheduler.c.obj
+ .debug_line    0x00000f9e      0xc25 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.obj
+ .debug_line    0x00001bc3      0x299 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.c.obj
+ .debug_line    0x00001e5c      0x4a0 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.obj
+ .debug_line    0x000022fc      0x48a CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.obj
+ .debug_line    0x00002786     0x1088 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+ .debug_line    0x0000380e      0x24a CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.c.obj
+ .debug_line    0x00003a58     0x10fa CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
+ .debug_line    0x00004b52     0x19ec CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+ .debug_line    0x0000653e      0xc2f CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
+ .debug_line    0x0000716d      0x82d CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
+ .debug_line    0x0000799a      0x893 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_uart/uart.c.obj
+ .debug_line    0x0000822d      0xa41 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
+ .debug_line    0x00008c6e      0x527 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.obj
+ .debug_line    0x00009195      0x470 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.c.obj
+ .debug_line    0x00009605      0x2b9 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.c.obj
+ .debug_line    0x000098be      0xb30 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
+ .debug_line    0x0000a3ee     0x12c0 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
+ .debug_line    0x0000b6ae      0x11a CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+ .debug_line    0x0000b7c8      0x281 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.obj
+ .debug_line    0x0000ba49      0x2a9 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_divider/divider.S.obj
+ .debug_line    0x0000bcf2      0x3fa CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
+ .debug_line    0x0000c0ec      0x3c4 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.obj
+ .debug_line    0x0000c4b0      0x66c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+ .debug_line    0x0000cb1c       0x61 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+ .debug_line    0x0000cb7d      0x3b2 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_aeabi.S.obj
+ .debug_line    0x0000cf2f      0x3b9 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.obj
+ .debug_line    0x0000d2e8      0x198 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+ .debug_line    0x0000d480       0x94 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+ .debug_line    0x0000d514       0xa5 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/crt0.S.obj
+ .debug_line    0x0000d5b9      0x1dd CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
+ .debug_line    0x0000d796      0xf00 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+ .debug_line    0x0000e696      0xa5d CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
 
-.debug_abbrev   0x00000000     0x4bfe
- .debug_abbrev  0x00000000      0x486 CMakeFiles/kernel.dir/kernel.c.obj
- .debug_abbrev  0x00000486      0x368 CMakeFiles/kernel.dir/scheduler.c.obj
- .debug_abbrev  0x000007ee       0x14 CMakeFiles/kernel.dir/assembly.s.obj
- .debug_abbrev  0x00000802      0x3a6 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.obj
- .debug_abbrev  0x00000ba8       0xf8 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.c.obj
- .debug_abbrev  0x00000ca0      0x2ce CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.obj
- .debug_abbrev  0x00000f6e      0x249 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.obj
- .debug_abbrev  0x000011b7      0x500 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
- .debug_abbrev  0x000016b7      0x116 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.c.obj
- .debug_abbrev  0x000017cd      0x3f1 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
- .debug_abbrev  0x00001bbe      0x5c3 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
- .debug_abbrev  0x00002181      0x3d5 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
- .debug_abbrev  0x00002556      0x290 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
- .debug_abbrev  0x000027e6      0x349 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_uart/uart.c.obj
- .debug_abbrev  0x00002b2f      0x434 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
- .debug_abbrev  0x00002f63      0x1e7 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.obj
- .debug_abbrev  0x0000314a      0x1a8 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.c.obj
- .debug_abbrev  0x000032f2      0x10c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.c.obj
- .debug_abbrev  0x000033fe      0x530 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
- .debug_abbrev  0x0000392e      0x371 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
- .debug_abbrev  0x00003c9f       0x12 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
- .debug_abbrev  0x00003cb1      0x167 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.obj
- .debug_abbrev  0x00003e18       0x12 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_divider/divider.S.obj
- .debug_abbrev  0x00003e2a       0x12 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
- .debug_abbrev  0x00003e3c      0x1c3 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.obj
- .debug_abbrev  0x00003fff       0x12 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
- .debug_abbrev  0x00004011       0x14 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
- .debug_abbrev  0x00004025       0x12 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_aeabi.S.obj
- .debug_abbrev  0x00004037      0x1c6 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.obj
- .debug_abbrev  0x000041fd       0x12 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
- .debug_abbrev  0x0000420f       0x12 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
- .debug_abbrev  0x00004221       0x12 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/crt0.S.obj
- .debug_abbrev  0x00004233       0xb8 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
- .debug_abbrev  0x000042eb      0x47a CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
- .debug_abbrev  0x00004765      0x499 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+.debug_line_str
+                0x00000000      0x383
+ .debug_line_str
+                0x00000000      0x383 CMakeFiles/kernel.dir/assembly.s.obj
+                                 0x65 (size before relaxing)
+ .debug_line_str
+                0x00000383       0x7f CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+ .debug_line_str
+                0x00000383       0x79 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_divider/divider.S.obj
+ .debug_line_str
+                0x00000383       0x7d CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
+ .debug_line_str
+                0x00000383       0x83 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+ .debug_line_str
+                0x00000383       0x88 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+ .debug_line_str
+                0x00000383       0x7b CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_aeabi.S.obj
+ .debug_line_str
+                0x00000383       0x81 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+ .debug_line_str
+                0x00000383       0x7f CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+ .debug_line_str
+                0x00000383       0x7c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/crt0.S.obj
+ .debug_line_str
+                0x00000383       0xd2 /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
 
-.debug_loclists
-                0x00000000     0x8a99
- .debug_loclists
-                0x00000000      0x36b CMakeFiles/kernel.dir/kernel.c.obj
- .debug_loclists
-                0x0000036b      0x19d CMakeFiles/kernel.dir/scheduler.c.obj
- .debug_loclists
-                0x00000508      0xb61 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.obj
- .debug_loclists
-                0x00001069       0xad CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.c.obj
- .debug_loclists
-                0x00001116      0x2af CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.obj
- .debug_loclists
-                0x000013c5      0x182 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.obj
- .debug_loclists
-                0x00001547      0xdb7 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
- .debug_loclists
-                0x000022fe       0x50 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.c.obj
- .debug_loclists
-                0x0000234e      0xa5b CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
- .debug_loclists
-                0x00002da9     0x146a CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
- .debug_loclists
-                0x00004213      0x698 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
- .debug_loclists
-                0x000048ab      0x7aa CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
- .debug_loclists
-                0x00005055      0x568 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_uart/uart.c.obj
- .debug_loclists
-                0x000055bd      0x5c2 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
- .debug_loclists
-                0x00005b7f      0x214 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.obj
- .debug_loclists
-                0x00005d93      0x1fd CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.c.obj
- .debug_loclists
-                0x00005f90       0x48 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.c.obj
- .debug_loclists
-                0x00005fd8      0x3d9 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
- .debug_loclists
-                0x000063b1     0x16f9 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
- .debug_loclists
-                0x00007aaa      0x14d CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.obj
- .debug_loclists
-                0x00007bf7       0x41 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.obj
- .debug_loclists
-                0x00007c38       0x4f CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.obj
- .debug_loclists
-                0x00007c87      0x8c3 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
- .debug_loclists
-                0x0000854a      0x54f CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+.debug_info     0x00000000    0x15863
+ .debug_info    0x00000000       0x25 CMakeFiles/kernel.dir/assembly.s.obj
+ .debug_info    0x00000025     0x114d CMakeFiles/kernel.dir/kernel.c.obj
+ .debug_info    0x00001172      0x6ea CMakeFiles/kernel.dir/scheduler.c.obj
+ .debug_info    0x0000185c     0x184b CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.obj
+ .debug_info    0x000030a7      0x1fb CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.c.obj
+ .debug_info    0x000032a2      0x69a CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.obj
+ .debug_info    0x0000393c      0x5fa CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.obj
+ .debug_info    0x00003f36     0x1c43 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+ .debug_info    0x00005b79      0x1a3 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.c.obj
+ .debug_info    0x00005d1c     0x1d29 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
+ .debug_info    0x00007a45     0x33f9 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+ .debug_info    0x0000ae3e     0x145b CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
+ .debug_info    0x0000c299      0xe82 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
+ .debug_info    0x0000d11b      0xd98 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_uart/uart.c.obj
+ .debug_info    0x0000deb3      0xfe7 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
+ .debug_info    0x0000ee9a      0x505 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.obj
+ .debug_info    0x0000f39f      0x4d8 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.c.obj
+ .debug_info    0x0000f877      0x1c7 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.c.obj
+ .debug_info    0x0000fa3e      0xf23 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
+ .debug_info    0x00010961     0x19db CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
+ .debug_info    0x0001233c       0x23 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+ .debug_info    0x0001235f      0x331 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.obj
+ .debug_info    0x00012690       0x23 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_divider/divider.S.obj
+ .debug_info    0x000126b3       0x23 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
+ .debug_info    0x000126d6      0x33b CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.obj
+ .debug_info    0x00012a11       0x23 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+ .debug_info    0x00012a34       0x24 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+ .debug_info    0x00012a58       0x23 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_aeabi.S.obj
+ .debug_info    0x00012a7b      0x34f CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.obj
+ .debug_info    0x00012dca       0x23 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+ .debug_info    0x00012ded       0x23 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+ .debug_info    0x00012e10       0x23 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/crt0.S.obj
+ .debug_info    0x00012e33      0x2b8 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
+ .debug_info    0x000130eb     0x1743 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+ .debug_info    0x0001482e     0x1035 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+
+.debug_abbrev   0x00000000     0x4bbe
+ .debug_abbrev  0x00000000       0x14 CMakeFiles/kernel.dir/assembly.s.obj
+ .debug_abbrev  0x00000014      0x486 CMakeFiles/kernel.dir/kernel.c.obj
+ .debug_abbrev  0x0000049a      0x328 CMakeFiles/kernel.dir/scheduler.c.obj
+ .debug_abbrev  0x000007c2      0x3a6 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.obj
+ .debug_abbrev  0x00000b68       0xf8 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.c.obj
+ .debug_abbrev  0x00000c60      0x2ce CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.obj
+ .debug_abbrev  0x00000f2e      0x249 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.obj
+ .debug_abbrev  0x00001177      0x500 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+ .debug_abbrev  0x00001677      0x116 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.c.obj
+ .debug_abbrev  0x0000178d      0x3f1 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
+ .debug_abbrev  0x00001b7e      0x5c3 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+ .debug_abbrev  0x00002141      0x3d5 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
+ .debug_abbrev  0x00002516      0x290 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
+ .debug_abbrev  0x000027a6      0x349 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_uart/uart.c.obj
+ .debug_abbrev  0x00002aef      0x434 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
+ .debug_abbrev  0x00002f23      0x1e7 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.obj
+ .debug_abbrev  0x0000310a      0x1a8 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.c.obj
+ .debug_abbrev  0x000032b2      0x10c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.c.obj
+ .debug_abbrev  0x000033be      0x530 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
+ .debug_abbrev  0x000038ee      0x371 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
+ .debug_abbrev  0x00003c5f       0x12 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+ .debug_abbrev  0x00003c71      0x167 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.obj
+ .debug_abbrev  0x00003dd8       0x12 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_divider/divider.S.obj
+ .debug_abbrev  0x00003dea       0x12 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
+ .debug_abbrev  0x00003dfc      0x1c3 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.obj
+ .debug_abbrev  0x00003fbf       0x12 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+ .debug_abbrev  0x00003fd1       0x14 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+ .debug_abbrev  0x00003fe5       0x12 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_aeabi.S.obj
+ .debug_abbrev  0x00003ff7      0x1c6 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.obj
+ .debug_abbrev  0x000041bd       0x12 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+ .debug_abbrev  0x000041cf       0x12 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+ .debug_abbrev  0x000041e1       0x12 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/crt0.S.obj
+ .debug_abbrev  0x000041f3       0xb8 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
+ .debug_abbrev  0x000042ab      0x47a CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+ .debug_abbrev  0x00004725      0x499 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
 
 .debug_aranges  0x00000000     0x1050
  .debug_aranges
-                0x00000000       0x70 CMakeFiles/kernel.dir/kernel.c.obj
+                0x00000000       0x20 CMakeFiles/kernel.dir/assembly.s.obj
  .debug_aranges
-                0x00000070       0x58 CMakeFiles/kernel.dir/scheduler.c.obj
+                0x00000020       0x70 CMakeFiles/kernel.dir/kernel.c.obj
  .debug_aranges
-                0x000000c8       0x20 CMakeFiles/kernel.dir/assembly.s.obj
+                0x00000090       0x58 CMakeFiles/kernel.dir/scheduler.c.obj
  .debug_aranges
                 0x000000e8      0x100 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.obj
  .debug_aranges
@@ -3038,197 +3053,185 @@ LOAD linker stubs
  .debug_aranges
                 0x00000fe8       0x68 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
 
+.debug_str      0x00000000     0x3cc3
+ .debug_str     0x00000000     0x3cc3 CMakeFiles/kernel.dir/assembly.s.obj
+                                 0x73 (size before relaxing)
+ .debug_str     0x00003cc3      0x72e CMakeFiles/kernel.dir/kernel.c.obj
+ .debug_str     0x00003cc3      0x3a7 CMakeFiles/kernel.dir/scheduler.c.obj
+ .debug_str     0x00003cc3      0xa00 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.obj
+ .debug_str     0x00003cc3      0x227 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.c.obj
+ .debug_str     0x00003cc3      0x36b CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.obj
+ .debug_str     0x00003cc3      0x352 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.obj
+ .debug_str     0x00003cc3      0x820 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+ .debug_str     0x00003cc3      0x208 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.c.obj
+ .debug_str     0x00003cc3      0x5fa CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
+ .debug_str     0x00003cc3      0xc7d CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+ .debug_str     0x00003cc3      0x732 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
+ .debug_str     0x00003cc3      0x3f8 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
+ .debug_str     0x00003cc3      0x62b CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_uart/uart.c.obj
+ .debug_str     0x00003cc3      0x6cf CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
+ .debug_str     0x00003cc3      0x2e3 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.obj
+ .debug_str     0x00003cc3      0x329 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.c.obj
+ .debug_str     0x00003cc3      0x226 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.c.obj
+ .debug_str     0x00003cc3      0x7e9 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
+ .debug_str     0x00003cc3      0x487 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
+ .debug_str     0x00003cc3       0x8d CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+ .debug_str     0x00003cc3      0x27e CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.obj
+ .debug_str     0x00003cc3       0x87 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_divider/divider.S.obj
+ .debug_str     0x00003cc3       0x8b CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
+ .debug_str     0x00003cc3      0x2c7 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.obj
+ .debug_str     0x00003cc3       0x91 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+ .debug_str     0x00003cc3       0x96 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
+ .debug_str     0x00003cc3       0x89 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_aeabi.S.obj
+ .debug_str     0x00003cc3      0x2c3 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.obj
+ .debug_str     0x00003cc3       0x8f CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+ .debug_str     0x00003cc3       0x8d CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+ .debug_str     0x00003cc3       0x8a CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/crt0.S.obj
+ .debug_str     0x00003cc3      0x3e9 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
+ .debug_str     0x00003cc3      0x9d4 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+ .debug_str     0x00003cc3      0x8f0 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+
+.debug_loclists
+                0x00000000     0x8a86
+ .debug_loclists
+                0x00000000      0x36b CMakeFiles/kernel.dir/kernel.c.obj
+ .debug_loclists
+                0x0000036b      0x18a CMakeFiles/kernel.dir/scheduler.c.obj
+ .debug_loclists
+                0x000004f5      0xb61 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.obj
+ .debug_loclists
+                0x00001056       0xad CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.c.obj
+ .debug_loclists
+                0x00001103      0x2af CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.obj
+ .debug_loclists
+                0x000013b2      0x182 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.obj
+ .debug_loclists
+                0x00001534      0xdb7 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+ .debug_loclists
+                0x000022eb       0x50 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.c.obj
+ .debug_loclists
+                0x0000233b      0xa5b CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
+ .debug_loclists
+                0x00002d96     0x146a CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+ .debug_loclists
+                0x00004200      0x698 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
+ .debug_loclists
+                0x00004898      0x7aa CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
+ .debug_loclists
+                0x00005042      0x568 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_uart/uart.c.obj
+ .debug_loclists
+                0x000055aa      0x5c2 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
+ .debug_loclists
+                0x00005b6c      0x214 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.obj
+ .debug_loclists
+                0x00005d80      0x1fd CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.c.obj
+ .debug_loclists
+                0x00005f7d       0x48 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.c.obj
+ .debug_loclists
+                0x00005fc5      0x3d9 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
+ .debug_loclists
+                0x0000639e     0x16f9 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
+ .debug_loclists
+                0x00007a97      0x14d CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.obj
+ .debug_loclists
+                0x00007be4       0x41 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.obj
+ .debug_loclists
+                0x00007c25       0x4f CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.obj
+ .debug_loclists
+                0x00007c74      0x8c3 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+ .debug_loclists
+                0x00008537      0x54f CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+
 .debug_rnglists
-                0x00000000      0xe41
+                0x00000000      0xe43
  .debug_rnglists
-                0x00000000       0x5c CMakeFiles/kernel.dir/kernel.c.obj
+                0x00000000       0x5e CMakeFiles/kernel.dir/kernel.c.obj
  .debug_rnglists
-                0x0000005c       0x3f CMakeFiles/kernel.dir/scheduler.c.obj
+                0x0000005e       0x3f CMakeFiles/kernel.dir/scheduler.c.obj
  .debug_rnglists
-                0x0000009b       0xec CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.obj
+                0x0000009d       0xec CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.obj
  .debug_rnglists
-                0x00000187       0x19 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.c.obj
+                0x00000189       0x19 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.c.obj
  .debug_rnglists
-                0x000001a0       0x31 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.obj
+                0x000001a2       0x31 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.obj
  .debug_rnglists
-                0x000001d1       0x3d CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.obj
+                0x000001d3       0x3d CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.obj
  .debug_rnglists
-                0x0000020e       0xf0 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+                0x00000210       0xf0 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
  .debug_rnglists
-                0x000002fe       0x13 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.c.obj
+                0x00000300       0x13 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.c.obj
  .debug_rnglists
-                0x00000311       0xe7 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
+                0x00000313       0xe7 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
  .debug_rnglists
-                0x000003f8      0x17a CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+                0x000003fa      0x17a CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
  .debug_rnglists
-                0x00000572       0x6a CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
+                0x00000574       0x6a CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
  .debug_rnglists
-                0x000005dc       0x8e CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
+                0x000005de       0x8e CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
  .debug_rnglists
-                0x0000066a       0x62 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_uart/uart.c.obj
+                0x0000066c       0x62 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_uart/uart.c.obj
  .debug_rnglists
-                0x000006cc       0x51 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
+                0x000006ce       0x51 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
  .debug_rnglists
-                0x0000071d       0x1a CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.obj
+                0x0000071f       0x1a CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.obj
  .debug_rnglists
-                0x00000737       0x3d CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.c.obj
+                0x00000739       0x3d CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.c.obj
  .debug_rnglists
-                0x00000774       0x1f CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.c.obj
+                0x00000776       0x1f CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.c.obj
  .debug_rnglists
-                0x00000793       0x7a CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
+                0x00000795       0x7a CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
  .debug_rnglists
-                0x0000080d       0xe5 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
+                0x0000080f       0xe5 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
  .debug_rnglists
-                0x000008f2       0x49 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
+                0x000008f4       0x49 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
  .debug_rnglists
-                0x0000093b       0x2b CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.obj
+                0x0000093d       0x2b CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.obj
  .debug_rnglists
-                0x00000966       0x2c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_divider/divider.S.obj
+                0x00000968       0x2c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_divider/divider.S.obj
  .debug_rnglists
-                0x00000992       0xed CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
+                0x00000994       0xed CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
  .debug_rnglists
-                0x00000a7f       0x21 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.obj
+                0x00000a81       0x21 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.obj
  .debug_rnglists
-                0x00000aa0       0x99 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
+                0x00000aa2       0x99 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
  .debug_rnglists
-                0x00000b39       0xdf CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_aeabi.S.obj
+                0x00000b3b       0xdf CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_aeabi.S.obj
  .debug_rnglists
-                0x00000c18       0x20 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.obj
+                0x00000c1a       0x20 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.obj
  .debug_rnglists
-                0x00000c38       0x38 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
+                0x00000c3a       0x38 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
  .debug_rnglists
-                0x00000c70       0x25 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
+                0x00000c72       0x25 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
  .debug_rnglists
-                0x00000c95       0x1b CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/crt0.S.obj
+                0x00000c97       0x1b CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/crt0.S.obj
  .debug_rnglists
-                0x00000cb0      0x117 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+                0x00000cb2      0x117 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
  .debug_rnglists
-                0x00000dc7       0x7a CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+                0x00000dc9       0x7a CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
 
-.debug_line     0x00000000     0xf107
- .debug_line    0x00000000      0x86c CMakeFiles/kernel.dir/kernel.c.obj
- .debug_line    0x0000086c      0x685 CMakeFiles/kernel.dir/scheduler.c.obj
- .debug_line    0x00000ef1       0xc1 CMakeFiles/kernel.dir/assembly.s.obj
- .debug_line    0x00000fb2      0xc25 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.obj
- .debug_line    0x00001bd7      0x299 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.c.obj
- .debug_line    0x00001e70      0x4a0 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.obj
- .debug_line    0x00002310      0x48a CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.obj
- .debug_line    0x0000279a     0x1088 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
- .debug_line    0x00003822      0x24a CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.c.obj
- .debug_line    0x00003a6c     0x10fa CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
- .debug_line    0x00004b66     0x19ec CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
- .debug_line    0x00006552      0xc2f CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
- .debug_line    0x00007181      0x82d CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
- .debug_line    0x000079ae      0x893 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_uart/uart.c.obj
- .debug_line    0x00008241      0xa41 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
- .debug_line    0x00008c82      0x527 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.obj
- .debug_line    0x000091a9      0x470 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.c.obj
- .debug_line    0x00009619      0x2b9 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.c.obj
- .debug_line    0x000098d2      0xb30 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
- .debug_line    0x0000a402     0x12c0 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
- .debug_line    0x0000b6c2      0x11a CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
- .debug_line    0x0000b7dc      0x281 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.obj
- .debug_line    0x0000ba5d      0x2a9 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_divider/divider.S.obj
- .debug_line    0x0000bd06      0x3fa CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
- .debug_line    0x0000c100      0x3c4 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.obj
- .debug_line    0x0000c4c4      0x66c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
- .debug_line    0x0000cb30       0x61 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
- .debug_line    0x0000cb91      0x3b2 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_aeabi.S.obj
- .debug_line    0x0000cf43      0x3b9 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.obj
- .debug_line    0x0000d2fc      0x198 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
- .debug_line    0x0000d494       0x94 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
- .debug_line    0x0000d528       0xa5 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/crt0.S.obj
- .debug_line    0x0000d5cd      0x1dd CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
- .debug_line    0x0000d7aa      0xf00 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
- .debug_line    0x0000e6aa      0xa5d CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-
-.debug_str      0x00000000     0x3cc9
- .debug_str     0x00000000     0x3cc9 CMakeFiles/kernel.dir/kernel.c.obj
-                                0x726 (size before relaxing)
- .debug_str     0x00003cc9      0x3d4 CMakeFiles/kernel.dir/scheduler.c.obj
- .debug_str     0x00003cc9       0x73 CMakeFiles/kernel.dir/assembly.s.obj
- .debug_str     0x00003cc9      0xa00 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.obj
- .debug_str     0x00003cc9      0x227 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.c.obj
- .debug_str     0x00003cc9      0x36b CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.obj
- .debug_str     0x00003cc9      0x352 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.obj
- .debug_str     0x00003cc9      0x820 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
- .debug_str     0x00003cc9      0x208 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.c.obj
- .debug_str     0x00003cc9      0x5fa CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
- .debug_str     0x00003cc9      0xc7d CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
- .debug_str     0x00003cc9      0x732 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
- .debug_str     0x00003cc9      0x3f8 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
- .debug_str     0x00003cc9      0x62b CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_uart/uart.c.obj
- .debug_str     0x00003cc9      0x6cf CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
- .debug_str     0x00003cc9      0x2e3 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.obj
- .debug_str     0x00003cc9      0x329 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.c.obj
- .debug_str     0x00003cc9      0x226 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.c.obj
- .debug_str     0x00003cc9      0x7e9 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
- .debug_str     0x00003cc9      0x487 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
- .debug_str     0x00003cc9       0x8d CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
- .debug_str     0x00003cc9      0x27e CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.obj
- .debug_str     0x00003cc9       0x87 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_divider/divider.S.obj
- .debug_str     0x00003cc9       0x8b CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
- .debug_str     0x00003cc9      0x2c7 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.obj
- .debug_str     0x00003cc9       0x91 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
- .debug_str     0x00003cc9       0x96 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
- .debug_str     0x00003cc9       0x89 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_aeabi.S.obj
- .debug_str     0x00003cc9      0x2c3 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.obj
- .debug_str     0x00003cc9       0x8f CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
- .debug_str     0x00003cc9       0x8d CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
- .debug_str     0x00003cc9       0x8a CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/crt0.S.obj
- .debug_str     0x00003cc9      0x3e9 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/binary_info.c.obj
- .debug_str     0x00003cc9      0x9d4 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
- .debug_str     0x00003cc9      0x8f0 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
-
-.debug_frame    0x00000000     0x1e68
+.debug_frame    0x00000000     0x1e80
  .debug_frame   0x00000000       0xfc CMakeFiles/kernel.dir/kernel.c.obj
- .debug_frame   0x000000fc       0xd8 CMakeFiles/kernel.dir/scheduler.c.obj
- .debug_frame   0x000001d4      0x278 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.obj
- .debug_frame   0x0000044c       0x38 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.c.obj
- .debug_frame   0x00000484       0x9c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.obj
- .debug_frame   0x00000520       0xc8 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.obj
- .debug_frame   0x000005e8      0x228 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
- .debug_frame   0x00000810       0x20 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.c.obj
- .debug_frame   0x00000830      0x254 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
- .debug_frame   0x00000a84      0x464 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
- .debug_frame   0x00000ee8      0x17c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
- .debug_frame   0x00001064      0x198 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
- .debug_frame   0x000011fc       0xf8 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_uart/uart.c.obj
- .debug_frame   0x000012f4      0x130 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
- .debug_frame   0x00001424       0x44 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.obj
- .debug_frame   0x00001468       0xa8 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.c.obj
- .debug_frame   0x00001510       0x40 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.c.obj
- .debug_frame   0x00001550      0x18c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
- .debug_frame   0x000016dc      0x1fc CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
- .debug_frame   0x000018d8       0x64 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.obj
- .debug_frame   0x0000193c       0x2c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.obj
- .debug_frame   0x00001968       0x2c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.obj
- .debug_frame   0x00001994      0x398 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
- .debug_frame   0x00001d2c      0x114 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
- .debug_frame   0x00001e40       0x28 /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strlen-stub.o)
-
-.debug_line_str
-                0x00000000      0x383
- .debug_line_str
-                0x00000000      0x383 CMakeFiles/kernel.dir/assembly.s.obj
-                                 0x65 (size before relaxing)
- .debug_line_str
-                0x00000383       0x7f CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bit_ops/bit_ops_aeabi.S.obj
- .debug_line_str
-                0x00000383       0x79 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_divider/divider.S.obj
- .debug_line_str
-                0x00000383       0x7d CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_aeabi.S.obj
- .debug_line_str
-                0x00000383       0x83 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_v1_rom_shim.S.obj
- .debug_line_str
-                0x00000383       0x88 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_int64_ops/pico_int64_ops_aeabi.S.obj
- .debug_line_str
-                0x00000383       0x7b CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_aeabi.S.obj
- .debug_line_str
-                0x00000383       0x81 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_v1_rom_shim.S.obj
- .debug_line_str
-                0x00000383       0x7f CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_mem_ops/mem_ops_aeabi.S.obj
- .debug_line_str
-                0x00000383       0x7c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_standard_link/crt0.S.obj
- .debug_line_str
-                0x00000383       0xd2 /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/libgcc.a(_dvmd_tls.o)
+ .debug_frame   0x000000fc       0xf0 CMakeFiles/kernel.dir/scheduler.c.obj
+ .debug_frame   0x000001ec      0x278 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_gpio/gpio.c.obj
+ .debug_frame   0x00000464       0x38 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_platform/platform.c.obj
+ .debug_frame   0x0000049c       0x9c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_claim/claim.c.obj
+ .debug_frame   0x00000538       0xc8 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_sync/sync.c.obj
+ .debug_frame   0x00000600      0x228 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_irq/irq.c.obj
+ .debug_frame   0x00000828       0x20 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_sync/lock_core.c.obj
+ .debug_frame   0x00000848      0x254 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_sync/mutex.c.obj
+ .debug_frame   0x00000a9c      0x464 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_time/time.c.obj
+ .debug_frame   0x00000f00      0x17c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_timer/timer.c.obj
+ .debug_frame   0x0000107c      0x198 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/common/pico_util/pheap.c.obj
+ .debug_frame   0x00001214       0xf8 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_uart/uart.c.obj
+ .debug_frame   0x0000130c      0x130 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_clocks/clocks.c.obj
+ .debug_frame   0x0000143c       0x44 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_pll/pll.c.obj
+ .debug_frame   0x00001480       0xa8 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_watchdog/watchdog.c.obj
+ .debug_frame   0x00001528       0x40 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/hardware_xosc/xosc.c.obj
+ .debug_frame   0x00001568      0x18c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_runtime/runtime.c.obj
+ .debug_frame   0x000016f4      0x1fc CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_printf/printf.c.obj
+ .debug_frame   0x000018f0       0x64 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_bootrom/bootrom.c.obj
+ .debug_frame   0x00001954       0x2c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_double/double_init_rom.c.obj
+ .debug_frame   0x00001980       0x2c CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_float/float_init_rom.c.obj
+ .debug_frame   0x000019ac      0x398 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio/stdio.c.obj
+ .debug_frame   0x00001d44      0x114 CMakeFiles/kernel.dir/Users/attilio/.pico-sdk/sdk/1.5.1/src/rp2_common/pico_stdio_uart/stdio_uart.c.obj
+ .debug_frame   0x00001e58       0x28 /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/libg.a(libc_a-strlen-stub.o)

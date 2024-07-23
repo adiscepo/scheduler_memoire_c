@@ -7,6 +7,7 @@
 
 typedef enum {
     UNDEFINED,
+    DEFINED,
     READY,
     RUNNING,
     BLOCKED,
@@ -30,6 +31,7 @@ typedef struct {
 
 extern scheduler_t scheduler;
 extern uint32_t tick;
+
 
 void init_scheduler();
 void create_process(uint32_t wcet, uint32_t absolute_deadline, void(*fn)(void*));

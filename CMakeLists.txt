@@ -12,11 +12,11 @@ add_compile_options(-DPICO_CMSIS_RENAME_EXCEPTIONS=1)
 pico_sdk_init()
 
 add_executable(kernel
+    assembly.s
     kernel.c
     task.c
     scheduler.c
     process.c
-    assembly.s
 )
 
 # set(RUST_LIB_PATH "${CMAKE_SOURCE_DIR}/rust_lib/target/thumbv6m-none-eabi/release")

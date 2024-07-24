@@ -24,17 +24,31 @@ def create_schedule_plot(events):
     y_ticks["IDLE"] = 0
     y_ticks["CS"] = -1
 
+    current_task = None
+    task_start_time = None
+
     for i, (event, time) in enumerate(events):
-        if i == 0:
-            continue
-        prev_event, prev_time = events[i-1]
-        if prev_event.startswith("D_T"):
-            task = prev_event.split(" ")[1]
-            ax.broken_barh([(prev_time, time - prev_time)], (y_ticks[task], 1), facecolors='tab:blue')
-        elif prev_event.startswith("IDLE"):
-            ax.broken_barh([(prev_time, time - prev_time)], (y_ticks["IDLE"], 1), facecolors='tab:gray')
-        elif prev_event == "D_CS":
-            ax.broken_barh([(prev_time, time - prev_time)], (y_ticks["CS"], 1), facecolors='tab:red')
+        if i > 0:
+            prev_event, prev_time = events[i-1]
+            if prev_event.startswith("D_T"):
+                task = prev_event.split(" ")[1]
+                ax.broken_barh([(prev_time, time - prev_time)], (y_ticks[task], 1), facecolors='tab:blue')
+            elif prev_event.startswith("IDLE"):
+                ax.broken_barh([(prev_time, time - prev_time)], (y_ticks["IDLE"], 1), facecolors='tab:gray')
+            elif prev_event == "D_CS":
+                ax.broken_barh([(prev_time, time - prev_time)], (y_ticks["CS"], 1), facecolors='tab:red')
+                if current_task is not None:
+                    ax.broken_barh([(task_start_time, prev_time - task_start_time)], (y_ticks[current_task], 1), facecolors='tab:blue')
+
+        if event.startswith("D_T"):
+            current_task = event.split(" ")[1]
+            task_start_time = time
+        elif event == "IDLE":
+            current_task = "IDLE"
+            task_start_time = time
+        elif event.startswith("R_T") or event == "F_CS":
+            current_task = None
+            task_start_time = None
 
     for event, time in events:
         if event.startswith("R_T"):

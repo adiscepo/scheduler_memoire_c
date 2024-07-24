@@ -44,8 +44,9 @@ int main() {
     init_scheduler();
 
     __asm("CPSID I");
-    create_process(150, 200, task1);
+    create_process(150, 10000, task1);
     create_process(20, 250, task2);
+    create_process(100, 1000, task3);
     __asm("CPSIE I");
 
     printf("Task: %d\n", scheduler.current_process);
@@ -62,9 +63,9 @@ void task1(void) {
     // printf("[ Début tâche 1 ] : %dms\n", to_ms_since_boot(get_absolute_time()));
     printf("D_T 0 : %dms\n", to_ms_since_boot(get_absolute_time()));
     gpio_put(LED_PIN_T1, 1);
-    while (task1_val < 1000000) {
+    while (task1_val < 10000000) {
         task1_val += 1;
-        // if (task1_val % 100000 == 0) printf("Task 1\n");
+        if (task1_val % 100000 == 0) printf("Task 1\n");
     }
     // printf("[ Fin tâche 1 ] : %dms\n", to_ms_since_boot(get_absolute_time()));
     gpio_put(LED_PIN_T1, 0);
@@ -89,8 +90,8 @@ void task2(void) {
 int i = 0;
 // Task 3
 void task3(void) {
+    gpio_put(LED_PIN_T3, 1);
     while (i < 1000000) {
-        gpio_put(LED_PIN_T3, 1);
         if (i % 100000 == 0) printf("Task 3\n");
         i++;
     }

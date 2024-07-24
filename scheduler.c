@@ -25,7 +25,7 @@ void init_scheduler() {
 }
 
 void create_process(uint32_t wcet, uint32_t absolute_deadline, void(*fn)(void*)) {
-    printf("[ Création processus ] : %dms\n", to_ms_since_boot(get_absolute_time()));
+    // printf("[ Création processus ] : %dms\n", to_ms_since_boot(get_absolute_time()));
     size_t available_process = -1;
     for (size_t i = 0; i < MAX_PROCESSES; i++) {
         if (scheduler.processes[i].state == UNDEFINED) {
@@ -58,7 +58,7 @@ void create_process(uint32_t wcet, uint32_t absolute_deadline, void(*fn)(void*))
     new_process->absolute_deadline = absolute_deadline;
     new_process->wcet = wcet;
     new_process->fn = (uint32_t*)fn;
-    new_process->state = READY;
+    new_process->state = DEFINED;
     // printf("[ Fin création processus ] : %dms\n", to_ms_since_boot(get_absolute_time()));
     return;
 }
@@ -70,14 +70,14 @@ void end_task() {
     __asm("ldr r0, =0x0");
     __asm("msr control, r0");
     __asm("isb");
-    printf("[ Fin de processus ] : %dms\n", to_ms_since_boot(get_absolute_time()));
+    // printf("[ Fin de processus ] : %dms\n", to_ms_since_boot(get_absolute_time()));
     process_t *ended_process = &scheduler.processes[scheduler.current_process];
     ended_process->state = UNDEFINED;
     for (size_t i = 0; i < PROCESS_STACK_SIZE; ++i) ended_process->stack[PROCESS_STACK_SIZE - i] = 0x00000000;     // Rempli toute la pile avec des données bidons
     ended_process->tos = 0;
     ended_process->release_time += ended_process->absolute_deadline;
     create_process(ended_process->wcet, ended_process->absolute_deadline + to_ms_since_boot(get_absolute_time()), ended_process->fn);
-    printf("[ Processus recréé ] : %dms\n", to_ms_since_boot(get_absolute_time()));
+    // printf("[ Processus recréé ] : %dms\n", to_ms_since_boot(get_absolute_time()));
     // On repasse en mode PSP
     __asm("mrs r0, control");
     __asm("ldr r0, =0x2");
@@ -93,31 +93,20 @@ void end_task() {
 
 
 size_t schedule() {
-    // if (scheduler.started == 0) {
-    //     scheduler.started = 1;
-    //     uint32_t start_time = to_ms_since_boot(get_absolute_time());
-    //     for (size_t i = 0; i < MAX_PROCESSES; i++)
-    //     {
-    //         scheduler.processes[i].release_time = start_time + 5;
-    //     }
-        
-    // }
+    printf("D_CS : %dms\n", to_ms_since_boot(get_absolute_time()));
+    if (scheduler.delay == 0) {
+        scheduler.delay = to_ms_since_boot(get_absolute_time());
+        scheduler.timer = 0;
+    }
+    scheduler.timer =  to_ms_since_boot(get_absolute_time()) - scheduler.delay;
     // Appelé à chaque changement de contexte
-    printf("[ Context switching ] : %dms\n", to_ms_since_boot(get_absolute_time()));
-    // if (scheduler.current_process == 1) {
-    //     scheduler.current_process = 0;
-    //     return 0;
-    // } else {
-    //     scheduler.current_process = 1;
-    //     return 1;
-    // }
     int32_t index = -1;
     uint32_t earliest_deadline = UINT32_MAX;
 
     for (size_t i = 0; i < MAX_PROCESSES; i++) {
         process_t *process = &scheduler.processes[i];
-        if (process->state == DEFINED && process->release_time >= to_ms_since_boot(get_absolute_time()) && process->absolute_deadline < to_ms_since_boot(get_absolute_time())) {
-            printf("La tâche %d est déployée sur le système.\n", i);
+        if (process->state == DEFINED && process->release_time <= to_ms_since_boot(get_absolute_time()) - scheduler.delay) {
+            printf("R_T %d : %dms\n", i, to_ms_since_boot(get_absolute_time()));
             process->state = READY;
         }
         if (process->state == READY && process->absolute_deadline < earliest_deadline) {
@@ -126,12 +115,13 @@ size_t schedule() {
         }
     }
     scheduler.current_process = index;
-    printf("New task : %d\n", index);
+    printf("F_CS : %dms\n", to_ms_since_boot(get_absolute_time()));
     if (index != -1) return index;
-    printf("[ ON PASSE EN IDLE ]");
+    printf("IDLE : %dms\n", to_ms_since_boot(get_absolute_time()));
     return MAX_PROCESSES; // Retourne l'id du processus IDLE
 }
 
 void idle() {
-    while (true) printf("[ IDLE ], %dms\n", to_ms_since_boot(get_absolute_time()));
+    // while (true) printf("[ IDLE ], %dms\n", to_ms_since_boot(get_absolute_time()));
+    while (true) __asm("NOP");
 }

@@ -44,8 +44,8 @@ int main() {
     init_scheduler();
 
     __asm("CPSID I");
-    create_process(150, 50000, task1);
-    create_process(20, 30000, task2);
+    create_process(150, 200, task1);
+    create_process(20, 250, task2);
     __asm("CPSIE I");
 
     printf("Task: %d\n", scheduler.current_process);
@@ -59,30 +59,31 @@ int main() {
 
 // Task 1
 void task1(void) {
-    printf("[ Début tâche 1 ] : %dms\n", to_ms_since_boot(get_absolute_time()));
+    // printf("[ Début tâche 1 ] : %dms\n", to_ms_since_boot(get_absolute_time()));
+    printf("D_T 0 : %dms\n", to_ms_since_boot(get_absolute_time()));
     gpio_put(LED_PIN_T1, 1);
     while (task1_val < 1000000) {
         task1_val += 1;
-        if (task1_val % 100000 == 0) { 
-            printf("Task 1\n");
-        }
+        // if (task1_val % 100000 == 0) printf("Task 1\n");
     }
+    // printf("[ Fin tâche 1 ] : %dms\n", to_ms_since_boot(get_absolute_time()));
     gpio_put(LED_PIN_T1, 0);
-    printf("[ Fin tâche 1 ] : %dms\n", to_ms_since_boot(get_absolute_time()));
     task1_val = 0;
+    printf("F_T 0 : %dms\n", to_ms_since_boot(get_absolute_time()));
 }
 
 // Task 2
 void task2(void) {
-    printf("[ Début tâche 2 ] : %dms\n", to_ms_since_boot(get_absolute_time()));
+    printf("D_T 1 : %dms\n", to_ms_since_boot(get_absolute_time()));
     gpio_put(LED_PIN_T2, 1);
     while(task2_val < 1000000) {
         task2_val += 1;
-        if (task2_val % 100000 == 0) printf("Task 2\n");
+        // if (task2_val % 100000 == 0) printf("Task 2\n");
     }
-    task2_val = 0;
-    printf("[ Fin tâche 2 ] : %dms\n", to_ms_since_boot(get_absolute_time()));
+    // printf("[ Fin tâche 2 ] : %dms\n", to_ms_since_boot(get_absolute_time()));
     gpio_put(LED_PIN_T2, 0);
+    task2_val = 0;
+    printf("F_T 1 : %dms\n", to_ms_since_boot(get_absolute_time()));
 }
 
 int i = 0;

@@ -93,6 +93,15 @@ void end_task() {
 
 
 size_t schedule() {
+    // if (scheduler.started == 0) {
+    //     scheduler.started = 1;
+    //     uint32_t start_time = to_ms_since_boot(get_absolute_time());
+    //     for (size_t i = 0; i < MAX_PROCESSES; i++)
+    //     {
+    //         scheduler.processes[i].release_time = start_time + 5;
+    //     }
+        
+    // }
     // Appelé à chaque changement de contexte
     printf("[ Context switching ] : %dms\n", to_ms_since_boot(get_absolute_time()));
     // if (scheduler.current_process == 1) {
@@ -107,7 +116,7 @@ size_t schedule() {
 
     for (size_t i = 0; i < MAX_PROCESSES; i++) {
         process_t *process = &scheduler.processes[i];
-        if (process->state == DEFINED && process->release_time >= to_ms_since_boot(get_absolute_time())) {
+        if (process->state == DEFINED && process->release_time >= to_ms_since_boot(get_absolute_time()) && process->absolute_deadline < to_ms_since_boot(get_absolute_time())) {
             printf("La tâche %d est déployée sur le système.\n", i);
             process->state = READY;
         }

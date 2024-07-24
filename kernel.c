@@ -44,8 +44,8 @@ int main() {
     init_scheduler();
 
     __asm("CPSID I");
-    create_process(150, 1000, task1);
-    create_process(20, 2000, task2);
+    create_process(150, 50000, task1);
+    create_process(20, 30000, task2);
     __asm("CPSIE I");
 
     printf("Task: %d\n", scheduler.current_process);

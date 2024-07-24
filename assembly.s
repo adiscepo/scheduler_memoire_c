@@ -185,51 +185,50 @@ isr_pendsv:
     cpsie i
     bx lr
 
+
 .global set_process_idle
 .type set_process_idle, %function
 set_process_idle:
-    cpsid i                  // Disable interrupts
-
-    // Save the current context
-    mrs r0, psp              // Get the current process stack pointer (PSP)
-    subs r0, #32             // Make space on the stack for r4-r11 (32 bytes = 8 registers)
-    stmia r0!, {r4-r7}       // Store r4-r7 on the stack
+    cpsid i
+    // Sauve le contexte courant
+    mrs r0, psp             // Sauve le pointeur de pile de la tâche actuelle
+    subs r0, #32            // Fait de l'espace afin de sauver les registres r4 à r11 (32 octets = 8 registres)
+    stmia r0!, {r4-r7}      // Sauve le contexte de la tâche sur sa propre pile 
     mov r4, r8
     mov r5, r9
     mov r6, r10
     mov r7, r11
-    stmia r0!, {r4-r7}       // Store r8-r11 on the stack
-
-    // Save the current PSP
+    stmia r0!, {r4-r7}      // Sauve les registres r8-r11
+    subs r0, #32
+    
     ldr r1, =scheduler
-    ldr r2, [r1]             // Load the current task index into r2
+    ldr r2, [r1]            // r2 contient l'indice de la tâche courante
     ldr r3, =PROCESS_SIZE
-    muls r3, r2              // Calculate the offset for the current task's TOS
+    muls r3, r2
     adds r3, #4
-    str r0, [r1, r3]         // Store the PSP of the current task
+    str r0, [r1, r3]        // r0 contient le TOS de la tâche courante 
 
-    // Set the current process to IDLE (MAX_PROCESS)
+    // Défini le processus actuel sur IDLE (MAX_PROCESS)
     ldr r0, =#MAX_PROCESSES
-    str r0, [r1]             // Set the current task index to IDLE
+    str r0, [r1]                // Défini le processus actuel sur IDLE
     ldr r3, =PROCESS_SIZE
-    muls r3, r0              // Calculate the offset for the IDLE task's TOS
+    muls r3, r0
     adds r3, #4
-    ldr r0, [r1, r3]         // Load the PSP of the IDLE task
+    ldr r0, [r1, r3]
 
-    adds r0, #16             // Adjust the PSP to the position of r8-r11
-    ldmia r0!, {r4-r7}       // Restore r8-r11 from the stack
+    adds r0, #16            // On place le curseur de pile sur les registres r8 à r11
+    ldmia r0!, {r4-r7}      // On restore les registres r8 à r11
     mov r8, r4
     mov r9, r5
     mov r10, r6
     mov r11, r7
-    subs r0, #32             // Adjust the PSP back to the position of r4-r7
-    ldmia r0!, {r4-r7}       // Restore r4-r7 from the stack
-    adds r0, #16             // Adjust the PSP to the original position (after saving r4-r11)
-    msr psp, r0              // Update the PSP with the new value
+    subs r0, #32            // On remet le curseur de pile sur les registres r4 à r7
+    ldmia r0!, {r4-r7}      // On restore les registres r4 à r7
+    adds r0, #16            // On remet le pointeur de la pile à la bonne place (celle où se trouvent les registres sauvés automatiquement)
+    msr psp, r0             // Met à jour le PSP avec le pointeur de pile de la tâche suivante
 
-    cpsie i                  // Enable interrupts
-    bx lr                    // Return from the function
-
+    cpsie i
+    bx lr
 
 .data
     .align  4

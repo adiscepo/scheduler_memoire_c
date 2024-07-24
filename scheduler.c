@@ -18,17 +18,17 @@ void init_scheduler() {
     idle_process->stack[PROCESS_STACK_SIZE - 3] = (uint32_t)(end_task);   // LR : Fonction de retour
     idle_process->tos = &idle_process->stack[PROCESS_STACK_SIZE - 16];      // Défini le pointeur vers le haut de la pile
     idle_process->absolute_deadline = UINT32_MAX;
-    idle_process->wcet = 0;
+    idle_process->deadline = 0;
     idle_process->state = UNDEFINED;
     scheduler.current_process = MAX_PROCESSES;
     __asm("CPSIE I");
 }
 
-void create_process(uint32_t wcet, uint32_t absolute_deadline, void(*fn)(void*)) {
-    // printf("[ Création processus ] : %dms\n", to_ms_since_boot(get_absolute_time()));
+void create_process(uint32_t deadline, uint32_t absolute_deadline, void(*fn)(void*)) {
+    // printf("[ Création processus ] : %dms\n", NOW);
     size_t available_process = -1;
     for (size_t i = 0; i < MAX_PROCESSES; i++) {
-        if (scheduler.processes[i].state == UNDEFINED) {
+        if (scheduler.processes[i].state == UNDEFINED || scheduler.processes[i].state == ENDED) {
             available_process = i;
             break;
         }
@@ -56,10 +56,10 @@ void create_process(uint32_t wcet, uint32_t absolute_deadline, void(*fn)(void*))
     new_process->tos = &new_process->stack[PROCESS_STACK_SIZE - 16];      // Défini le pointeur vers le haut de la pile
 
     new_process->absolute_deadline = absolute_deadline;
-    new_process->wcet = wcet;
+    new_process->deadline = deadline;
     new_process->fn = (uint32_t*)fn;
     new_process->state = DEFINED;
-    // printf("[ Fin création processus ] : %dms\n", to_ms_since_boot(get_absolute_time()));
+    // printf("[ Fin création processus ] : %dms\n", NOW);
     return;
 }
 
@@ -70,43 +70,67 @@ void end_task() {
     __asm("ldr r0, =0x0");
     __asm("msr control, r0");
     __asm("isb");
-    // printf("[ Fin de processus ] : %dms\n", to_ms_since_boot(get_absolute_time()));
-    process_t *ended_process = &scheduler.processes[scheduler.current_process];
-    ended_process->state = UNDEFINED;
-    for (size_t i = 0; i < PROCESS_STACK_SIZE; ++i) ended_process->stack[PROCESS_STACK_SIZE - i] = 0x00000000;     // Rempli toute la pile avec des données bidons
-    ended_process->tos = 0;
-    ended_process->release_time += ended_process->absolute_deadline;
-    create_process(ended_process->wcet, ended_process->absolute_deadline + to_ms_since_boot(get_absolute_time()), ended_process->fn);
-    // printf("[ Processus recréé ] : %dms\n", to_ms_since_boot(get_absolute_time()));
+    // printf("[ Fin de processus ] : %dms\n", NOW);
+    size_t pid = scheduler.current_process;
+    process_t *ended_process = &scheduler.processes[pid];
+    ended_process->state = ENDED;
+    ended_process->release_time = ended_process->absolute_deadline;
+    // for (size_t i = 0; i < PROCESS_STACK_SIZE; ++i) ended_process->stack[PROCESS_STACK_SIZE - i] = 0x00000000;     // Rempli toute la pile avec des données bidons
+    // ended_process->tos = 0;
+    // set_process_idle();
+    // create_process(ended_process->deadline, ended_process->absolute_deadline, ended_process->fn);
+    // printf("[ Processus %d recréé ] : %dms\n", pid, NOW);
     // On repasse en mode PSP
     __asm("mrs r0, control");
     __asm("ldr r0, =0x2");
     __asm("msr control, r0");
     __asm("isb");
     __asm("CPSIE I");
-    set_process_idle();
     while (true) {
         __asm("WFI");
-        // printf("[ Processus en attente de redémarrage ] : %dms\n", to_ms_since_boot(get_absolute_time()));
+        // printf("[ Processus en attente de redémarrage ] : %dms\n", NOW);
     }
 }
 
 
 size_t schedule() {
-    printf("D_CS : %dms\n", to_ms_since_boot(get_absolute_time()));
+    printf("D_CS : %dms\n", NOW);
     if (scheduler.delay == 0) {
-        scheduler.delay = to_ms_since_boot(get_absolute_time());
+        scheduler.delay = NOW;
         scheduler.timer = 0;
     }
-    scheduler.timer =  to_ms_since_boot(get_absolute_time()) - scheduler.delay;
+    scheduler.timer =  NOW - scheduler.delay;
     // Appelé à chaque changement de contexte
     int32_t index = -1;
     uint32_t earliest_deadline = UINT32_MAX;
 
     for (size_t i = 0; i < MAX_PROCESSES; i++) {
         process_t *process = &scheduler.processes[i];
-        if (process->state == DEFINED && process->release_time <= to_ms_since_boot(get_absolute_time()) - scheduler.delay) {
-            printf("R_T %d : %dms\n", i, to_ms_since_boot(get_absolute_time()));
+        if (process->state == ENDED) {
+            process->stack[PROCESS_STACK_SIZE - 1] = 0x01000000;             // Défini le xPSR sur Thumb
+            process->stack[PROCESS_STACK_SIZE - 2] = (uint32_t)process->fn;           // PC de la pile pointe vers le code de la fonction
+            process->stack[PROCESS_STACK_SIZE - 3] = (uint32_t)(end_task);   // LR : Fonction de retour
+            process->stack[PROCESS_STACK_SIZE - 4] = 0x12121212;             // Permet de contrôler en mémoire lors du débug
+            process->stack[PROCESS_STACK_SIZE - 5] = 0x33333333;
+            process->stack[PROCESS_STACK_SIZE - 6] = 0x22222222;
+            process->stack[PROCESS_STACK_SIZE - 7] = 0x11111111;
+            process->stack[PROCESS_STACK_SIZE - 8] = 0x00000000;
+            process->stack[PROCESS_STACK_SIZE - 9] = 0x11111111;
+            process->stack[PROCESS_STACK_SIZE - 10] = 0x10101010;
+            process->stack[PROCESS_STACK_SIZE - 11] = 0x99999999;
+            process->stack[PROCESS_STACK_SIZE - 12] = 0x88888888;
+            process->stack[PROCESS_STACK_SIZE - 13] = 0x77777777;
+            process->stack[PROCESS_STACK_SIZE - 14] = 0x66666666;
+            process->stack[PROCESS_STACK_SIZE - 15] = 0x55555555;
+            process->stack[PROCESS_STACK_SIZE - 16] = 0x44444444;
+            // for (size_t i = 17; i < PROCESS_STACK_SIZE; ++i) stack[stack_size - i] = 0xdeadbeef;     // Rempli toute la pile avec des données bidons
+            process->tos = &process->stack[PROCESS_STACK_SIZE - 16];      // Défini le pointeur vers le haut de la pile
+
+            process->absolute_deadline = process->release_time + process->deadline;
+            process->state = DEFINED;
+        }
+        if (process->state == DEFINED && process->release_time <= NOW - scheduler.delay) {
+            printf("R_T %d : %dms\n", i, NOW);
             process->state = READY;
         }
         if (process->state == READY && process->absolute_deadline < earliest_deadline) {
@@ -115,13 +139,13 @@ size_t schedule() {
         }
     }
     scheduler.current_process = index;
-    printf("F_CS : %dms\n", to_ms_since_boot(get_absolute_time()));
+    printf("F_CS : %dms\n", NOW);
     if (index != -1) return index;
-    printf("IDLE : %dms\n", to_ms_since_boot(get_absolute_time()));
+    printf("IDLE : %dms\n", NOW);
     return MAX_PROCESSES; // Retourne l'id du processus IDLE
 }
 
 void idle() {
-    // while (true) printf("[ IDLE ], %dms\n", to_ms_since_boot(get_absolute_time()));
+    // while (true) printf("[ IDLE ], %dms\n", NOW);
     while (true) __asm("NOP");
 }

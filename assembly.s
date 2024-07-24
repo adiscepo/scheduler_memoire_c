@@ -19,8 +19,8 @@
 .equ PROCESS_SIZE, 0x1018   // | TOS      | 4 bytes
                             // | STACK    | 4 * STACK_SIZE (1024) bytes
                             // |   ....   |
-                            // | WCET     | 4 bytes
                             // | DEADLINE | 4 bytes
+                            // | REALDEAD | 4 bytes
                             // | RELEASE  | 4 bytes
                             // | STATE    | 4 bytes
 
@@ -190,16 +190,16 @@ isr_pendsv:
 .type set_process_idle, %function
 set_process_idle:
     cpsid i
-    // Sauve le contexte courant
-    mrs r0, psp             // Sauve le pointeur de pile de la tâche actuelle
-    subs r0, #32            // Fait de l'espace afin de sauver les registres r4 à r11 (32 octets = 8 registres)
-    stmia r0!, {r4-r7}      // Sauve le contexte de la tâche sur sa propre pile 
-    mov r4, r8
-    mov r5, r9
-    mov r6, r10
-    mov r7, r11
-    stmia r0!, {r4-r7}      // Sauve les registres r8-r11
-    subs r0, #32
+    @ // Sauve le contexte courant
+    @ mrs r0, psp             // Sauve le pointeur de pile de la tâche actuelle
+    @ subs r0, #32            // Fait de l'espace afin de sauver les registres r4 à r11 (32 octets = 8 registres)
+    @ stmia r0!, {r4-r7}      // Sauve le contexte de la tâche sur sa propre pile 
+    @ mov r4, r8
+    @ mov r5, r9
+    @ mov r6, r10
+    @ mov r7, r11
+    @ stmia r0!, {r4-r7}      // Sauve les registres r8-r11
+    @ subs r0, #32
     
     ldr r1, =scheduler
     ldr r2, [r1]            // r2 contient l'indice de la tâche courante

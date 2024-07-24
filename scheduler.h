@@ -11,13 +11,13 @@ typedef enum {
     READY,
     RUNNING,
     BLOCKED,
-    SUSPENDED
+    ENDED
 } state_t;
 
 typedef struct {
     uint32_t *tos;
     uint32_t stack[PROCESS_STACK_SIZE];
-    uint32_t wcet;
+    uint32_t deadline;
     uint32_t absolute_deadline;
     uint32_t release_time;
     uint32_t *fn;
@@ -36,7 +36,7 @@ extern uint32_t tick;
 
 
 void init_scheduler();
-void create_process(uint32_t wcet, uint32_t absolute_deadline, void(*fn)(void*));
+void create_process(uint32_t deadline, uint32_t absolute_deadline, void(*fn)(void*));
 void end_task();
 void idle();
 

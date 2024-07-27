@@ -1,68 +1,109 @@
 import matplotlib.pyplot as plt
-import re
+import pandas as pd
+import numpy as np
+from matplotlib.patches import Patch
+import sys
 
-def parse_log_file(file_path):
-    events = []
-    with open(file_path, 'r') as file:
-        for line in file:
-            if match := re.match(r"(D_CS|F_CS|R_T \d+|D_T \d+|F_T \d+|IDLE) : (\d+)ms", line):
-                event, time = match.groups()
-                time = int(time)
-                events.append((event, time))
-    return events
+# Fonction pour lire le fichier de logs et extraire les informations
+def read_log_file(filename):
+    with open(filename, 'r') as file:
+        lines = file.readlines()
 
-def create_schedule_plot(events):
-    fig, ax = plt.subplots()
-    y_labels = set()
-    for event, time in events:
-        if "T" in event:
-            task = event.split(" ")[1]
-            y_labels.add(task)
+    max_tasks = int(lines[0].split(":")[1].strip())
+    logs = []
     
-    y_labels = sorted(y_labels)
-    y_ticks = {label: idx for idx, label in enumerate(y_labels, start=1)}
-    y_ticks["IDLE"] = 0
-    y_ticks["CS"] = -1
+    for line in lines[1:]:
+        parts = line.strip().split()
+        if len(parts) == 3:
+            action, task_id, timestamp = parts
+            task_id = int(task_id)
+        else:
+            action, timestamp = parts[0], parts[1]
+            task_id = max_tasks if action == "IDLE" else None
+        timestamp = int(timestamp)
+        logs.append((action, task_id, timestamp))
+    
+    return max_tasks, logs
 
-    current_task = None
-    task_start_time = None
+# Fonction pour traiter les logs et organiser les informations pour le graphe
+def process_logs(max_tasks, logs):
+    task_dict = {i: [] for i in range(max_tasks + 1)}  # Including the IDLE task as max_tasks
+    current_task = -1
+    start_time = 0
+    missed_deadlines = []
 
-    for i, (event, time) in enumerate(events):
-        if i > 0:
-            prev_event, prev_time = events[i-1]
-            if prev_event.startswith("D_T"):
-                task = prev_event.split(" ")[1]
-                ax.broken_barh([(prev_time, time - prev_time)], (y_ticks[task], 1), facecolors='tab:blue')
-            elif prev_event.startswith("IDLE"):
-                ax.broken_barh([(prev_time, time - prev_time)], (y_ticks["IDLE"], 1), facecolors='tab:gray')
-            elif prev_event == "D_CS":
-                ax.broken_barh([(prev_time, time - prev_time)], (y_ticks["CS"], 1), facecolors='tab:red')
-                if current_task is not None:
-                    ax.broken_barh([(task_start_time, prev_time - task_start_time)], (y_ticks[current_task], 1), facecolors='tab:blue')
+    for log in logs:
+        action, task_id, timestamp = log
+        if task_id == max_tasks or task_id == -1:
+            task_id = max_tasks
+        if action == "D":
+            if current_task != -1:
+                task_dict[current_task].append((start_time, timestamp, 'running'))
+            current_task = task_id
+            start_time = timestamp
+        elif action == "P":
+            task_dict[task_id].append((start_time, timestamp, 'running'))
+            start_time = timestamp
+            current_task = -1
+        elif action == "F":
+            task_dict[task_id].append((start_time, timestamp, 'running'))
+            current_task = -1
+        elif action == "IDLE":
+            if current_task != -1:
+                task_dict[current_task].append((start_time, timestamp, 'running'))
+            current_task = max_tasks
+            start_time = timestamp
+        elif action == "R":
+            task_dict[task_id].append((timestamp, timestamp, 'appearance'))
+        elif action == "M":
+            missed_deadlines.append((task_id, timestamp))
+    
+    return task_dict, missed_deadlines
 
-        if event.startswith("D_T"):
-            current_task = event.split(" ")[1]
-            task_start_time = time
-        elif event == "IDLE":
-            current_task = "IDLE"
-            task_start_time = time
-        elif event.startswith("R_T") or event == "F_CS":
-            current_task = None
-            task_start_time = None
 
-    for event, time in events:
-        if event.startswith("R_T"):
-            task = event.split(" ")[1]
-            ax.plot(time, y_ticks[task], 'ro', label=f"R_T {task}" if not plt.gca().get_legend_handles_labels()[1].count(f"R_T {task}") else "")
+# Fonction pour créer le graphe
+def create_gantt_chart(task_dict, missed_deadlines, name):
+    fig, ax = plt.subplots(figsize=(15, 8))
+    colors = plt.cm.get_cmap('Set2', len(task_dict))
+    legend_elements = [Patch(facecolor=colors(i), edgecolor='k', label=f'Task {i}') for i in range(len(task_dict))]
+    legend_elements.append(Patch(facecolor='white', edgecolor='k', label='Idle'))
 
-    ax.set_yticks(list(y_ticks.values()))
-    ax.set_yticklabels(list(y_ticks.keys()))
+    y_labels = []
+    y_ticks = []
+    
+    for i, (task_id, intervals) in enumerate(task_dict.items()):
+        y_labels.append('IDLE' if task_id == -1 else f'Task {task_id}')
+        y_ticks.append(i)
+        for interval in intervals:
+            start, end, state = interval
+            if state == 'running':
+                ax.barh(i, end-start, left=start, color=colors(task_id))
+            elif state == 'appearance':
+                # ax.plot(start, i, 'o', color='black')
+                ax.annotate('', xy=(start, i+0.1), xytext=(start, i+0.5),
+                            arrowprops=dict(facecolor='black', shrink=0.05, width=0.3, headwidth=5, headlength=5))
+            elif state == 'idle':
+                ax.barh(i, 0, left=start, color='white', edgecolor='k')
+
+    for task_id, timestamp in missed_deadlines:
+        ax.scatter(timestamp, task_id, color='red', marker='x', s=100, label='Missed Deadline' if 'Missed Deadline' not in [l.get_label() for l in legend_elements] else "")
+
+    ax.set_yticks(y_ticks)
+    ax.set_yticklabels(y_labels)
     ax.set_xlabel('Time (ms)')
-    ax.set_ylabel('Tasks')
-    ax.grid(True)
-    ax.legend(loc='upper right')
-    plt.show()
+    ax.set_title('Task Execution Gantt Chart')
+    ax.legend(handles=legend_elements, loc='upper right')
 
-file_path = 'output.log'  # Remplacez ceci par le chemin de votre fichier de sortie
-events = parse_log_file(file_path)
-create_schedule_plot(events)
+    # plt.show()
+    plt.savefig(name, dpi=150)
+
+# Lecture et traitement du fichier de logs
+max_tasks, logs = read_log_file('output.log')
+task_dict, missed_deadlines = process_logs(max_tasks, logs)
+
+name = "plot.png"
+if len(sys.argv) >= 2:
+    name = f"plot{sys.argv[1]}.png"
+
+# Création du graphe
+create_gantt_chart(task_dict, missed_deadlines, name)

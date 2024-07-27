@@ -23,6 +23,7 @@
                             // | REALDEAD | 4 bytes
                             // | RELEASE  | 4 bytes
                             // | STATE    | 4 bytes
+.equ LR_POS, 0xFFC
 
 // J'aurais pu utiliser des fonctions proposées par le sdk du rpi pico (pour définir les
 // exceptions, les valeurs de systick, etc.) mais j'ai préféré les faire en assembleur
@@ -228,6 +229,61 @@ set_process_idle:
     msr psp, r0             // Met à jour le PSP avec le pointeur de pile de la tâche suivante
 
     cpsie i
+    bx lr
+
+.global software_interrupt_handler
+.type software_interrupt_handler, %function
+software_interrupt_handler:
+    ldr r0, =0x0
+    msr control, r0
+    isb
+
+    ldr r1, =scheduler
+    ldr r2, [r1]          
+    ldr r3, =0x1018
+    muls r3, r2
+    adds r3, #4
+    str r0, [r1, r3]
+    mov r3, lr            
+    push {r3}             
+    
+    bl schedule           
+    ldr r1, =scheduler
+    ldr r3, =0x1018
+    muls r3, r0           
+    adds r3, #4
+    ldr r0, [r1, r3]      
+    adds r1, r3
+    ldr r3, =0x400
+    adds r1, r3
+    ldr r2, [r1]
+    
+    pop {r3}              
+    mov lr, r3
+    adds r0, #16          
+    ldmia r0!, {r4-r7}    
+    mov r8, r4
+    mov r9, r5
+    mov r10, r6
+    mov r11, r7
+    subs r0, #32          
+    ldmia r0!, {r4-r7}    
+    adds r0, #16
+
+    msr psp, r0   
+    ldr r0, [r0, #20] // On va directement au LR (TOS qui est sur r0 - (5 * 4) => LR)
+    mov lr, r0
+    mrs r0, control
+    ldr r0, =0x2
+    msr control, r0
+    isb
+    ldr r0, =#16
+    ldr r1, =#0
+    bl irq_set_enabled
+    CPSIE I
+    
+    ldr r0, =0xfffffffd
+    mov lr, r0
     bx lr
 
 .data

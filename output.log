@@ -1,4337 +1,1146 @@
 Task: 10
-D_CS : 135ms
-R_T 0 : 0ms
-R_T 1 : 0ms
-R_T 2 : 1ms
-F_CS : 2ms
-Task 3
-Task 3
-Task 3
-D_CS : 134ms
-F_CS : 134ms
-Task 3
-Task 3
-D_CS : 268ms
-F_CS : 268ms
-Task 3
-Task 3
-Task 3
-D_CS : 403ms
-F_CS : 403ms
-Task 3
-Task 3
-D_CS : 537ms
-F_CS : 537ms
-D_CS : 671ms
-R_T 2 : 671ms
-F_CS : 671ms
-D_T 1 : 672ms
-F_T 1 : 785ms
-D_CS : 805ms
-F_CS : 805ms
-Task 3
-Task 3
-Task 3
-D_CS : 940ms
-F_CS : 940ms
-Task 3
-Task 3
-D_CS : 1074ms
-F_CS : 1074ms
-Task 3
-Task 3
-Task 3
-D_CS : 1208ms
-R_T 1 : 1208ms
-F_CS : 1208ms
-Task 3
-Task 3
-D_CS : 1342ms
-F_CS : 1342ms
-D_CS : 1476ms
-R_T 2 : 1476ms
-F_CS : 1476ms
-Task 3
-Task 3
-Task 3
-D_CS : 1611ms
-F_CS : 1611ms
-Task 3
-Task 3
-D_CS : 1745ms
-F_CS : 1745ms
-Task 3
-Task 3
-Task 3
-D_CS : 1879ms
-F_CS : 1879ms
-Task 3
-Task 3
-D_CS : 2013ms
-F_CS : 2013ms
-D_CS : 2148ms
-R_T 2 : 2148ms
-F_CS : 2148ms
-D_T 1 : 2149ms
-F_T 1 : 2262ms
-D_CS : 2282ms
-R_T 1 : 2282ms
-F_CS : 2282ms
-Task 3
-Task 3
-Task 3
-D_CS : 2416ms
-F_CS : 2416ms
-Task 3
-Task 3
-D_CS : 2550ms
-F_CS : 2550ms
-Task 3
-Task 3
-Task 3
-D_CS : 2684ms
-F_CS : 2684ms
-Task 3
-Task 3
-D_CS : 2819ms
-F_CS : 2819ms
-D_CS : 2953ms
-R_T 2 : 2953ms
-F_CS : 2953ms
-Task 3
-Task 3
-Task 3
-D_CS : 3087ms
-F_CS : 3087ms
-Task 3
-Task 3
-D_CS : 3221ms
-F_CS : 3221ms
-Task 3
-Task 3
-Task 3
-D_CS : 3355ms
-F_CS : 3356ms
-Task 3
-Task 3
-D_CS : 3490ms
-F_CS : 3490ms
-D_CS : 3624ms
-R_T 2 : 3624ms
-F_CS : 3624ms
-D_T 1 : 3625ms
-F_T 1 : 3738ms
-D_CS : 3758ms
-R_T 1 : 3758ms
-F_CS : 3758ms
-Task 3
-Task 3
-Task 3
-D_CS : 3892ms
-F_CS : 3892ms
-Task 3
-Task 3
-D_CS : 4027ms
-F_CS : 4027ms
-Task 3
-Task 3
-Task 3
-D_CS : 4161ms
-F_CS : 4161ms
-Task 3
-Task 3
-D_CS : 4295ms
-F_CS : 4295ms
-D_CS : 4429ms
-R_T 2 : 4429ms
-F_CS : 4429ms
-Task 3
-Task 3
-Task 3
-D_CS : 4563ms
-F_CS : 4563ms
-Task 3
-Task 3
-D_CS : 4698ms
-F_CS : 4698ms
-Task 3
-Task 3
-Task 3
-D_CS : 4832ms
-F_CS : 4832ms
-Task 3
-Task 3
-D_CS : 4966ms
-F_CS : 4966ms
-D_CS : 5100ms
-R_T 2 : 5100ms
-F_CS : 5100ms
-D_T 1 : 5101ms
-F_T 1 : 5215ms
-D_CS : 5235ms
-R_T 1 : 5235ms
-F_CS : 5235ms
-Task 3
-Task 3
-Task 3
-D_CS : 5369ms
-F_CS : 5369ms
-Task 3
-Task 3
-D_CS : 5503ms
-F_CS : 5503ms
-Task 3
-Task 3
-Task 3
-D_CS : 5637ms
-F_CS : 5637ms
-Task 3
-Task 3
-D_CS : 5771ms
-F_CS : 5771ms
-D_CS : 5906ms
-R_T 2 : 5906ms
-F_CS : 5906ms
-Task 3
-Task 3
-Task 3
-D_CS : 6040ms
-F_CS : 6040ms
-Task 3
-Task 3
-D_CS : 6174ms
-F_CS : 6174ms
-Task 3
-Task 3
-Task 3
-D_CS : 6308ms
-F_CS : 6308ms
-Task 3
-Task 3
-D_CS : 6442ms
-F_CS : 6443ms
-D_CS : 6577ms
-R_T 2 : 6577ms
-F_CS : 6577ms
-D_T 1 : 6578ms
-F_T 1 : 6691ms
-D_CS : 6711ms
-R_T 1 : 6711ms
-F_CS : 6711ms
-Task 3
-Task 3
-Task 3
-D_CS : 6845ms
-F_CS : 6845ms
-Task 3
-Task 3
-D_CS : 6979ms
-F_CS : 6979ms
-Task 3
-Task 3
-Task 3
-D_CS : 7114ms
-F_CS : 7114ms
-Task 3
-Task 3
-D_CS : 7248ms
-F_CS : 7248ms
-D_CS : 7382ms
-R_T 2 : 7382ms
-F_CS : 7382ms
-Task 3
-Task 3
-Task 3
-D_CS : 7516ms
-F_CS : 7516ms
-Task 3
-Task 3
-D_CS : 7650ms
-F_CS : 7650ms
-Task 3
-Task 3
-Task 3
-D_CS : 7785ms
-F_CS : 7785ms
-Task 3
-Task 3
-D_CS : 7919ms
-F_CS : 7919ms
-D_CS : 8053ms
-R_T 2 : 8053ms
-F_CS : 8053ms
-D_T 1 : 8054ms
-F_T 1 : 8168ms
-D_CS : 8187ms
-R_T 1 : 8187ms
-F_CS : 8187ms
-Task 3
-Task 3
-Task 3
-D_CS : 8322ms
-F_CS : 8322ms
-Task 3
-Task 3
-D_CS : 8456ms
-F_CS : 8456ms
-Task 3
-Task 3
-Task 3
-D_CS : 8590ms
-F_CS : 8590ms
-Task 3
-Task 3
-D_CS : 8724ms
-F_CS : 8724ms
-D_CS : 8858ms
-R_T 2 : 8858ms
-F_CS : 8858ms
-Task 3
-Task 3
-Task 3
-D_CS : 8993ms
-F_CS : 8993ms
-Task 3
-Task 3
-D_CS : 9127ms
-F_CS : 9127ms
-Task 3
-Task 3
-Task 3
-D_CS : 9261ms
-F_CS : 9261ms
-Task 3
-Task 3
-D_CS : 9395ms
-F_CS : 9395ms
-D_CS : 9529ms
-R_T 2 : 9530ms
-F_CS : 9530ms
-D_T 1 : 9531ms
-F_T 1 : 9644ms
-D_CS : 9664ms
-R_T 1 : 9664ms
-F_CS : 9664ms
-Task 3
-Task 3
-Task 3
-D_CS : 9798ms
-F_CS : 9798ms
-Task 3
-Task 3
-D_CS : 9932ms
-F_CS : 9932ms
-Task 3
-Task 3
-Task 3
-D_CS : 10066ms
-F_CS : 10066ms
-Task 3
-Task 3
-D_CS : 10201ms
-F_CS : 10201ms
-D_CS : 10335ms
-R_T 2 : 10335ms
-F_CS : 10335ms
-Task 3
-Task 3
-Task 3
-D_CS : 10469ms
-F_CS : 10469ms
-Task 3
-Task 3
-D_CS : 10603ms
-F_CS : 10603ms
-Task 3
-Task 3
-Task 3
-D_CS : 10737ms
-F_CS : 10737ms
-Task 3
-Task 3
-D_CS : 10872ms
-F_CS : 10872ms
-D_CS : 11006ms
-R_T 2 : 11006ms
-F_CS : 11006ms
-D_T 1 : 11007ms
-F_T 1 : 11121ms
-D_CS : 11140ms
-R_T 1 : 11140ms
-F_CS : 11140ms
-Task 3
-Task 3
-Task 3
-D_CS : 11274ms
-F_CS : 11274ms
-Task 3
-Task 3
-D_CS : 11409ms
-F_CS : 11409ms
-Task 3
-Task 3
-Task 3
-D_CS : 11543ms
-F_CS : 11543ms
-Task 3
-Task 3
-D_CS : 11677ms
-F_CS : 11677ms
-D_CS : 11811ms
-R_T 2 : 11811ms
-F_CS : 11811ms
-Task 3
-Task 3
-Task 3
-D_CS : 11945ms
-F_CS : 11945ms
-Task 3
-Task 3
-D_CS : 12080ms
-F_CS : 12080ms
-Task 3
-Task 3
-Task 3
-D_CS : 12214ms
-F_CS : 12214ms
-Task 3
-Task 3
-D_CS : 12348ms
-F_CS : 12348ms
-D_CS : 12482ms
-R_T 2 : 12482ms
-F_CS : 12482ms
-D_T 1 : 12484ms
-F_T 1 : 12597ms
-D_CS : 12616ms
-R_T 1 : 12617ms
-F_CS : 12617ms
-Task 3
-Task 3
-Task 3
-D_CS : 12751ms
-F_CS : 12751ms
-Task 3
-Task 3
-D_CS : 12885ms
-F_CS : 12885ms
-Task 3
-Task 3
-Task 3
-D_CS : 13019ms
-F_CS : 13019ms
-Task 3
-Task 3
-D_CS : 13153ms
-F_CS : 13153ms
-D_CS : 13288ms
-R_T 2 : 13288ms
-F_CS : 13288ms
-Task 3
-Task 3
-Task 3
-D_CS : 13422ms
-F_CS : 13422ms
-Task 3
-Task 3
-D_CS : 13556ms
-F_CS : 13556ms
-Task 3
-Task 3
-Task 3
-D_CS : 13690ms
-F_CS : 13690ms
-Task 3
-Task 3
-D_CS : 13824ms
-F_CS : 13824ms
-D_CS : 13959ms
-R_T 2 : 13959ms
-F_CS : 13959ms
-D_T 0 : 13960ms
-Task 1
-Task 1
-D_CS : 14093ms
-F_CS : 14093ms
-Task 1
-Task 1
-Task 1
-D_CS : 14227ms
-F_CS : 14227ms
-Task 1
-Task 1
-D_CS : 14361ms
-F_CS : 14361ms
-Task 1
-Task 1
-Task 1
-D_CS : 14496ms
-F_CS : 14496ms
-Task 1
-Task 1
-D_CS : 14630ms
-F_CS : 14630ms
-Task 1
-Task 1
-Task 1
-D_CS : 14764ms
-F_CS : 14764ms
-Task 1
-Task 1
-D_CS : 14898ms
-F_CS : 14898ms
-Task 1
-Task 1
-Task 1
-D_CS : 15032ms
-F_CS : 15032ms
-Task 1
-Task 1
-D_CS : 15167ms
-F_CS : 15167ms
-Task 1
-Task 1
-Task 1
-D_CS : 15301ms
-F_CS : 15301ms
-Task 1
-Task 1
-D_CS : 15435ms
-F_CS : 15435ms
-Task 1
-Task 1
-Task 1
-D_CS : 15569ms
-F_CS : 15569ms
-Task 1
-Task 1
-D_CS : 15704ms
-F_CS : 15704ms
-Task 1
-Task 1
-Task 1
-D_CS : 15838ms
-F_CS : 15838ms
-Task 1
-Task 1
-Task 1
-D_CS : 15972ms
-F_CS : 15972ms
-Task 1
-Task 1
-D_CS : 16106ms
-F_CS : 16106ms
-Task 1
-Task 1
-Task 1
-D_CS : 16240ms
-F_CS : 16240ms
-Task 1
-Task 1
-D_CS : 16375ms
-F_CS : 16375ms
-Task 1
-Task 1
-Task 1
-D_CS : 16509ms
-F_CS : 16509ms
-Task 1
-Task 1
-D_CS : 16643ms
-F_CS : 16643ms
-Task 1
-Task 1
-Task 1
-D_CS : 16777ms
-F_CS : 16777ms
-Task 1
-Task 1
-D_CS : 16911ms
-F_CS : 16912ms
-Task 1
-Task 1
-Task 1
-D_CS : 17046ms
-F_CS : 17046ms
-Task 1
-Task 1
-D_CS : 17180ms
-F_CS : 17180ms
-Task 1
-Task 1
-Task 1
-D_CS : 17314ms
-F_CS : 17314ms
-Task 1
-Task 1
-D_CS : 17448ms
-F_CS : 17448ms
-Task 1
-Task 1
-Task 1
-D_CS : 17583ms
-F_CS : 17583ms
-Task 1
-Task 1
-Task 1
-D_CS : 17717ms
-F_CS : 17717ms
-Task 1
-Task 1
-D_CS : 17851ms
-F_CS : 17851ms
-Task 1
-Task 1
-Task 1
-D_CS : 17985ms
-F_CS : 17985ms
-Task 1
-Task 1
-D_CS : 18119ms
-F_CS : 18119ms
-Task 1
-Task 1
-Task 1
-D_CS : 18254ms
-F_CS : 18254ms
-Task 1
-Task 1
-D_CS : 18388ms
-F_CS : 18388ms
-Task 1
-Task 1
-Task 1
-D_CS : 18522ms
-F_CS : 18522ms
-Task 1
-Task 1
-D_CS : 18656ms
-F_CS : 18656ms
-Task 1
-Task 1
-Task 1
-D_CS : 18791ms
-F_CS : 18791ms
-Task 1
-Task 1
-D_CS : 18925ms
-F_CS : 18925ms
-Task 1
-Task 1
-Task 1
-D_CS : 19059ms
-F_CS : 19059ms
-Task 1
-Task 1
-Task 1
-D_CS : 19193ms
-F_CS : 19193ms
-Task 1
-F_T 0 : 19246ms
-D_CS : 19327ms
-R_T 0 : 19327ms
-F_CS : 19327ms
-D_T 1 : 19329ms
-F_T 1 : 19442ms
-D_CS : 19462ms
-R_T 1 : 19462ms
-F_CS : 19462ms
-Task 3
-Task 3
-Task 3
-D_CS : 19596ms
-F_CS : 19596ms
-Task 3
-Task 3
-D_CS : 19730ms
-F_CS : 19730ms
-Task 3
-Task 3
-Task 3
-D_CS : 19864ms
-F_CS : 19864ms
-Task 3
-Task 3
-D_CS : 19998ms
-F_CS : 19999ms
-D_CS : 20133ms
-R_T 2 : 20133ms
-F_CS : 20133ms
-Task 3
-Task 3
-Task 3
-D_CS : 20267ms
-F_CS : 20267ms
-Task 3
-Task 3
-D_CS : 20401ms
-F_CS : 20401ms
-Task 3
-Task 3
-Task 3
-D_CS : 20535ms
-F_CS : 20535ms
-Task 3
-Task 3
-D_CS : 20670ms
-F_CS : 20670ms
-D_CS : 20804ms
-R_T 2 : 20804ms
-F_CS : 20804ms
-D_T 1 : 20805ms
-F_T 1 : 20919ms
-D_CS : 20938ms
-R_T 1 : 20938ms
-F_CS : 20938ms
-Task 3
-Task 3
-Task 3
-D_CS : 21072ms
-F_CS : 21072ms
-Task 3
-Task 3
-D_CS : 21206ms
-F_CS : 21206ms
-Task 3
-Task 3
-Task 3
-D_CS : 21341ms
-F_CS : 21341ms
-Task 3
-Task 3
-D_CS : 21475ms
-F_CS : 21475ms
-D_CS : 21609ms
-R_T 2 : 21609ms
-F_CS : 21609ms
-Task 3
-Task 3
-Task 3
-D_CS : 21743ms
-F_CS : 21743ms
-Task 3
-Task 3
-D_CS : 21878ms
-F_CS : 21878ms
-Task 3
-Task 3
-Task 3
-D_CS : 22012ms
-F_CS : 22012ms
-Task 3
-Task 3
-D_CS : 22146ms
-F_CS : 22146ms
-D_CS : 22280ms
-R_T 2 : 22280ms
-F_CS : 22280ms
-D_T 1 : 22282ms
-F_T 1 : 22395ms
-D_CS : 22414ms
-R_T 1 : 22414ms
-F_CS : 22414ms
-Task 3
-Task 3
-Task 3
-D_CS : 22549ms
-F_CS : 22549ms
-Task 3
-Task 3
-D_CS : 22683ms
-F_CS : 22683ms
-Task 3
-Task 3
-Task 3
-D_CS : 22817ms
-F_CS : 22817ms
-Task 3
-Task 3
-D_CS : 22951ms
-F_CS : 22951ms
-D_CS : 23085ms
-R_T 2 : 23086ms
-F_CS : 23086ms
-Task 3
-Task 3
-Task 3
-D_CS : 23220ms
-F_CS : 23220ms
-Task 3
-Task 3
-D_CS : 23354ms
-F_CS : 23354ms
-Task 3
-Task 3
-Task 3
-D_CS : 23488ms
-F_CS : 23488ms
-Task 3
-Task 3
-D_CS : 23622ms
-F_CS : 23622ms
-D_CS : 23757ms
-R_T 2 : 23757ms
-F_CS : 23757ms
-D_T 1 : 23758ms
-F_T 1 : 23871ms
-D_CS : 23891ms
-R_T 1 : 23891ms
-F_CS : 23891ms
-Task 3
-Task 3
-Task 3
-D_CS : 24025ms
-F_CS : 24025ms
-Task 3
-Task 3
-D_CS : 24159ms
-F_CS : 24159ms
-Task 3
-Task 3
-Task 3
-D_CS : 24293ms
-F_CS : 24293ms
-Task 3
-Task 3
-D_CS : 24428ms
-F_CS : 24428ms
-D_CS : 24562ms
-R_T 2 : 24562ms
-F_CS : 24562ms
-Task 3
-Task 3
-Task 3
-D_CS : 24696ms
-F_CS : 24696ms
-Task 3
-Task 3
-D_CS : 24830ms
-F_CS : 24830ms
-Task 3
-Task 3
-Task 3
-D_CS : 24965ms
-F_CS : 24965ms
-Task 3
-Task 3
-D_CS : 25099ms
-F_CS : 25099ms
-D_CS : 25233ms
-R_T 2 : 25233ms
-F_CS : 25233ms
-D_T 1 : 25234ms
-F_T 1 : 25348ms
-D_CS : 25367ms
-R_T 1 : 25367ms
-F_CS : 25367ms
-Task 3
-Task 3
-Task 3
-D_CS : 25501ms
-F_CS : 25501ms
-Task 3
-Task 3
-D_CS : 25636ms
-F_CS : 25636ms
-Task 3
-Task 3
-Task 3
-D_CS : 25770ms
-F_CS : 25770ms
-Task 3
-Task 3
-D_CS : 25904ms
-F_CS : 25904ms
-D_CS : 26038ms
-R_T 2 : 26038ms
-F_CS : 26038ms
-Task 3
-Task 3
-Task 3
-D_CS : 26172ms
-F_CS : 26173ms
-Task 3
-Task 3
-D_CS : 26307ms
-F_CS : 26307ms
-Task 3
-Task 3
-Task 3
-D_CS : 26441ms
-F_CS : 26441ms
-Task 3
-Task 3
-D_CS : 26575ms
-F_CS : 26575ms
-D_CS : 26709ms
-R_T 2 : 26709ms
-F_CS : 26709ms
-D_T 1 : 26711ms
-F_T 1 : 26824ms
-D_CS : 26844ms
-R_T 1 : 26844ms
-F_CS : 26844ms
-Task 3
-Task 3
-Task 3
-D_CS : 26978ms
-F_CS : 26978ms
-Task 3
-Task 3
-D_CS : 27112ms
-F_CS : 27112ms
-Task 3
-Task 3
-Task 3
-D_CS : 27246ms
-F_CS : 27246ms
-Task 3
-Task 3
-D_CS : 27380ms
-F_CS : 27380ms
-D_CS : 27515ms
-R_T 2 : 27515ms
-F_CS : 27515ms
-Task 3
-Task 3
-Task 3
-D_CS : 27649ms
-F_CS : 27649ms
-Task 3
-Task 3
-D_CS : 27783ms
-F_CS : 27783ms
-Task 3
-Task 3
-Task 3
-D_CS : 27917ms
-F_CS : 27917ms
-Task 3
-Task 3
-D_CS : 28052ms
-F_CS : 28052ms
-D_CS : 28186ms
-R_T 2 : 28186ms
-F_CS : 28186ms
-D_T 1 : 28187ms
-F_T 1 : 28301ms
-D_CS : 28320ms
-R_T 1 : 28320ms
-F_CS : 28320ms
-Task 3
-Task 3
-Task 3
-D_CS : 28454ms
-F_CS : 28454ms
-Task 3
-Task 3
-D_CS : 28588ms
-F_CS : 28588ms
-Task 3
-Task 3
-Task 3
-D_CS : 28723ms
-F_CS : 28723ms
-Task 3
-Task 3
-D_CS : 28857ms
-F_CS : 28857ms
-D_CS : 28991ms
-R_T 2 : 28991ms
-F_CS : 28991ms
-Task 3
-Task 3
-Task 3
-D_CS : 29125ms
-F_CS : 29125ms
-Task 3
-Task 3
-D_CS : 29259ms
-F_CS : 29260ms
-Task 3
-Task 3
-Task 3
-D_CS : 29394ms
-F_CS : 29394ms
-Task 3
-Task 3
-D_CS : 29528ms
-F_CS : 29528ms
-D_CS : 29662ms
-R_T 2 : 29662ms
-F_CS : 29662ms
-D_T 1 : 29664ms
-F_T 1 : 29777ms
-D_CS : 29796ms
-R_T 1 : 29796ms
-F_CS : 29796ms
-Task 3
-Task 3
-Task 3
-D_CS : 29931ms
-F_CS : 29931ms
-Task 3
-Task 3
-D_CS : 30065ms
-F_CS : 30065ms
-Task 3
-Task 3
-Task 3
-D_CS : 30199ms
-F_CS : 30199ms
-Task 3
-Task 3
-D_CS : 30333ms
-F_CS : 30333ms
-D_CS : 30467ms
-R_T 2 : 30467ms
-F_CS : 30468ms
-Task 3
-Task 3
-Task 3
-D_CS : 30602ms
-F_CS : 30602ms
-Task 3
-Task 3
-D_CS : 30736ms
-F_CS : 30736ms
-Task 3
-Task 3
-Task 3
-D_CS : 30870ms
-F_CS : 30870ms
-Task 3
-Task 3
-D_CS : 31004ms
-F_CS : 31004ms
-D_CS : 31139ms
-R_T 2 : 31139ms
-F_CS : 31139ms
-D_T 1 : 31140ms
-F_T 1 : 31253ms
-D_CS : 31273ms
-R_T 1 : 31273ms
-F_CS : 31273ms
-Task 3
-Task 3
-Task 3
-D_CS : 31407ms
-F_CS : 31407ms
-Task 3
-Task 3
-D_CS : 31541ms
-F_CS : 31541ms
-Task 3
-Task 3
-Task 3
-D_CS : 31675ms
-F_CS : 31675ms
-Task 3
-Task 3
-D_CS : 31810ms
-F_CS : 31810ms
-D_CS : 31944ms
-R_T 2 : 31944ms
-F_CS : 31944ms
-Task 3
-Task 3
-Task 3
-D_CS : 32078ms
-F_CS : 32078ms
-Task 3
-Task 3
-D_CS : 32212ms
-F_CS : 32212ms
-Task 3
-Task 3
-Task 3
-D_CS : 32346ms
-F_CS : 32347ms
-Task 3
-Task 3
-D_CS : 32481ms
-F_CS : 32481ms
-D_CS : 32615ms
-R_T 2 : 32615ms
-F_CS : 32615ms
-D_T 1 : 32616ms
-F_T 1 : 32730ms
-D_CS : 32749ms
-R_T 1 : 32749ms
-F_CS : 32749ms
-Task 3
-Task 3
-Task 3
-D_CS : 32883ms
-F_CS : 32883ms
-Task 3
-Task 3
-D_CS : 33018ms
-F_CS : 33018ms
-Task 3
-Task 3
-Task 3
-D_CS : 33152ms
-F_CS : 33152ms
-Task 3
-Task 3
-D_CS : 33286ms
-F_CS : 33286ms
-D_CS : 33420ms
-R_T 2 : 33420ms
-F_CS : 33420ms
-Task 3
-Task 3
-Task 3
-D_CS : 33554ms
-F_CS : 33554ms
-Task 3
-Task 3
-D_CS : 33689ms
-F_CS : 33689ms
-Task 3
-Task 3
-Task 3
-D_CS : 33823ms
-F_CS : 33823ms
-Task 3
-Task 3
-D_CS : 33957ms
-F_CS : 33957ms
-D_CS : 34091ms
-R_T 2 : 34091ms
-F_CS : 34091ms
-D_T 0 : 34093ms
-Task 1
-Task 1
-D_CS : 34226ms
-F_CS : 34226ms
-Task 1
-Task 1
-Task 1
-D_CS : 34360ms
-F_CS : 34360ms
-Task 1
-Task 1
-D_CS : 34494ms
-F_CS : 34494ms
-Task 1
-Task 1
-Task 1
-D_CS : 34628ms
-F_CS : 34628ms
-Task 1
-Task 1
-D_CS : 34762ms
-F_CS : 34762ms
-Task 1
-Task 1
-Task 1
-D_CS : 34897ms
-F_CS : 34897ms
-Task 1
-Task 1
-D_CS : 35031ms
-F_CS : 35031ms
-Task 1
-Task 1
-Task 1
-D_CS : 35165ms
-F_CS : 35165ms
-Task 1
-Task 1
-D_CS : 35299ms
-F_CS : 35299ms
-Task 1
-Task 1
-Task 1
-D_CS : 35434ms
-F_CS : 35434ms
-Task 1
-Task 1
-D_CS : 35568ms
-F_CS : 35568ms
-Task 1
-Task 1
-Task 1
-D_CS : 35702ms
-F_CS : 35702ms
-Task 1
-Task 1
-D_CS : 35836ms
-F_CS : 35836ms
-Task 1
-Task 1
-Task 1
-D_CS : 35970ms
-F_CS : 35970ms
-Task 1
-Task 1
-Task 1
-D_CS : 36105ms
-F_CS : 36105ms
-Task 1
-Task 1
-D_CS : 36239ms
-F_CS : 36239ms
-Task 1
-Task 1
-Task 1
-D_CS : 36373ms
-F_CS : 36373ms
-Task 1
-Task 1
-D_CS : 36507ms
-F_CS : 36507ms
-Task 1
-Task 1
-Task 1
-D_CS : 36641ms
-F_CS : 36642ms
-Task 1
-Task 1
-D_CS : 36776ms
-F_CS : 36776ms
-Task 1
-Task 1
-Task 1
-D_CS : 36910ms
-F_CS : 36910ms
-Task 1
-Task 1
-D_CS : 37044ms
-F_CS : 37044ms
-Task 1
-Task 1
-Task 1
-D_CS : 37178ms
-F_CS : 37178ms
-Task 1
-Task 1
-D_CS : 37313ms
-F_CS : 37313ms
-Task 1
-Task 1
-Task 1
-D_CS : 37447ms
-F_CS : 37447ms
-Task 1
-Task 1
-D_CS : 37581ms
-F_CS : 37581ms
-Task 1
-Task 1
-Task 1
-D_CS : 37715ms
-F_CS : 37715ms
-Task 1
-Task 1
-Task 1
-D_CS : 37849ms
-F_CS : 37849ms
-Task 1
-Task 1
-D_CS : 37984ms
-F_CS : 37984ms
-Task 1
-Task 1
-Task 1
-D_CS : 38118ms
-F_CS : 38118ms
-Task 1
-Task 1
-D_CS : 38252ms
-F_CS : 38252ms
-Task 1
-Task 1
-Task 1
-D_CS : 38386ms
-F_CS : 38386ms
-Task 1
-Task 1
-D_CS : 38521ms
-F_CS : 38521ms
-Task 1
-Task 1
-Task 1
-D_CS : 38655ms
-F_CS : 38655ms
-Task 1
-Task 1
-D_CS : 38789ms
-F_CS : 38789ms
-Task 1
-Task 1
-Task 1
-D_CS : 38923ms
-F_CS : 38923ms
-Task 1
-Task 1
-D_CS : 39057ms
-F_CS : 39057ms
-Task 1
-Task 1
-Task 1
-D_CS : 39192ms
-F_CS : 39192ms
-Task 1
-Task 1
-Task 1
-D_CS : 39326ms
-F_CS : 39326ms
-Task 1
-F_T 0 : 39378ms
-D_CS : 39460ms
-R_T 0 : 39460ms
-F_CS : 39460ms
-D_T 1 : 39461ms
-F_T 1 : 39575ms
-D_CS : 39594ms
-R_T 1 : 39594ms
-F_CS : 39594ms
-Task 3
-Task 3
-Task 3
-D_CS : 39728ms
-F_CS : 39729ms
-Task 3
-Task 3
-D_CS : 39863ms
-F_CS : 39863ms
-Task 3
-Task 3
-Task 3
-D_CS : 39997ms
-F_CS : 39997ms
-Task 3
-Task 3
-D_CS : 40131ms
-F_CS : 40131ms
-D_CS : 40265ms
-R_T 2 : 40265ms
-F_CS : 40265ms
-Task 3
-Task 3
-Task 3
-D_CS : 40400ms
-F_CS : 40400ms
-Task 3
-Task 3
-D_CS : 40534ms
-F_CS : 40534ms
-Task 3
-Task 3
-Task 3
-D_CS : 40668ms
-F_CS : 40668ms
-Task 3
-Task 3
-D_CS : 40802ms
-F_CS : 40802ms
-D_CS : 40936ms
-R_T 2 : 40936ms
-F_CS : 40937ms
-D_T 1 : 40938ms
-F_T 1 : 41051ms
-D_CS : 41071ms
-R_T 1 : 41071ms
-F_CS : 41071ms
-Task 3
-Task 3
-Task 3
-D_CS : 41205ms
-F_CS : 41205ms
-Task 3
-Task 3
-D_CS : 41339ms
-F_CS : 41339ms
-Task 3
-Task 3
-Task 3
-D_CS : 41473ms
-F_CS : 41473ms
-Task 3
-Task 3
-D_CS : 41608ms
-F_CS : 41608ms
-D_CS : 41742ms
-R_T 2 : 41742ms
-F_CS : 41742ms
-Task 3
-Task 3
-Task 3
-D_CS : 41876ms
-F_CS : 41876ms
-Task 3
-Task 3
-D_CS : 42010ms
-F_CS : 42010ms
-Task 3
-Task 3
-Task 3
-D_CS : 42144ms
-F_CS : 42144ms
-Task 3
-Task 3
-D_CS : 42279ms
-F_CS : 42279ms
-D_CS : 42413ms
-R_T 2 : 42413ms
-F_CS : 42413ms
-D_T 1 : 42414ms
-F_T 1 : 42528ms
-D_CS : 42547ms
-R_T 1 : 42547ms
-F_CS : 42547ms
-Task 3
-Task 3
-Task 3
-D_CS : 42681ms
-F_CS : 42681ms
-Task 3
-Task 3
-D_CS : 42815ms
-F_CS : 42816ms
-Task 3
-Task 3
-Task 3
-D_CS : 42950ms
-F_CS : 42950ms
-Task 3
-Task 3
-D_CS : 43084ms
-F_CS : 43084ms
-D_CS : 43218ms
-R_T 2 : 43218ms
-F_CS : 43218ms
-Task 3
-Task 3
-Task 3
-D_CS : 43352ms
-F_CS : 43352ms
-Task 3
-Task 3
-D_CS : 43487ms
-F_CS : 43487ms
-Task 3
-Task 3
-Task 3
-D_CS : 43621ms
-F_CS : 43621ms
-Task 3
-Task 3
-D_CS : 43755ms
-F_CS : 43755ms
-D_CS : 43889ms
-R_T 2 : 43889ms
-F_CS : 43889ms
-D_T 1 : 43891ms
-F_T 1 : 44004ms
-D_CS : 44023ms
-R_T 1 : 44023ms
-F_CS : 44024ms
-Task 3
-Task 3
-Task 3
-D_CS : 44158ms
-F_CS : 44158ms
-Task 3
-Task 3
-D_CS : 44292ms
-F_CS : 44292ms
-Task 3
-Task 3
-Task 3
-D_CS : 44426ms
-F_CS : 44426ms
-Task 3
-Task 3
-D_CS : 44560ms
-F_CS : 44560ms
-D_CS : 44695ms
-R_T 2 : 44695ms
-F_CS : 44695ms
-Task 3
-Task 3
-Task 3
-D_CS : 44829ms
-F_CS : 44829ms
-Task 3
-Task 3
-D_CS : 44963ms
-F_CS : 44963ms
-Task 3
-Task 3
-Task 3
-D_CS : 45097ms
-F_CS : 45097ms
-Task 3
-Task 3
-D_CS : 45231ms
-F_CS : 45231ms
-D_CS : 45366ms
-R_T 2 : 45366ms
-F_CS : 45366ms
-D_T 1 : 45367ms
-F_T 1 : 45480ms
-D_CS : 45500ms
-R_T 1 : 45500ms
-F_CS : 45500ms
-Task 3
-Task 3
-Task 3
-D_CS : 45634ms
-F_CS : 45634ms
-Task 3
-Task 3
-D_CS : 45768ms
-F_CS : 45768ms
-Task 3
-Task 3
-Task 3
-D_CS : 45902ms
-F_CS : 45903ms
-Task 3
-Task 3
-D_CS : 46037ms
-F_CS : 46037ms
-D_CS : 46171ms
-R_T 2 : 46171ms
-F_CS : 46171ms
-Task 3
-Task 3
-Task 3
-D_CS : 46305ms
-F_CS : 46305ms
-Task 3
-Task 3
-D_CS : 46439ms
-F_CS : 46439ms
-Task 3
-Task 3
-Task 3
-D_CS : 46574ms
-F_CS : 46574ms
-Task 3
-Task 3
-D_CS : 46708ms
-F_CS : 46708ms
-D_CS : 46842ms
-R_T 2 : 46842ms
-F_CS : 46842ms
-D_T 1 : 46843ms
-F_T 1 : 46957ms
-D_CS : 46976ms
-R_T 1 : 46976ms
-F_CS : 46976ms
-Task 3
-Task 3
-Task 3
-D_CS : 47110ms
-F_CS : 47110ms
-Task 3
-Task 3
-D_CS : 47245ms
-F_CS : 47245ms
-Task 3
-Task 3
-Task 3
-D_CS : 47379ms
-F_CS : 47379ms
-Task 3
-Task 3
-D_CS : 47513ms
-F_CS : 47513ms
-D_CS : 47647ms
-R_T 2 : 47647ms
-F_CS : 47647ms
-Task 3
-Task 3
-Task 3
-D_CS : 47782ms
-F_CS : 47782ms
-Task 3
-Task 3
-D_CS : 47916ms
-F_CS : 47916ms
-Task 3
-Task 3
-Task 3
-D_CS : 48050ms
-F_CS : 48050ms
-Task 3
-Task 3
-D_CS : 48184ms
-F_CS : 48184ms
-D_CS : 48318ms
-R_T 2 : 48318ms
-F_CS : 48318ms
-D_T 1 : 48320ms
-F_T 1 : 48433ms
-D_CS : 48453ms
-R_T 1 : 48453ms
-F_CS : 48453ms
-Task 3
-Task 3
-Task 3
-D_CS : 48587ms
-F_CS : 48587ms
-Task 3
-Task 3
-D_CS : 48721ms
-F_CS : 48721ms
-Task 3
-Task 3
-Task 3
-D_CS : 48855ms
-F_CS : 48855ms
-Task 3
-Task 3
-D_CS : 48989ms
-F_CS : 48990ms
-D_CS : 49124ms
-R_T 2 : 49124ms
-F_CS : 49124ms
-Task 3
-Task 3
-Task 3
-D_CS : 49258ms
-F_CS : 49258ms
-Task 3
-Task 3
-D_CS : 49392ms
-F_CS : 49392ms
-Task 3
-Task 3
-Task 3
-D_CS : 49526ms
-F_CS : 49526ms
-Task 3
-Task 3
-D_CS : 49661ms
-F_CS : 49661ms
-D_CS : 49795ms
-R_T 2 : 49795ms
-F_CS : 49795ms
-D_T 1 : 49796ms
-F_T 1 : 49910ms
-D_CS : 49929ms
-R_T 1 : 49929ms
-F_CS : 49929ms
-Task 3
-Task 3
-Task 3
-D_CS : 50063ms
-F_CS : 50063ms
-Task 3
-Task 3
-D_CS : 50197ms
-F_CS : 50197ms
-Task 3
-Task 3
-Task 3
-D_CS : 50332ms
-F_CS : 50332ms
-Task 3
-Task 3
-D_CS : 50466ms
-F_CS : 50466ms
-D_CS : 50600ms
-R_T 2 : 50600ms
-F_CS : 50600ms
-Task 3
-Task 3
-Task 3
-D_CS : 50734ms
-F_CS : 50734ms
-Task 3
-Task 3
-D_CS : 50869ms
-F_CS : 50869ms
-Task 3
-Task 3
-Task 3
-D_CS : 51003ms
-F_CS : 51003ms
-Task 3
-Task 3
-D_CS : 51137ms
-F_CS : 51137ms
-D_CS : 51271ms
-R_T 2 : 51271ms
-F_CS : 51271ms
-D_T 1 : 51273ms
-F_T 1 : 51386ms
-D_CS : 51405ms
-R_T 1 : 51405ms
-F_CS : 51405ms
-Task 3
-Task 3
-Task 3
-D_CS : 51540ms
-F_CS : 51540ms
-Task 3
-Task 3
-D_CS : 51674ms
-F_CS : 51674ms
-Task 3
-Task 3
-Task 3
-D_CS : 51808ms
-F_CS : 51808ms
-Task 3
-Task 3
-D_CS : 51942ms
-F_CS : 51942ms
-D_CS : 52077ms
-R_T 2 : 52077ms
-F_CS : 52077ms
-Task 3
-Task 3
-Task 3
-D_CS : 52211ms
-F_CS : 52211ms
-Task 3
-Task 3
-D_CS : 52345ms
-F_CS : 52345ms
-Task 3
-Task 3
-Task 3
-D_CS : 52479ms
-F_CS : 52479ms
-Task 3
-Task 3
-D_CS : 52613ms
-F_CS : 52613ms
-D_CS : 52748ms
-R_T 2 : 52748ms
-F_CS : 52748ms
-D_T 1 : 52749ms
-F_T 1 : 52862ms
-D_CS : 52882ms
-R_T 1 : 52882ms
-F_CS : 52882ms
-Task 3
-Task 3
-Task 3
-D_CS : 53016ms
-F_CS : 53016ms
-Task 3
-Task 3
-D_CS : 53150ms
-F_CS : 53150ms
-Task 3
-Task 3
-Task 3
-D_CS : 53284ms
-F_CS : 53285ms
-Task 3
-Task 3
-D_CS : 53419ms
-F_CS : 53419ms
-D_CS : 53553ms
-R_T 2 : 53553ms
-F_CS : 53553ms
-Task 3
-Task 3
-Task 3
-D_CS : 53687ms
-F_CS : 53687ms
-Task 3
-Task 3
-D_CS : 53821ms
-F_CS : 53821ms
-Task 3
-Task 3
-Task 3
-D_CS : 53956ms
-F_CS : 53956ms
-Task 3
-Task 3
-D_CS : 54090ms
-F_CS : 54090ms
-D_CS : 54224ms
-R_T 2 : 54224ms
-F_CS : 54224ms
-D_T 0 : 54225ms
-Task 1
-Task 1
-D_CS : 54358ms
-F_CS : 54358ms
-Task 1
-Task 1
-Task 1
-D_CS : 54492ms
-F_CS : 54492ms
-Task 1
-Task 1
-D_CS : 54627ms
-F_CS : 54627ms
-Task 1
-Task 1
-Task 1
-D_CS : 54761ms
-F_CS : 54761ms
-Task 1
-Task 1
-D_CS : 54895ms
-F_CS : 54895ms
-Task 1
-Task 1
-Task 1
-D_CS : 55029ms
-F_CS : 55029ms
-Task 1
-Task 1
-D_CS : 55164ms
-F_CS : 55164ms
-Task 1
-Task 1
-Task 1
-D_CS : 55298ms
-F_CS : 55298ms
-Task 1
-Task 1
-D_CS : 55432ms
-F_CS : 55432ms
-Task 1
-Task 1
-Task 1
-D_CS : 55566ms
-F_CS : 55566ms
-Task 1
-Task 1
-D_CS : 55700ms
-F_CS : 55700ms
-Task 1
-Task 1
-Task 1
-D_CS : 55835ms
-F_CS : 55835ms
-Task 1
-Task 1
-D_CS : 55969ms
-F_CS : 55969ms
-Task 1
-Task 1
-Task 1
-D_CS : 56103ms
-F_CS : 56103ms
-Task 1
-Task 1
-Task 1
-D_CS : 56237ms
-F_CS : 56237ms
-Task 1
-Task 1
-D_CS : 56371ms
-F_CS : 56372ms
-Task 1
-Task 1
-Task 1
-D_CS : 56506ms
-F_CS : 56506ms
-Task 1
-Task 1
-D_CS : 56640ms
-F_CS : 56640ms
-Task 1
-Task 1
-Task 1
-D_CS : 56774ms
-F_CS : 56774ms
-Task 1
-Task 1
-D_CS : 56908ms
-F_CS : 56908ms
-Task 1
-Task 1
-Task 1
-D_CS : 57043ms
-F_CS : 57043ms
-Task 1
-Task 1
-D_CS : 57177ms
-F_CS : 57177ms
-Task 1
-Task 1
-Task 1
-D_CS : 57311ms
-F_CS : 57311ms
-Task 1
-Task 1
-D_CS : 57445ms
-F_CS : 57445ms
-Task 1
-Task 1
-Task 1
-D_CS : 57579ms
-F_CS : 57579ms
-Task 1
-Task 1
-D_CS : 57714ms
-F_CS : 57714ms
-Task 1
-Task 1
-Task 1
-D_CS : 57848ms
-F_CS : 57848ms
-Task 1
-Task 1
-Task 1
-D_CS : 57982ms
-F_CS : 57982ms
-Task 1
-Task 1
-D_CS : 58116ms
-F_CS : 58116ms
-Task 1
-Task 1
-Task 1
-D_CS : 58251ms
-F_CS : 58251ms
-Task 1
-Task 1
-D_CS : 58385ms
-F_CS : 58385ms
-Task 1
-Task 1
-Task 1
-D_CS : 58519ms
-F_CS : 58519ms
-Task 1
-Task 1
-D_CS : 58653ms
-F_CS : 58653ms
-Task 1
-Task 1
-Task 1
-D_CS : 58787ms
-F_CS : 58787ms
-Task 1
-Task 1
-D_CS : 58922ms
-F_CS : 58922ms
-Task 1
-Task 1
-Task 1
-D_CS : 59056ms
-F_CS : 59056ms
-Task 1
-Task 1
-D_CS : 59190ms
-F_CS : 59190ms
-Task 1
-Task 1
-Task 1
-D_CS : 59324ms
-F_CS : 59324ms
-Task 1
-Task 1
-Task 1
-D_CS : 59458ms
-F_CS : 59459ms
-Task 1
-F_T 0 : 59511ms
-D_CS : 59593ms
-R_T 0 : 59593ms
-F_CS : 59593ms
-D_T 1 : 59594ms
-F_T 1 : 59708ms
-D_CS : 59727ms
-R_T 1 : 59727ms
-F_CS : 59727ms
-Task 3
-Task 3
-Task 3
-D_CS : 59861ms
-F_CS : 59861ms
-Task 3
-Task 3
-D_CS : 59995ms
-F_CS : 59995ms
-Task 3
-Task 3
-Task 3
-D_CS : 60130ms
-F_CS : 60130ms
-Task 3
-Task 3
-D_CS : 60264ms
-F_CS : 60264ms
-D_CS : 60398ms
-R_T 2 : 60398ms
-F_CS : 60398ms
-Task 3
-Task 3
-Task 3
-D_CS : 60532ms
-F_CS : 60532ms
-Task 3
-Task 3
-D_CS : 60666ms
-F_CS : 60666ms
-Task 3
-Task 3
-Task 3
-D_CS : 60801ms
-F_CS : 60801ms
-Task 3
-Task 3
-D_CS : 60935ms
-F_CS : 60935ms
-D_CS : 61069ms
-R_T 2 : 61069ms
-F_CS : 61069ms
-D_T 1 : 61070ms
-F_T 1 : 61184ms
-D_CS : 61203ms
-R_T 1 : 61203ms
-F_CS : 61203ms
-Task 3
-Task 3
-Task 3
-D_CS : 61338ms
-F_CS : 61338ms
-Task 3
-Task 3
-D_CS : 61472ms
-F_CS : 61472ms
-Task 3
-Task 3
-Task 3
-D_CS : 61606ms
-F_CS : 61606ms
-Task 3
-Task 3
-D_CS : 61740ms
-F_CS : 61740ms
-D_CS : 61874ms
-R_T 2 : 61874ms
-F_CS : 61874ms
-Task 3
-Task 3
-Task 3
-D_CS : 62009ms
-F_CS : 62009ms
-Task 3
-Task 3
-D_CS : 62143ms
-F_CS : 62143ms
-Task 3
-Task 3
-Task 3
-D_CS : 62277ms
-F_CS : 62277ms
-Task 3
-Task 3
-D_CS : 62411ms
-F_CS : 62411ms
-D_CS : 62545ms
-R_T 2 : 62546ms
-F_CS : 62546ms
-D_T 1 : 62547ms
-F_T 1 : 62660ms
-D_CS : 62680ms
-R_T 1 : 62680ms
-F_CS : 62680ms
-Task 3
-Task 3
-Task 3
-D_CS : 62814ms
-F_CS : 62814ms
-Task 3
-Task 3
-D_CS : 62948ms
-F_CS : 62948ms
-Task 3
-Task 3
-Task 3
-D_CS : 63082ms
-F_CS : 63082ms
-Task 3
-Task 3
-D_CS : 63217ms
-F_CS : 63217ms
-D_CS : 63351ms
-R_T 2 : 63351ms
-F_CS : 63351ms
-Task 3
-Task 3
-Task 3
-D_CS : 63485ms
-F_CS : 63485ms
-Task 3
-Task 3
-D_CS : 63619ms
-F_CS : 63619ms
-Task 3
-Task 3
-Task 3
-D_CS : 63753ms
-F_CS : 63753ms
-Task 3
-Task 3
-D_CS : 63888ms
-F_CS : 63888ms
-D_CS : 64022ms
-R_T 2 : 64022ms
-F_CS : 64022ms
-D_T 1 : 64023ms
-F_T 1 : 64137ms
-D_CS : 64156ms
-R_T 1 : 64156ms
-F_CS : 64156ms
-Task 3
-Task 3
-Task 3
-D_CS : 64290ms
-F_CS : 64290ms
-Task 3
-Task 3
-D_CS : 64425ms
-F_CS : 64425ms
-Task 3
-Task 3
-Task 3
-D_CS : 64559ms
-F_CS : 64559ms
-Task 3
-Task 3
-D_CS : 64693ms
-F_CS : 64693ms
-D_CS : 64827ms
-R_T 2 : 64827ms
-F_CS : 64827ms
-Task 3
-Task 3
-Task 3
-D_CS : 64961ms
-F_CS : 64961ms
-Task 3
-Task 3
-D_CS : 65096ms
-F_CS : 65096ms
-Task 3
-Task 3
-Task 3
-D_CS : 65230ms
-F_CS : 65230ms
-Task 3
-Task 3
-D_CS : 65364ms
-F_CS : 65364ms
-D_CS : 65498ms
-R_T 2 : 65498ms
-F_CS : 65498ms
-D_T 1 : 65500ms
-F_T 1 : 65613ms
-D_CS : 65632ms
-R_T 1 : 65633ms
-F_CS : 65633ms
-Task 3
-Task 3
-Task 3
-D_CS : 65767ms
-F_CS : 65767ms
-Task 3
-Task 3
-D_CS : 65901ms
-F_CS : 65901ms
-Task 3
-Task 3
-Task 3
-D_CS : 66035ms
-F_CS : 66035ms
-Task 3
-Task 3
-D_CS : 66169ms
-F_CS : 66169ms
-D_CS : 66304ms
-R_T 2 : 66304ms
-F_CS : 66304ms
-Task 3
-Task 3
-Task 3
-D_CS : 66438ms
-F_CS : 66438ms
-Task 3
-Task 3
-D_CS : 66572ms
-F_CS : 66572ms
-Task 3
-Task 3
-Task 3
-D_CS : 66706ms
-F_CS : 66706ms
-Task 3
-Task 3
-D_CS : 66840ms
-F_CS : 66840ms
-D_CS : 66975ms
-R_T 2 : 66975ms
-F_CS : 66975ms
-D_T 1 : 66976ms
-F_T 1 : 67090ms
-D_CS : 67109ms
-R_T 1 : 67109ms
-F_CS : 67109ms
-Task 3
-Task 3
-Task 3
-D_CS : 67243ms
-F_CS : 67243ms
-Task 3
-Task 3
-D_CS : 67377ms
-F_CS : 67377ms
-Task 3
-Task 3
-Task 3
-D_CS : 67512ms
-F_CS : 67512ms
-Task 3
-Task 3
-D_CS : 67646ms
-F_CS : 67646ms
-D_CS : 67780ms
-R_T 2 : 67780ms
-F_CS : 67780ms
-Task 3
-Task 3
-Task 3
-D_CS : 67914ms
-F_CS : 67914ms
-Task 3
-Task 3
-D_CS : 68048ms
-F_CS : 68048ms
-Task 3
-Task 3
-Task 3
-D_CS : 68183ms
-F_CS : 68183ms
-Task 3
-Task 3
-D_CS : 68317ms
-F_CS : 68317ms
-D_CS : 68451ms
-R_T 2 : 68451ms
-F_CS : 68451ms
-D_T 1 : 68452ms
-F_T 1 : 68566ms
-D_CS : 68585ms
-R_T 1 : 68585ms
-F_CS : 68585ms
-Task 3
-Task 3
-Task 3
-D_CS : 68719ms
-F_CS : 68720ms
-Task 3
-Task 3
-D_CS : 68854ms
-F_CS : 68854ms
-Task 3
-Task 3
-Task 3
-D_CS : 68988ms
-F_CS : 68988ms
-Task 3
-Task 3
-D_CS : 69122ms
-F_CS : 69122ms
-D_CS : 69256ms
-R_T 2 : 69256ms
-F_CS : 69256ms
-Task 3
-Task 3
-Task 3
-D_CS : 69391ms
-F_CS : 69391ms
-Task 3
-Task 3
-D_CS : 69525ms
-F_CS : 69525ms
-Task 3
-Task 3
-Task 3
-D_CS : 69659ms
-F_CS : 69659ms
-Task 3
-Task 3
-D_CS : 69793ms
-F_CS : 69793ms
-D_CS : 69927ms
-R_T 2 : 69927ms
-F_CS : 69928ms
-D_T 1 : 69929ms
-F_T 1 : 70042ms
-D_CS : 70062ms
-R_T 1 : 70062ms
-F_CS : 70062ms
-Task 3
-Task 3
-Task 3
-D_CS : 70196ms
-F_CS : 70196ms
-Task 3
-Task 3
-D_CS : 70330ms
-F_CS : 70330ms
-Task 3
-Task 3
-Task 3
-D_CS : 70464ms
-F_CS : 70464ms
-Task 3
-Task 3
-D_CS : 70599ms
-F_CS : 70599ms
-D_CS : 70733ms
-R_T 2 : 70733ms
-F_CS : 70733ms
-Task 3
-Task 3
-Task 3
-D_CS : 70867ms
-F_CS : 70867ms
-Task 3
-Task 3
-D_CS : 71001ms
-F_CS : 71001ms
-Task 3
-Task 3
-Task 3
-D_CS : 71135ms
-F_CS : 71135ms
-Task 3
-Task 3
-D_CS : 71270ms
-F_CS : 71270ms
-D_CS : 71404ms
-R_T 2 : 71404ms
-F_CS : 71404ms
-D_T 1 : 71405ms
-F_T 1 : 71519ms
-D_CS : 71538ms
-R_T 1 : 71538ms
-F_CS : 71538ms
-Task 3
-Task 3
-Task 3
-D_CS : 71672ms
-F_CS : 71672ms
-Task 3
-Task 3
-D_CS : 71807ms
-F_CS : 71807ms
-Task 3
-Task 3
-Task 3
-D_CS : 71941ms
-F_CS : 71941ms
-Task 3
-Task 3
-D_CS : 72075ms
-F_CS : 72075ms
-D_CS : 72209ms
-R_T 2 : 72209ms
-F_CS : 72209ms
-Task 3
-Task 3
-Task 3
-D_CS : 72343ms
-F_CS : 72343ms
-Task 3
-Task 3
-D_CS : 72478ms
-F_CS : 72478ms
-Task 3
-Task 3
-Task 3
-D_CS : 72612ms
-F_CS : 72612ms
-Task 3
-Task 3
-D_CS : 72746ms
-F_CS : 72746ms
-D_CS : 72880ms
-R_T 2 : 72880ms
-F_CS : 72880ms
-D_T 1 : 72882ms
-F_T 1 : 72995ms
-D_CS : 73014ms
-R_T 1 : 73015ms
-F_CS : 73015ms
-Task 3
-Task 3
-Task 3
-D_CS : 73149ms
-F_CS : 73149ms
-Task 3
-Task 3
-D_CS : 73283ms
-F_CS : 73283ms
-Task 3
-Task 3
-Task 3
-D_CS : 73417ms
-F_CS : 73417ms
-Task 3
-Task 3
-D_CS : 73551ms
-F_CS : 73551ms
-D_CS : 73686ms
-R_T 2 : 73686ms
-F_CS : 73686ms
-Task 3
-Task 3
-Task 3
-D_CS : 73820ms
-F_CS : 73820ms
-Task 3
-Task 3
-D_CS : 73954ms
-F_CS : 73954ms
-Task 3
-Task 3
-Task 3
-D_CS : 74088ms
-F_CS : 74088ms
-Task 3
-Task 3
-D_CS : 74222ms
-F_CS : 74222ms
-D_CS : 74357ms
-R_T 2 : 74357ms
-F_CS : 74357ms
-D_T 0 : 74358ms
-Task 1
-Task 1
-D_CS : 74491ms
-F_CS : 74491ms
-Task 1
-Task 1
-Task 1
-D_CS : 74625ms
-F_CS : 74625ms
-Task 1
-Task 1
-D_CS : 74759ms
-F_CS : 74759ms
-Task 1
-Task 1
-Task 1
-D_CS : 74894ms
-F_CS : 74894ms
-Task 1
-Task 1
-D_CS : 75028ms
-F_CS : 75028ms
-Task 1
-Task 1
-Task 1
-D_CS : 75162ms
-F_CS : 75162ms
-Task 1
-Task 1
-D_CS : 75296ms
-F_CS : 75296ms
-Task 1
-Task 1
-Task 1
-D_CS : 75430ms
-F_CS : 75430ms
-Task 1
-Task 1
-D_CS : 75565ms
-F_CS : 75565ms
-Task 1
-Task 1
-Task 1
-D_CS : 75699ms
-F_CS : 75699ms
-Task 1
-Task 1
-D_CS : 75833ms
-F_CS : 75833ms
-Task 1
-Task 1
-Task 1
-D_CS : 75967ms
-F_CS : 75967ms
-Task 1
-Task 1
-D_CS : 76101ms
-F_CS : 76102ms
-Task 1
-Task 1
-Task 1
-D_CS : 76236ms
-F_CS : 76236ms
-Task 1
-Task 1
-Task 1
-D_CS : 76370ms
-F_CS : 76370ms
-Task 1
-Task 1
-D_CS : 76504ms
-F_CS : 76504ms
-Task 1
-Task 1
-Task 1
-D_CS : 76638ms
-F_CS : 76638ms
-Task 1
-Task 1
-D_CS : 76773ms
-F_CS : 76773ms
-Task 1
-Task 1
-Task 1
-D_CS : 76907ms
-F_CS : 76907ms
-Task 1
-Task 1
-D_CS : 77041ms
-F_CS : 77041ms
-Task 1
-Task 1
-Task 1
-D_CS : 77175ms
-F_CS : 77175ms
-Task 1
-Task 1
-D_CS : 77309ms
-F_CS : 77309ms
-Task 1
-Task 1
-Task 1
-D_CS : 77444ms
-F_CS : 77444ms
-Task 1
-Task 1
-D_CS : 77578ms
-F_CS : 77578ms
-Task 1
-Task 1
-Task 1
-D_CS : 77712ms
-F_CS : 77712ms
-Task 1
-Task 1
-D_CS : 77846ms
-F_CS : 77846ms
-Task 1
-Task 1
-Task 1
-D_CS : 77981ms
-F_CS : 77981ms
-Task 1
-Task 1
-Task 1
-D_CS : 78115ms
-F_CS : 78115ms
-Task 1
-Task 1
-D_CS : 78249ms
-F_CS : 78249ms
-Task 1
-Task 1
-Task 1
-D_CS : 78383ms
-F_CS : 78383ms
-Task 1
-Task 1
-D_CS : 78517ms
-F_CS : 78517ms
-Task 1
-Task 1
-Task 1
-D_CS : 78652ms
-F_CS : 78652ms
-Task 1
-Task 1
-D_CS : 78786ms
-F_CS : 78786ms
-Task 1
-Task 1
-Task 1
-D_CS : 78920ms
-F_CS : 78920ms
-Task 1
-Task 1
-D_CS : 79054ms
-F_CS : 79054ms
-Task 1
-Task 1
-Task 1
-D_CS : 79188ms
-F_CS : 79189ms
-Task 1
-Task 1
-D_CS : 79323ms
-F_CS : 79323ms
-Task 1
-Task 1
-Task 1
-D_CS : 79457ms
-F_CS : 79457ms
-Task 1
-Task 1
-Task 1
-D_CS : 79591ms
-F_CS : 79591ms
-Task 1
-F_T 0 : 79644ms
-D_CS : 79725ms
-R_T 0 : 79725ms
-F_CS : 79725ms
-D_T 1 : 79727ms
-F_T 1 : 79840ms
-D_CS : 79860ms
-R_T 1 : 79860ms
-F_CS : 79860ms
-Task 3
-Task 3
-Task 3
-D_CS : 79994ms
-F_CS : 79994ms
-Task 3
-Task 3
-D_CS : 80128ms
-F_CS : 80128ms
-Task 3
-Task 3
-Task 3
-D_CS : 80262ms
-F_CS : 80262ms
-Task 3
-Task 3
-D_CS : 80396ms
-F_CS : 80396ms
-D_CS : 80531ms
-R_T 2 : 80531ms
-F_CS : 80531ms
-Task 3
-Task 3
-Task 3
-D_CS : 80665ms
-F_CS : 80665ms
-Task 3
-Task 3
-D_CS : 80799ms
-F_CS : 80799ms
-Task 3
-Task 3
-Task 3
-D_CS : 80933ms
-F_CS : 80933ms
-Task 3
-Task 3
-D_CS : 81068ms
-F_CS : 81068ms
-D_CS : 81202ms
-R_T 2 : 81202ms
-F_CS : 81202ms
-D_T 1 : 81203ms
-F_T 1 : 81317ms
-D_CS : 81336ms
-R_T 1 : 81336ms
-F_CS : 81336ms
-Task 3
-Task 3
-Task 3
-D_CS : 81470ms
-F_CS : 81470ms
-Task 3
-Task 3
-D_CS : 81604ms
-F_CS : 81604ms
-Task 3
-Task 3
-Task 3
-D_CS : 81739ms
-F_CS : 81739ms
-Task 3
-Task 3
-D_CS : 81873ms
-F_CS : 81873ms
-D_CS : 82007ms
-R_T 2 : 82007ms
-F_CS : 82007ms
-Task 3
-Task 3
-Task 3
-D_CS : 82141ms
-F_CS : 82141ms
-Task 3
-Task 3
-D_CS : 82275ms
-F_CS : 82276ms
-Task 3
-Task 3
-Task 3
-D_CS : 82410ms
-F_CS : 82410ms
-Task 3
-Task 3
-D_CS : 82544ms
-F_CS : 82544ms
-D_CS : 82678ms
-R_T 2 : 82678ms
-F_CS : 82678ms
-D_T 1 : 82680ms
-F_T 1 : 82793ms
-D_CS : 82812ms
-R_T 1 : 82812ms
-F_CS : 82812ms
-Task 3
-Task 3
-Task 3
-D_CS : 82947ms
-F_CS : 82947ms
-Task 3
-Task 3
-D_CS : 83081ms
-F_CS : 83081ms
-Task 3
-Task 3
-Task 3
-D_CS : 83215ms
-F_CS : 83215ms
-Task 3
-Task 3
-D_CS : 83349ms
-F_CS : 83349ms
-D_CS : 83483ms
-R_T 2 : 83483ms
-F_CS : 83484ms
-Task 3
-Task 3
-Task 3
-D_CS : 83618ms
-F_CS : 83618ms
-Task 3
-Task 3
-D_CS : 83752ms
-F_CS : 83752ms
-Task 3
-Task 3
-Task 3
-D_CS : 83886ms
-F_CS : 83886ms
-Task 3
-Task 3
-D_CS : 84020ms
-F_CS : 84020ms
-D_CS : 84155ms
-R_T 2 : 84155ms
-F_CS : 84155ms
-D_T 1 : 84156ms
-F_T 1 : 84269ms
-D_CS : 84289ms
-R_T 1 : 84289ms
-F_CS : 84289ms
-Task 3
-Task 3
-Task 3
-D_CS : 84423ms
-F_CS : 84423ms
-Task 3
-Task 3
-D_CS : 84557ms
-F_CS : 84557ms
-Task 3
-Task 3
-Task 3
-D_CS : 84691ms
-F_CS : 84691ms
-Task 3
-Task 3
-D_CS : 84826ms
-F_CS : 84826ms
-D_CS : 84960ms
-R_T 2 : 84960ms
-F_CS : 84960ms
-Task 3
-Task 3
-Task 3
-D_CS : 85094ms
-F_CS : 85094ms
-Task 3
-Task 3
-D_CS : 85228ms
-F_CS : 85228ms
-Task 3
-Task 3
-Task 3
-D_CS : 85362ms
-F_CS : 85363ms
-Task 3
-Task 3
-D_CS : 85497ms
-F_CS : 85497ms
-D_CS : 85631ms
-R_T 2 : 85631ms
-F_CS : 85631ms
-D_T 1 : 85632ms
-F_T 1 : 85746ms
-D_CS : 85765ms
-R_T 1 : 85765ms
-F_CS : 85765ms
-Task 3
-Task 3
-Task 3
-D_CS : 85899ms
-F_CS : 85899ms
-Task 3
-Task 3
-D_CS : 86034ms
-F_CS : 86034ms
-Task 3
-Task 3
-Task 3
-D_CS : 86168ms
-F_CS : 86168ms
-Task 3
-Task 3
-D_CS : 86302ms
-F_CS : 86302ms
-D_CS : 86436ms
-R_T 2 : 86436ms
-F_CS : 86436ms
-Task 3
-Task 3
-Task 3
-D_CS : 86570ms
-F_CS : 86570ms
-Task 3
-Task 3
-D_CS : 86705ms
-F_CS : 86705ms
-Task 3
-Task 3
-Task 3
-D_CS : 86839ms
-F_CS : 86839ms
-Task 3
-Task 3
-D_CS : 86973ms
-F_CS : 86973ms
-D_CS : 87107ms
-R_T 2 : 87107ms
-F_CS : 87107ms
-D_T 1 : 87109ms
-F_T 1 : 87222ms
-D_CS : 87242ms
-R_T 1 : 87242ms
-F_CS : 87242ms
-Task 3
-Task 3
-Task 3
-D_CS : 87376ms
-F_CS : 87376ms
-Task 3
-Task 3
-D_CS : 87510ms
-F_CS : 87510ms
-Task 3
-Task 3
-Task 3
-D_CS : 87644ms
-F_CS : 87644ms
-Task 3
-Task 3
-D_CS : 87778ms
-F_CS : 87778ms
-D_CS : 87913ms
-R_T 2 : 87913ms
-F_CS : 87913ms
-Task 3
-Task 3
-Task 3
-D_CS : 88047ms
-F_CS : 88047ms
-Task 3
-Task 3
-D_CS : 88181ms
-F_CS : 88181ms
-Task 3
-Task 3
-Task 3
-D_CS : 88315ms
-F_CS : 88315ms
-Task 3
-Task 3
-D_CS : 88450ms
-F_CS : 88450ms
-D_CS : 88584ms
-R_T 2 : 88584ms
-F_CS : 88584ms
-D_T 1 : 88585ms
-F_T 1 : 88699ms
-D_CS : 88718ms
-R_T 1 : 88718ms
-F_CS : 88718ms
-Task 3
-Task 3
-Task 3
-D_CS : 88852ms
-F_CS : 88852ms
-Task 3
-Task 3
-D_CS : 88986ms
-F_CS : 88986ms
-Task 3
-Task 3
-Task 3
-D_CS : 89121ms
-F_CS : 89121ms
-Task 3
-Task 3
-D_CS : 89255ms
-F_CS : 89255ms
-D_CS : 89389ms
-R_T 2 : 89389ms
-F_CS : 89389ms
-Task 3
-Task 3
-Task 3
-D_CS : 89523ms
-F_CS : 89523ms
-Task 3
-Task 3
-D_CS : 89657ms
-F_CS : 89658ms
-Task 3
-Task 3
-Task 3
-D_CS : 89792ms
-F_CS : 89792ms
-Task 3
-Task 3
-D_CS : 89926ms
-F_CS : 89926ms
-D_CS : 90060ms
-R_T 2 : 90060ms
-F_CS : 90060ms
-D_T 1 : 90062ms
-F_T 1 : 90175ms
-D_CS : 90194ms
-R_T 1 : 90194ms
-F_CS : 90194ms
-Task 3
-Task 3
-Task 3
-D_CS : 90329ms
-F_CS : 90329ms
-Task 3
-Task 3
-D_CS : 90463ms
-F_CS : 90463ms
-Task 3
-Task 3
-Task 3
-D_CS : 90597ms
-F_CS : 90597ms
-Task 3
-Task 3
-D_CS : 90731ms
-F_CS : 90731ms
-D_CS : 90865ms
-R_T 2 : 90865ms
-F_CS : 90866ms
-Task 3
-Task 3
-Task 3
-D_CS : 91000ms
-F_CS : 91000ms
-Task 3
-Task 3
-D_CS : 91134ms
-F_CS : 91134ms
-Task 3
-Task 3
-Task 3
-D_CS : 91268ms
-F_CS : 91268ms
-Task 3
-Task 3
-D_CS : 91402ms
-F_CS : 91402ms
-D_CS : 91537ms
-R_T 2 : 91537ms
-F_CS : 91537ms
-D_T 1 : 91538ms
-F_T 1 : 91651ms
-D_CS : 91671ms
-R_T 1 : 91671ms
-F_CS : 91671ms
-Task 3
-Task 3
-Task 3
-D_CS : 91805ms
-F_CS : 91805ms
-Task 3
-Task 3
-D_CS : 91939ms
-F_CS : 91939ms
-Task 3
-Task 3
-Task 3
-D_CS : 92073ms
-F_CS : 92073ms
-Task 3
-Task 3
-D_CS : 92208ms
-F_CS : 92208ms
-D_CS : 92342ms
-R_T 2 : 92342ms
-F_CS : 92342ms
-Task 3
-Task 3
-Task 3
-D_CS : 92476ms
-F_CS : 92476ms
-Task 3
-Task 3
-D_CS : 92610ms
-F_CS : 92610ms
-Task 3
-Task 3
-Task 3
-D_CS : 92744ms
-F_CS : 92745ms
-Task 3
-Task 3
-D_CS : 92879ms
-F_CS : 92879ms
-D_CS : 93013ms
-R_T 2 : 93013ms
-F_CS : 93013ms
-D_T 1 : 93014ms
-F_T 1 : 93128ms
-D_CS : 93147ms
-R_T 1 : 93147ms
-F_CS : 93147ms
-Task 3
-Task 3
-Task 3
-D_CS : 93281ms
-F_CS : 93281ms
-Task 3
-Task 3
-D_CS : 93416ms
-F_CS : 93416ms
-Task 3
-Task 3
-Task 3
-D_CS : 93550ms
-F_CS : 93550ms
-Task 3
-Task 3
-D_CS : 93684ms
-F_CS : 93684ms
-D_CS : 93818ms
-R_T 2 : 93818ms
-F_CS : 93818ms
-Task 3
-Task 3
-Task 3
-D_CS : 93952ms
-F_CS : 93952ms
-Task 3
-Task 3
-D_CS : 94087ms
-F_CS : 94087ms
-Task 3
-Task 3
-Task 3
-D_CS : 94221ms
-F_CS : 94221ms
-Task 3
-Task 3
-D_CS : 94355ms
-F_CS : 94355ms
-D_CS : 94489ms
-R_T 2 : 94489ms
-F_CS : 94489ms
-D_T 0 : 94491ms
-Task 1
-Task 1
-D_CS : 94624ms
-F_CS : 94624ms
-Task 1
-Task 1
-Task 1
-D_CS : 94758ms
-F_CS : 94758ms
-Task 1
-Task 1
-D_CS : 94892ms
-F_CS : 94892ms
-Task 1
-Task 1
-Task 1
-D_CS : 95026ms
-F_CS : 95026ms
-Task 1
-Task 1
-D_CS : 95160ms
-F_CS : 95160ms
-Task 1
-Task 1
-Task 1
-D_CS : 95295ms
-F_CS : 95295ms
-Task 1
-Task 1
-D_CS : 95429ms
-F_CS : 95429ms
-Task 1
-Task 1
-Task 1
-D_CS : 95563ms
-F_CS : 95563ms
-Task 1
-Task 1
-D_CS : 95697ms
-F_CS : 95697ms
-Task 1
-Task 1
-Task 1
-D_CS : 95831ms
-F_CS : 95832ms
-Task 1
-Task 1
-D_CS : 95966ms
-F_CS : 95966ms
-Task 1
-Task 1
-Task 1
-D_CS : 96100ms
-F_CS : 96100ms
-Task 1
-Task 1
-D_CS : 96234ms
-F_CS : 96234ms
-Task 1
-Task 1
-Task 1
-D_CS : 96368ms
-F_CS : 96368ms
-Task 1
-Task 1
-Task 1
-D_CS : 96503ms
-F_CS : 96503ms
-Task 1
-Task 1
-D_CS : 96637ms
-F_CS : 96637ms
-Task 1
-Task 1
-Task 1
-D_CS : 96771ms
-F_CS : 96771ms
-Task 1
-Task 1
-D_CS : 96905ms
-F_CS : 96905ms
-Task 1
-Task 1
-Task 1
-D_CS : 97039ms
-F_CS : 97039ms
-Task 1
-Task 1
-D_CS : 97174ms
-F_CS : 97174ms
-Task 1
-Task 1
-Task 1
-D_CS : 97308ms
-F_CS : 97308ms
-Task 1
-Task 1
-D_CS : 97442ms
-F_CS : 97442ms
-Task 1
-Task 1
-Task 1
-D_CS : 97576ms
-F_CS : 97576ms
-Task 1
-Task 1
-D_CS : 97711ms
-F_CS : 97711ms
-Task 1
-Task 1
-Task 1
-D_CS : 97845ms
-F_CS : 97845ms
-Task 1
-Task 1
-D_CS : 97979ms
-F_CS : 97979ms
-Task 1
-Task 1
-Task 1
-D_CS : 98113ms
-F_CS : 98113ms
-Task 1
-Task 1
-Task 1
-D_CS : 98247ms
-F_CS : 98247ms
-Task 1
-Task 1
-D_CS : 98382ms
-F_CS : 98382ms
-Task 1
-Task 1
-Task 1
-D_CS : 98516ms
-F_CS : 98516ms
-Task 1
-Task 1
-D_CS : 98650ms
-F_CS : 98650ms
-Task 1
-Task 1
-Task 1
-D_CS : 98784ms
-F_CS : 98784ms
-Task 1
-Task 1
-D_CS : 98918ms
-F_CS : 98919ms
-Task 1
-Task 1
-Task 1
-D_CS : 99053ms
-F_CS : 99053ms
-Task 1
-Task 1
-D_CS : 99187ms
-F_CS : 99187ms
-Task 1
-Task 1
-Task 1
-D_CS : 99321ms
-F_CS : 99321ms
-Task 1
-Task 1
-D_CS : 99455ms
-F_CS : 99455ms
-Task 1
-Task 1
-Task 1
-D_CS : 99590ms
-F_CS : 99590ms
-Task 1
-Task 1
-Task 1
-D_CS : 99724ms
-F_CS : 99724ms
-Task 1
-F_T 0 : 99776ms
-D_CS : 99858ms
-R_T 0 : 99858ms
-F_CS : 99858ms
-D_T 1 : 99859ms
-F_T 1 : 99973ms
-D_CS : 99992ms
-R_T 1 : 99992ms
-F_CS : 99992ms
-Task 3
-Task 3
-Task 3
-D_CS : 100126ms
-F_CS : 100126ms
-Task 3
-Task 3
-D_CS : 100261ms
-F_CS : 100261ms
-Task 3
-Task 3
-Task 3
-D_CS : 100395ms
-F_CS : 100395ms
-Task 3
-Task 3
-D_CS : 100529ms
-F_CS : 100529ms
-D_CS : 100663ms
-R_T 2 : 100663ms
-F_CS : 100664ms
-Task 3
-Task 3
-Task 3
-D_CS : 100798ms
-F_CS : 100798ms
-Task 3
-Task 3
-D_CS : 100932ms
-F_CS : 100932ms
-Task 3
-Task 3
-Task 3
-D_CS : 101066ms
-F_CS : 101066ms
-Task 3
-Task 3
-D_CS : 101200ms
-F_CS : 101200ms
-D_CS : 101334ms
-R_T 2 : 101334ms
-F_CS : 101335ms
-D_T 1 : 101336ms
-F_T 1 : 101450ms
-D_CS : 101469ms
-R_T 1 : 101469ms
-F_CS : 101469ms
-Task 3
-Task 3
-Task 3
-D_CS : 101603ms
-F_CS : 101603ms
-Task 3
-Task 3
-D_CS : 101737ms
-F_CS : 101737ms
-Task 3
-Task 3
-Task 3
-D_CS : 101871ms
-F_CS : 101871ms
-Task 3
-Task 3
-D_CS : 102005ms
-F_CS : 102006ms
-D_CS : 102140ms
-R_T 2 : 102140ms
-F_CS : 102140ms
-Task 3
-Task 3
-Task 3
-D_CS : 102274ms
-F_CS : 102274ms
-Task 3
-Task 3
-D_CS : 102408ms
-F_CS : 102408ms
-Task 3
-Task 3
-Task 3
-D_CS : 102542ms
-F_CS : 102542ms
-Task 3
-Task 3
-D_CS : 102677ms
-F_CS : 102677ms
-D_CS : 102811ms
-R_T 2 : 102811ms
-F_CS : 102811ms
-D_T 1 : 102812ms
-F_T 1 : 102926ms
-D_CS : 102945ms
-R_T 1 : 102945ms
-F_CS : 102945ms
-Task 3
-Task 3
-Task 3
-D_CS : 103079ms
-F_CS : 103079ms
-Task 3
-Task 3
-D_CS : 103213ms
-F_CS : 103213ms
-Task 3
-Task 3
-Task 3
-D_CS : 103348ms
-F_CS : 103348ms
-Task 3
-Task 3
-D_CS : 103482ms
-F_CS : 103482ms
-D_CS : 103616ms
-R_T 2 : 103616ms
-F_CS : 103616ms
-Task 3
-Task 3
-Task 3
-D_CS : 103750ms
-F_CS : 103750ms
-Task 3
-Task 3
-D_CS : 103885ms
-F_CS : 103885ms
-Task 3
-Task 3
-Task 3
-D_CS : 104019ms
-F_CS : 104019ms
-Task 3
-Task 3
-D_CS : 104153ms
-F_CS : 104153ms
-D_CS : 104287ms
-R_T 2 : 104287ms
-F_CS : 104287ms
-D_T 1 : 104289ms
-F_T 1 : 104402ms
-D_CS : 104421ms
-R_T 1 : 104421ms
-F_CS : 104422ms
-Task 3
-Task 3
-Task 3
-D_CS : 104556ms
-F_CS : 104556ms
-Task 3
-Task 3
-D_CS : 104690ms
-F_CS : 104690ms
-Task 3
-Task 3
-Task 3
-D_CS : 104824ms
-F_CS : 104824ms
-Task 3
-Task 3
-D_CS : 104958ms
-F_CS : 104958ms
-D_CS : 105093ms
-R_T 2 : 105093ms
-F_CS : 105093ms
-Task 3
-Task 3
-Task 3
-D_CS : 105227ms
-F_CS : 105227ms
-Task 3
-Task 3
-D_CS : 105361ms
-F_CS : 105361ms
-Task 3
-Task 3
-Task 3
-D_CS : 105495ms
-F_CS : 105495ms
-Task 3
-Task 3
-D_CS : 105629ms
-F_CS : 105629ms
-D_CS : 105764ms
-R_T 2 : 105764ms
-F_CS : 105764ms
-D_T 1 : 105765ms
-F_T 1 : 105879ms
-D_CS : 105898ms
-R_T 1 : 105898ms
-F_CS : 105898ms
-Task 3
-Task 3
-Task 3
-D_CS : 106032ms
-F_CS : 106032ms
-Task 3
-Task 3
-D_CS : 106166ms
-F_CS : 106166ms
-Task 3
-Task 3
-Task 3
-D_CS : 106300ms
-F_CS : 106301ms
-Task 3
-Task 3
-D_CS : 106435ms
-F_CS : 106435ms
-D_CS : 106569ms
-R_T 2 : 106569ms
-F_CS : 106569ms
-Task 3
-Task 3
-Task 3
-D_CS : 106703ms
-F_CS : 106703ms
-Task 3
-Task 3
-D_CS : 106837ms
-F_CS : 106837ms
-Task 3
-Task 3
-Task 3
-D_CS : 106972ms
-F_CS : 106972ms
-Task 3
-Task 3
-D_CS : 107106ms
-F_CS : 107106ms
-D_CS : 107240ms
-R_T 2 : 107240ms
-F_CS : 107240ms
-D_T 1 : 107242ms
-F_T 1 : 107355ms
-D_CS : 107374ms
-R_T 1 : 107374ms
-F_CS : 107374ms
-Task 3
-Task 3
-Task 3
-D_CS : 107508ms
-F_CS : 107508ms
-Task 3
-Task 3
-D_CS : 107643ms
-F_CS : 107643ms
-Task 3
-Task 3
-Task 3
-D_CS : 107777ms
-F_CS : 107777ms
-Task 3
-Task 3
-D_CS : 107911ms
-F_CS : 107911ms
-D_CS : 108045ms
-R_T 2 : 108045ms
-F_CS : 108045ms
-Task 3
-Task 3
-Task 3
-D_CS : 108180ms
-F_CS : 108180ms
-Task 3
-Task 3
-D_CS : 108314ms
-F_CS : 108314ms
-Task 3
-Task 3
-Task 3
-D_CS : 108448ms
-F_CS : 108448ms
-Task 3
-Task 3
-D_CS : 108582ms
-F_CS : 108582ms
-D_CS : 108716ms
-R_T 2 : 108716ms
-F_CS : 108717ms
-D_T 1 : 108718ms
-F_T 1 : 108832ms
-D_CS : 108851ms
-R_T 1 : 108851ms
-F_CS : 108851ms
-Task 3
-Task 3
-Task 3
-D_CS : 108985ms
-F_CS : 108985ms
-Task 3
-Task 3
-D_CS : 109119ms
-F_CS : 109119ms
-Task 3
-Task 3
-Task 3
-D_CS : 109253ms
-F_CS : 109253ms
-Task 3
-Task 3
-D_CS : 109387ms
-F_CS : 109388ms
-D_CS : 109522ms
-R_T 2 : 109522ms
-F_CS : 109522ms
-Task 3
-Task 3
-Task 3
-D_CS : 109656ms
-F_CS : 109656ms
-Task 3
-Task 3
-D_CS : 109790ms
-F_CS : 109790ms
-Task 3
-Task 3
-Task 3
-D_CS : 109924ms
-F_CS : 109924ms
-Task 3
-Task 3
-D_CS : 110059ms
-F_CS : 110059ms
-D_CS : 110193ms
-R_T 2 : 110193ms
-F_CS : 110193ms
-D_T 1 : 110194ms
-F_T 1 : 110308ms
-D_CS : 110327ms
-R_T 1 : 110327ms
-F_CS : 110327ms
-Task 3
-Task 3
-Task 3
-D_CS : 110461ms
-F_CS : 110461ms
-Task 3
-Task 3
-D_CS : 110595ms
-F_CS : 110595ms
-Task 3
-Task 3
-Task 3
-D_CS : 110730ms
-F_CS : 110730ms
-Task 3
-Task 3
-D_CS : 110864ms
-F_CS : 110864ms
-D_CS : 110998ms
-R_T 2 : 110998ms
-F_CS : 110998ms
-Task 3
-Task 3
-Task 3
-D_CS : 111132ms
-F_CS : 111132ms
-Task 3
-Task 3
-D_CS : 111267ms
-F_CS : 111267ms
-Task 3
-Task 3
-Task 3
-D_CS : 111401ms
-F_CS : 111401ms
-Task 3
-Task 3
-D_CS : 111535ms
-F_CS : 111535ms
-D_CS : 111669ms
-R_T 2 : 111669ms
-F_CS : 111669ms
-D_T 1 : 111671ms
-F_T 1 : 111784ms
-D_CS : 111803ms
-R_T 1 : 111803ms
-F_CS : 111804ms
-Task 3
-Task 3
-Task 3
-D_CS : 111938ms
-F_CS : 111938ms
-Task 3
-Task 3
-D_CS : 112072ms
-F_CS : 112072ms
-Task 3
-Task 3
-Task 3
-D_CS : 112206ms
-F_CS : 112206ms
-Task 3
-Task 3
-D_CS : 112340ms
-F_CS : 112340ms
-D_CS : 112474ms
-R_T 2 : 112475ms
-F_CS : 112475ms
-Task 3
-Task 3
-Task 3
-D_CS : 112609ms
-F_CS : 112609ms
-Task 3
-Task 3
-D_CS : 112743ms
-F_CS : 112743ms
-Task 3
-Task 3
-Task 3
-D_CS : 112877ms
-F_CS : 112877ms
-Task 3
-Task 3
-D_CS : 113011ms
-F_CS : 113011ms
-D_CS : 113146ms
-R_T 2 : 113146ms
-F_CS : 113146ms
-D_T 1 : 113147ms
-F_T 1 : 113261ms
-D_CS : 113280ms
-R_T 1 : 113280ms
-F_CS : 113280ms
-Task 3
-Task 3
-Task 3
-D_CS : 113414ms
-F_CS : 113414ms
-Task 3
-Task 3
-D_CS : 113548ms
-F_CS : 113548ms
-Task 3
-Task 3
-Task 3
-D_CS : 113682ms
-F_CS : 113682ms
-Task 3
-Task 3
-D_CS : 113817ms
-F_CS : 113817ms
-D_CS : 113951ms
-R_T 2 : 113951ms
-F_CS : 113951ms
-Task 3
-Task 3
-Task 3
-D_CS : 114085ms
-F_CS : 114085ms
-Task 3
-Task 3
-D_CS : 114219ms
-F_CS : 114219ms
-Task 3
-Task 3
-Task 3
-D_CS : 114354ms
-F_CS : 114354ms
-Task 3
-Task 3
-D_CS : 114488ms
-F_CS : 114488ms
-D_CS : 114622ms
-R_T 2 : 114622ms
-F_CS : 114622ms
-D_T 0 : 114624ms
-Task 1
-Task 1
-D_CS : 114756ms
-F_CS : 114756ms
-Task 1
-Task 1
-Task 1
-D_CS : 114890ms
-F_CS : 114890ms
-Task 1
-Task 1
-D_CS : 115025ms
-F_CS : 115025ms
-Task 1
-Task 1
-Task 1
-D_CS : 115159ms
-F_CS : 115159ms
-Task 1
-Task 1
-D_CS : 115293ms
-F_CS : 115293ms
-Task 1
-Task 1
-Task 1
-D_CS : 115427ms
-F_CS : 115427ms
-Task 1
-Task 1
-D_CS : 115561ms
-F_CS : 115562ms
-Task 1
-Task 1
-Task 1
-D_CS : 115696ms
-F_CS : 115696ms
-Task 1
-Task 1
-D_CS : 115830ms
-F_CS : 115830ms
-Task 1
-Task 1
-Task 1
-D_CS : 115964ms
-F_CS : 115964ms
-Task 1
-Task 1
-D_CS : 116098ms
-F_CS : 116098ms
-Task 1
-Task 1
-Task 1
-D_CS : 116233ms
-F_CS : 116233ms
-Task 1
-Task 1
-D_CS : 116367ms
-F_CS : 116367ms
-Task 1
-Task 1
-Task 1
-D_CS : 116501ms
-F_CS : 116501ms
-Task 1
-Task 1
-Task 1
-D_CS : 116635ms
-F_CS : 116635ms
-Task 1
-Task 1
-D_CS : 116769ms
-F_CS : 116769ms
-Task 1
-Task 1
-Task 1
-D_CS : 116904ms
-F_CS : 116904ms
-Task 1
-Task 1
-D_CS : 117038ms
-F_CS : 117038ms
-Task 1
-Task 1
-Task 1
-D_CS : 117172ms
-F_CS : 117172ms
-Task 1
-Task 1
-D_CS : 117306ms
-F_CS : 117306ms
-Task 1
-Task 1
-Task 1
-D_CS : 117441ms
-F_CS : 117441ms
-Task 1
-Task 1
-D_CS : 117575ms
-F_CS : 117575ms
-Task 1
-Task 1
-Task 1
-D_CS : 117709ms
-F_CS : 117709ms
-Task 1
-Task 1
-D_CS : 117843ms
-F_CS : 117843ms
-Task 1
-Task 1
-Task 1
-D_CS : 117977ms
-F_CS : 117977ms
-Task 1
-Task 1
-D_CS : 118112ms
-F_CS : 118112ms
-Task 1
-Task 1
-Task 1
-D_CS : 118246ms
-F_CS : 118246ms
-Task 1
-Task 1
-Task 1
-D_CS : 118380ms
-F_CS : 118380ms
-Task 1
-Task 1
-D_CS : 118514ms
-F_CS : 118514ms
-Task 1
-Task 1
-Task 1
-D_CS : 118648ms
-F_CS : 118649ms
-Task 1
-Task 1
-D_CS : 118783ms
-F_CS : 118783ms
-Task 1
-Task 1
-Task 1
-D_CS : 118917ms
-F_CS : 118917ms
-Task 1
-Task 1
-D_CS : 119051ms
-F_CS : 119051ms
-Task 1
-Task 1
-Task 1
-D_CS : 119185ms
-F_CS : 119185ms
-Task 1
-Task 1
-D_CS : 119320ms
-F_CS : 119320ms
-Task 1
-Task 1
-Task 1
-D_CS : 119454ms
-F_CS : 119454ms
-Task 1
-Task 1
-D_CS : 119588ms
-F_CS : 119588ms
-Task 1
-Task 1
-Task 1
-D_CS : 119722ms
-F_CS : 119722ms
-Task 1
-Task 1
-D_CS : 119856ms
-F_CS : 119856ms
-Task 1
-Task 1
-F_T 0 : 119911ms
-D_CS : 119991ms
-R_T 0 : 119991ms
-F_CS : 119991ms
-D_T 1 : 119992ms
-F_T 1 : 120106ms
-D_CS : 120125ms
-R_T 1 : 120125ms
-F_CS : 120125ms
-Task 3
-Task 3
-Task 3
-D_CS : 120259ms
-F_CS : 120259ms
-Task 3
-Task 3
-D_CS : 120393ms
-F_CS : 120393ms
-Task 3
-Task 3
-Task 3
-D_CS : 120528ms
-F_CS : 120528ms
-Task 3
-Task 3
-D_CS : 120662ms
-F_CS : 120662ms
-D_CS : 120796ms
-R_T 2 : 120796ms
-F_CS : 120796ms
-Task 3
-Task 3
-Task 3
-D_CS : 120930ms
-F_CS : 120930ms
-Task 3
-Task 3
-D_CS : 121064ms
-F_CS : 121064ms
-Task 3
-Task 3
-Task 3
-D_CS : 121199ms
-F_CS : 121199ms
-Task 3
-Task 3
-D_CS : 121333ms
-F_CS : 121333ms
-D_CS : 121467ms
-R_T 2 : 121467ms
-F_CS : 121467ms
-D_T 1 : 121469ms
-F_T 1 : 121582ms
-D_CS : 121601ms
-R_T 1 : 121601ms
-F_CS : 121601ms
-Task 3
-Task 3
-Task 3
-D_CS : 121736ms
-F_CS : 121736ms
-Task 3
-Task 3
-D_CS : 121870ms
-F_CS : 121870ms
-Task 3
-Task 3
-Task 3
-D_CS : 122004ms
-F_CS : 122004ms
-Task 3
-Task 3
-D_CS : 122138ms
-F_CS : 122138ms
-D_CS : 122272ms
-R_T 2 : 122272ms
-F_CS : 122273ms
-Task 3
-Task 3
-Task 3
-D_CS : 122407ms
-F_CS : 122407ms
-Task 3
-Task 3
-D_CS : 122541ms
-F_CS : 122541ms
-Task 3
-Task 3
-Task 3
-D_CS : 122675ms
-F_CS : 122675ms
-Task 3
-Task 3
-D_CS : 122809ms
-F_CS : 122809ms
-D_CS : 122943ms
-R_T 2 : 122944ms
-F_CS : 122944ms
-D_T 1 : 122945ms
-F_T 1 : 123059ms
-D_CS : 123078ms
-R_T 1 : 123078ms
-F_CS : 123078ms
-Task 3
-Task 3
-Task 3
-D_CS : 123212ms
-F_CS : 123212ms
-Task 3
-Task 3
-D_CS : 123346ms
-F_CS : 123346ms
-Task 3
-Task 3
-Task 3
-D_CS : 123480ms
-F_CS : 123480ms
-Task 3
-Task 3
-D_CS : 123615ms
-F_CS : 123615ms
-D_CS : 123749ms
-R_T 2 : 123749ms
-F_CS : 123749ms
-Task 3
-Task 3
-Task 3
-D_CS : 123883ms
-F_CS : 123883ms
-Task 3
-Task 3
-D_CS : 124017ms
-F_CS : 124017ms
-Task 3
-Task 3
-Task 3
-D_CS : 124151ms
-F_CS : 124151ms
-Task 3
-Task 3
-D_CS : 124286ms
-F_CS : 124286ms
-D_CS : 124420ms
-R_T 2 : 124420ms
-F_CS : 124420ms
-D_T 1 : 124422ms
-F_T 1 : 124535ms
-D_CS : 124554ms
-R_T 1 : 124554ms
-F_CS : 124554ms
-Task 3
-Task 3
-Task 3
-D_CS : 124688ms
-F_CS : 124688ms
-Task 3
-Task 3
-D_CS : 124823ms
-F_CS : 124823ms
-Task 3
-Task 3
-Task 3
-D_CS : 124957ms
-F_CS : 124957ms
-Task 3
-Task 3
-D_CS : 125091ms
-F_CS : 125091ms
-D_CS : 125225ms
-R_T 2 : 125225ms
-F_CS : 125225ms
-Task 3
-Task 3
-Task 3
-D_CS : 125359ms
-F_CS : 125359ms
-Task 3
-Task 3
-D_CS : 125494ms
-F_CS : 125494ms
-Task 3
-Task 3
-Task 3
-D_CS : 125628ms
-F_CS : 125628ms
-Task 3
-Task 3
-D_CS : 125762ms
-F_CS : 125762ms
-D_CS : 125896ms
-R_T 2 : 125896ms
-F_CS : 125896ms
-D_T 1 : 125898ms
-F_T 1 : 126011ms
-D_CS : 126030ms
-R_T 1 : 126031ms
-F_CS : 126031ms
-Task 3
-Task 3
-Task 3
-D_CS : 126165ms
-F_CS : 126165ms
-Task 3
-Task 3
-D_CS : 126299ms
-F_CS : 126299ms
-Task 3
-Task 3
-Task 3
-D_CS : 126433ms
-F_CS : 126433ms
-Task 3
-Task 3
-D_CS : 126567ms
-F_CS : 126567ms
-D_CS : 126702ms
-R_T 2 : 126702ms
-F_CS : 126702ms
-Task 3
-Task 3
-Task 3
-D_CS : 126836ms
-F_CS : 126836ms
-Task 3
-Task 3
-D_CS : 126970ms
-F_CS : 126970ms
-Task 3
-Task 3
-Task 3
-D_CS : 127104ms
-F_CS : 127104ms
-Task 3
-Task 3
-D_CS : 127238ms
-F_CS : 127238ms
-D_CS : 127373ms
-R_T 2 : 127373ms
-F_CS : 127373ms
-D_T 1 : 127374ms
-F_T 1 : 127488ms
-D_CS : 127507ms
-R_T 1 : 127507ms
-F_CS : 127507ms
-Task 3
-Task 3
-Task 3
-D_CS : 127641ms
-F_CS : 127641ms
-Task 3
-Task 3
-D_CS : 127775ms
-F_CS : 127775ms
-Task 3
-Task 3
-Task 3
-D_CS : 127910ms
-F_CS : 127910ms
-Task 3
-Task 3
-D_CS : 128044ms
-F_CS : 128044ms
-D_CS : 128178ms
-R_T 2 : 128178ms
-F_CS : 128178ms
-Task 3
-Task 3
-Task 3
-D_CS : 128312ms
-F_CS : 128312ms
-Task 3
-Task 3
-D_CS : 128446ms
-F_CS : 128446ms
-Task 3
-Task 3
-Task 3
-D_CS : 128581ms
-F_CS : 128581ms
-Task 3
-Task 3
-D_CS : 128715ms
-F_CS : 128715ms
-D_CS : 128849ms
-R_T 2 : 128849ms
-F_CS : 128849ms
-D_T 1 : 128851ms
-F_T 1 : 128964ms
-D_CS : 128983ms
-R_T 1 : 128983ms
-F_CS : 128983ms
-Task 3
-Task 3
-Task 3
-D_CS : 129117ms
-F_CS : 129118ms
-Task 3
-Task 3
-D_CS : 129252ms
-F_CS : 129252ms
-Task 3
-Task 3
-Task 3
-D_CS : 129386ms
-F_CS : 129386ms
-Task 3
-Task 3
-D_CS : 129520ms
-F_CS : 129520ms
-D_CS : 129654ms
-R_T 2 : 129654ms
-F_CS : 129655ms
-Task 3
-Task 3
-Task 3
-D_CS : 129789ms
-F_CS : 129789ms
-Task 3
-Task 3
-D_CS : 129923ms
-F_CS : 129923ms
-Task 3
-Task 3
-Task 3
-D_CS : 130057ms
-F_CS : 130057ms
-Task 3
-Task 3
-D_CS : 130191ms
-F_CS : 130191ms
-D_CS : 130325ms
-R_T 2 : 130325ms
-F_CS : 130326ms
-D_T 1 : 130327ms
-F_T 1 : 130441ms
-D_CS : 130460ms
-R_T 1 : 130460ms
-F_CS : 130460ms
-Task 3
-Task 3
-Task 3
-D_CS : 130594ms
-F_CS : 130594ms
-Task 3
-Task 3
-D_CS : 130728ms
-F_CS : 130728ms
-Task 3
-Task 3
-Task 3
-D_CS : 130862ms
-F_CS : 130862ms
-Task 3
-Task 3
-D_CS : 130997ms
-F_CS : 130997ms
-D_CS : 131131ms
-R_T 2 : 131131ms
-F_CS : 131131ms
-Task 3
-Task 3
-Task 3
-D_CS : 131265ms
-F_CS : 131265ms
-Task 3
-Task 3
-D_CS : 131399ms
-F_CS : 131399ms
-Task 3
-Task 3
-Task 3
-D_CS : 131533ms
-F_CS : 131533ms
-Task 3
-Task 3
-D_CS : 131668ms
-F_CS : 131668ms
-D_CS : 131802ms
-R_T 2 : 131802ms
-F_CS : 131802ms
-D_T 1 : 131803ms
-F_T 1 : 131917ms
-D_CS : 131936ms
-R_T 1 : 131936ms
-F_CS : 131936ms
-Task 3
-Task 3
-Task 3
-D_CS : 132070ms
-F_CS : 132070ms
-Task 3
-Task 3
-D_CS : 132204ms
-F_CS : 132205ms
-Task 3
-Task 3
-Task 3
-D_CS : 132339ms
-F_CS : 132339ms
-Task 3
-Task 3
-D_CS : 132473ms
-F_CS : 132473ms
-D_CS : 132607ms
-R_T 2 : 132607ms
-F_CS : 132607ms
-Task 3
-Task 3
-Task 3
-D_CS : 132741ms
-F_CS : 132741ms
-Task 3
-Task 3
-D_CS : 132876ms
-F_CS : 132876ms
-Task 3
-Task 3
-Task 3
-D_CS : 133010ms
-F_CS : 133010ms
-Task 3
-Task 3
-D_CS : 133144ms
-F_CS : 133144ms
-D_CS : 133278ms
-R_T 2 : 133278ms
-F_CS : 133278ms
-D_T 1 : 133280ms
-F_T 1 : 133393ms
-D_CS : 133412ms
-R_T 1 : 133412ms
-F_CS : 133413ms
-Task 3
-Task 3
-Task 3
-D_CS : 133547ms
-F_CS : 133547ms
-Task 3
-Task 3
-D_CS : 133681ms
-F_CS : 133681ms
-Task 3
-Task 3
+P 10 135
+D 10 135
+R 0 0
+R 1 0
+R 2 0
+F 10 1
+P 10 1
+D 1 2
+P 1 134
+D 10 134
+F 10 134
+P 1 134
+F 1 227
+P 1 227
+D 10 227
+F 10 227
+P 1 228
+D 2 228
+P 2 268
+D 10 269
+F 10 269
+P 2 269
+D 2 342
+P 2 342
+D 10 342
+F 10 342
+P 2 342
+D 0 343
+Task 1
+P 0 403
+D 10 403
+F 10 403
+P 0 403
+Task 1
+Task 1
+P 0 537
+D 10 537
+F 10 537
+P 0 537
+Task 1
+Task 1
+Task 1
+P 0 671
+D 10 671
+F 10 671
+P 0 671
+Task 1
+Task 1
+P 0 805
+D 10 805
+F 10 805
+P 0 805
+Task 1
+Task 1
+Task 1
+P 0 940
+D 10 940
+F 10 940
+P 0 940
+Task 1
+Task 1
+P 0 1074
+D 10 1074
+R 1 1074
+F 10 1074
+P 0 1075
+D 1 1075
+P 1 1208
+D 10 1208
+F 10 1208
+P 1 1208
+F 1 1301
+P 1 1301
+D 10 1301
+F 10 1301
+P 1 1302
+Task 1
+P 0 1342
+D 10 1342
+F 10 1342
+P 0 1342
+Task 1
+Task 1
+Task 1
+P 0 1476
+D 10 1476
+F 10 1477
+P 0 1477
+Task 1
+Task 1
+P 0 1611
+D 10 1611
+R 2 1611
+F 10 1611
+P 0 1611
+D 2 1612
+D 2 1725
+P 2 1725
+D 10 1725
+F 10 1725
+P 2 1726
+P 0 1745
+D 10 1745
+F 10 1745
+P 0 1745
+Task 1
+Task 1
+Task 1
+P 0 1879
+D 10 1879
+F 10 1879
+P 0 1879
+Task 1
+Task 1
+P 0 2013
+D 10 2013
+R 1 2013
+F 10 2013
+P 0 2014
+D 1 2015
+P 1 2148
+D 10 2148
+F 10 2148
+P 1 2148
+F 1 2241
+P 1 2241
+D 10 2241
+F 10 2241
+P 1 2241
+Task 1
+P 0 2282
+D 10 2282
+F 10 2282
+P 0 2282
+Task 1
+Task 1
+Task 1
+P 0 2416
+D 10 2416
+F 10 2416
+P 0 2416
+Task 1
+Task 1
+P 0 2550
+D 10 2550
+F 10 2550
+P 0 2550
+Task 1
+Task 1
+Task 1
+P 0 2684
+D 10 2684
+F 10 2684
+P 0 2685
+Task 1
+Task 1
+P 0 2819
+D 10 2819
+F 10 2819
+P 0 2819
+Task 1
+Task 1
+Task 1
+P 0 2953
+D 10 2953
+F 10 2953
+P 0 2953
+Task 1
+Task 1
+P 0 3087
+D 10 3087
+R 1 3087
+R 2 3087
+F 10 3088
+P 0 3089
+D 1 3090
+P 1 3221
+D 10 3221
+F 10 3221
+P 1 3221
+F 1 3315
+P 1 3315
+D 10 3315
+F 10 3315
+P 1 3316
+D 2 3317
+P 2 3355
+D 10 3356
+F 10 3356
+P 2 3356
+D 2 3431
+P 2 3431
+D 10 3431
+F 10 3431
+P 2 3431
+Task 1
+P 0 3490
+D 10 3490
+F 10 3490
+P 0 3490
+Task 1
+Task 1
+Task 1
+P 0 3624
+D 10 3624
+F 10 3624
+P 0 3624
+Task 1
+Task 1
+Task 1
+P 0 3758
+D 10 3758
+F 10 3758
+P 0 3758
+Task 1
+Task 1
+P 0 3892
+D 10 3892
+F 10 3892
+P 0 3892
+Task 1
+Task 1
+Task 1
+P 0 4027
+D 10 4027
+R 1 4027
+F 10 4027
+P 0 4027
+D 1 4028
+P 1 4161
+D 10 4161
+F 10 4161
+P 1 4161
+F 1 4254
+P 1 4254
+D 10 4254
+F 10 4254
+P 1 4255
+P 0 4295
+D 10 4295
+F 10 4295
+P 0 4295
+Task 1
+Task 1
+Task 1
+P 0 4429
+D 10 4429
+F 10 4429
+P 0 4429
+Task 1
+Task 1
+P 0 4563
+D 10 4563
+R 2 4564
+F 10 4564
+P 0 4564
+D 2 4565
+D 2 4678
+P 2 4678
+D 10 4678
+F 10 4678
+P 2 4679
+Task 1
+P 0 4698
+D 10 4698
+F 10 4698
+P 0 4698
+Task 1
+Task 1
+P 0 4832
+D 10 4832
+F 10 4832
+P 0 4832
+Task 1
+Task 1
+Task 1
+P 0 4966
+D 10 4966
+F 10 4966
+P 0 4966
+Task 1
+Task 1
+P 0 5100
+D 10 5100
+R 1 5100
+F 10 5100
+P 0 5101
+D 1 5102
+P 1 5235
+D 10 5235
+F 10 5235
+P 1 5235
+F 1 5328
+P 1 5328
+D 10 5328
+F 10 5328
+P 1 5328
+Task 1
+P 0 5369
+D 10 5369
+F 10 5369
+P 0 5369
+Task 1
+Task 1
+Task 1
+P 0 5503
+D 10 5503
+F 10 5503
+P 0 5503
+Task 1
+Task 1
+P 0 5637
+D 10 5637
+F 10 5637
+P 0 5637
+Task 1
+Task 1
+Task 1
+P 0 5771
+D 10 5771
+F 10 5771
+P 0 5772
+Task 1
+Task 1
+P 0 5906
+D 10 5906
+F 10 5906
+P 0 5906
+Task 1
+Task 1
+Task 1
+P 0 6040
+D 10 6040
+R 1 6040
+R 2 6040
+F 10 6041
+P 0 6042
+Task 1
+Task 1
+P 0 6174
+D 10 6174
+F 10 6174
+P 0 6174
+Task 1
+Task 1
+Task 1
+P 0 6308
+D 10 6308
+F 10 6308
+P 0 6308
+Task 1
+Task 1
+P 0 6442
+D 10 6443
+F 10 6443
+P 0 6443
+Task 1
+Task 1
+Task 1
+P 0 6577
+D 10 6577
+F 10 6577
+P 0 6577
+Task 1
+Task 1
+P 0 6711
+D 10 6711
+F 10 6711
+P 0 6711
+Task 1
+Task 1
+Task 1
+P 0 6845
+D 10 6845
+F 10 6845
+P 0 6845
+Task 1
+Task 1
+P 0 6979
+D 10 6979
+F 10 6979
+P 0 6979
+Task 1
+Task 1
+Task 1
+P 0 7114
+D 10 7114
+M 0 7114
+M 1 7114
+F 10 7114
+P 0 7115
+Task 1
+F 0 7151
+P 0 7151
+D 10 7151
+R 0 7152
+M 1 7153
+F 10 7153
+P 0 7154
+D 1 7155
+P 1 7248
+D 10 7248
+M 1 7248
+F 10 7248
+P 1 7249
+F 1 7382
+P 1 7382
+D 10 7382
+R 1 7382
+F 10 7383
+P 1 7383
+P 2 7384
+D 10 7385
+F 10 7386
+P 2 7387
+D 2 7388
+D 2 7501
+P 2 7501
+D 10 7501
+R 2 7501
+F 10 7502
+P 2 7503
+D 1 7503
+P 1 7516
+D 10 7516
+F 10 7516
+P 1 7516
+P 1 7650
+D 10 7650
+F 10 7651
+P 1 7651
+F 1 7730
+P 1 7730
+D 10 7730
+F 10 7730
+P 1 7731
+D 2 7732
+P 2 7785
+D 10 7785
+F 10 7785
+P 2 7785
+D 2 7845
+P 2 7845
+D 10 7845
+F 10 7845
+P 2 7846
+D 0 7847
+Task 1
+P 0 7919
+D 10 7919
+F 10 7919
+P 0 7919
+Task 1
+Task 1
+P 0 8053
+D 10 8053
+R 1 8053
+F 10 8053
+P 0 8054
+D 1 8055
+P 1 8187
+D 10 8187
+F 10 8187
+P 1 8187
+F 1 8280
+P 1 8280
+D 10 8281
+F 10 8281
+P 1 8281
+Task 1
+P 0 8322
+D 10 8322
+F 10 8322
+P 0 8322
+Task 1
+Task 1
+Task 1
+P 0 8456
+D 10 8456
+F 10 8456
+P 0 8456
+Task 1
+Task 1
+P 0 8590
+D 10 8590
+F 10 8590
+P 0 8590
+Task 1
+Task 1
+Task 1
+P 0 8724
+D 10 8724
+F 10 8724
+P 0 8724
+Task 1
+Task 1
+P 0 8858
+D 10 8858
+F 10 8858
+P 0 8859
+Task 1
+Task 1
+Task 1
+P 0 8993
+D 10 8993
+F 10 8993
+P 0 8993
+Task 1
+Task 1
+P 0 9127
+D 10 9127
+R 1 9127
+R 2 9127
+F 10 9128
+P 0 9129
+D 1 9129
+P 1 9261
+D 10 9261
+F 10 9261
+P 1 9261
+F 1 9355
+P 1 9355
+D 10 9355
+F 10 9355
+P 1 9356
+D 2 9357
+P 2 9395
+D 10 9395
+F 10 9395
+P 2 9395
+D 2 9470
+P 2 9470
+D 10 9470
+F 10 9471
+P 2 9471
+Task 1
+P 0 9529
+D 10 9530
+F 10 9530
+P 0 9530
+Task 1
+Task 1
+Task 1
+P 0 9664
+D 10 9664
+F 10 9664
+P 0 9664
+Task 1
+Task 1
+P 0 9798
+D 10 9798
+F 10 9798
+P 0 9798
+Task 1
+Task 1
+Task 1
+P 0 9932
+D 10 9932
+F 10 9932
+P 0 9932
+Task 1
+Task 1
+P 0 10066
+D 10 10066
+R 1 10066
+F 10 10066
+P 0 10068
+D 1 10068
+P 1 10201
+D 10 10201
+F 10 10201
+P 1 10201
+F 1 10295
+P 1 10295
+D 10 10295
+F 10 10295
+P 1 10296
+Task 1
+P 0 10335
+D 10 10335
+F 10 10335
+P 0 10335
+Task 1
+Task 1
+Task 1
+P 0 10469
+D 10 10469
+F 10 10469
+P 0 10469
+Task 1
+Task 1
+P 0 10603
+D 10 10603
+R 2 10603
+F 10 10603
+P 0 10604
+D 2 10605
+D 2 10718
+P 2 10718
+D 10 10718
+F 10 10718
+P 2 10719
+Task 1
+P 0 10737
+D 10 10737
+F 10 10738
+P 0 10738
+Task 1
+Task 1
+P 0 10872
+D 10 10872
+F 10 10872
+P 0 10872
+Task 1
+Task 1
+Task 1
+P 0 11006
+D 10 11006
+R 1 11006
+F 10 11006
+P 0 11007
+D 1 11008
+P 1 11140
+D 10 11140
+F 10 11140
+P 1 11140
+F 1 11234
+P 1 11234
+D 10 11234
+F 10 11234
+P 1 11235
+P 0 11274
+D 10 11274
+F 10 11274
+P 0 11275
+Task 1
+Task 1
+Task 1
+P 0 11409
+D 10 11409
+F 10 11409
+P 0 11409
+Task 1
+Task 1
+P 0 11543
+D 10 11543
+F 10 11543
+P 0 11543
+Task 1
+Task 1
+Task 1
+P 0 11677
+D 10 11677
+F 10 11677
+P 0 11677
+Task 1
+Task 1
+P 0 11811
+D 10 11811
+F 10 11811
+P 0 11811
+Task 1
+Task 1
+Task 1
+P 0 11945
+D 10 11945
+F 10 11945
+P 0 11946
+Task 1
+Task 1
+P 0 12080
+D 10 12080
+R 1 12080
+R 2 12080
+F 10 12081
+P 0 12082
+D 1 12083
+P 1 12214
+D 10 12214
+F 10 12214
+P 1 12214
+F 1 12309
+P 1 12309
+D 10 12309
+F 10 12309
+P 1 12310
+D 2 12311
+P 2 12348
+D 10 12348
+F 10 12348
+P 2 12348
+D 2 12425
+P 2 12425
+D 10 12425
+F 10 12425
+P 2 12426
+Task 1
+P 0 12482
+D 10 12482
+F 10 12482
+P 0 12482
+Task 1
+Task 1
+Task 1
+P 0 12616
+D 10 12617
+F 10 12617
+P 0 12617
+Task 1
+Task 1
+Task 1
+P 0 12751
+D 10 12751
+F 10 12751
+P 0 12751
+Task 1
+Task 1
+P 0 12885
+D 10 12885
+F 10 12885
+P 0 12885
+Task 1
+Task 1
+Task 1
+P 0 13019
+D 10 13019
+R 1 13019
+F 10 13019
+P 0 13020
+Task 1
+Task 1
+P 0 13153
+D 10 13153
+F 10 13153
+P 0 13154
+Task 1
+Task 1
+Task 1
+P 0 13288
+D 10 13288
+F 10 13288
+P 0 13288
+Task 1
+Task 1
+P 0 13422
+D 10 13422
+F 10 13422
+P 0 13422
+Task 1
+Task 1
+Task 1
+P 0 13556
+D 10 13556
+R 2 13556
+F 10 13556
+P 0 13557
+Task 1
+Task 1
+P 0 13690
+D 10 13690
+F 10 13690
+P 0 13690
+Task 1
+Task 1
+Task 1
+P 0 13824
+D 10 13824
+F 10 13825
+P 0 13825
+Task 1
+Task 1
+P 0 13959
+D 10 13959
+F 10 13959
+P 0 13959
+Task 1
+Task 1
+Task 1
+P 0 14093
+D 10 14093
+M 0 14093
+M 1 14093
+F 10 14094
+P 0 14095
+Task 1
+Task 1
+P 0 14227
+D 10 14227
+M 0 14227
+M 1 14227
+F 10 14228
+P 0 14229
+Task 1
+Task 1
+Task 1
+P 0 14361
+D 10 14361
+M 0 14361
+M 1 14361
+F 10 14362
+P 0 14363
+Task 1
+Task 1
+P 0 14496
+D 10 14496
+M 0 14496
+M 1 14496
+F 10 14497
+P 0 14498
+Task 1
+Task 1
+Task 1
+P 0 14630
+D 10 14630
+M 0 14630
+M 1 14630
+F 10 14631
+P 0 14632
+Task 1
+F 0 14680
+P 0 14680
+D 10 14680
+R 0 14681
+M 1 14682
+F 10 14683
+P 0 14684
+D 1 14685
+P 1 14764
+D 10 14764
+M 1 14764
+F 10 14764
+P 1 14765
+P 1 14898
+D 10 14898
+M 1 14898
+F 10 14898
+P 1 14899
+F 1 14914
+P 1 14914
+D 10 14914
+R 1 14914
+F 10 14915
+P 1 14916
+D 1 14917
+P 1 15032
+D 10 15032
+M 1 15032
+M 2 15033
+F 10 15033
+P 1 15035
+F 1 15145
+P 1 15145
+D 10 15145
+R 1 15145
+M 2 15146
+F 10 15147
+P 1 15148
+D 2 15149
+P 2 15167
+D 10 15167
+M 2 15167
+F 10 15167
+P 2 15168
+D 2 15264
+P 2 15264
+D 10 15264
+R 2 15264
+F 10 15265
+P 2 15266
+D 1 15267
+P 1 15301
+D 10 15301
+F 10 15301
+P 1 15301
+P 1 15435
+D 10 15435
+F 10 15435
+P 1 15435
+F 1 15495
+P 1 15495
+D 10 15495
+F 10 15495
+P 1 15496
+D 2 15497
+P 2 15569
+D 10 15569
+F 10 15569
+P 2 15569
+D 2 15611
+P 2 15611
+D 10 15611
+F 10 15611
+P 2 15612
+D 0 15613
+Task 1
+P 0 15704
+D 10 15704
+F 10 15704
+P 0 15704
+Task 1
+Task 1
+Task 1
+P 0 15838
+D 10 15838
+F 10 15838
+P 0 15838
+Task 1
+Task 1
+P 0 15972
+D 10 15972
+F 10 15972
+P 0 15972
+Task 1
+Task 1
+Task 1
+P 0 16106
+D 10 16106
+R 1 16106
+F 10 16106
+P 0 16107
+D 1 16108
+P 1 16240
+D 10 16240
+F 10 16240
+P 1 16241
+F 1 16334
+P 1 16334
+D 10 16334
+F 10 16334
+P 1 16336
+P 0 16375
+D 10 16375
+F 10 16375
+P 0 16375
+Task 1
+Task 1
+Task 1
+P 0 16509
+D 10 16509
+R 2 16509
+F 10 16509
+P 0 16510
+D 2 16511
+D 2 16624
+P 2 16624
+D 10 16624
+F 10 16624
+P 2 16625
+P 0 16643
+D 10 16643
+F 10 16643
+P 0 16643
+Task 1
+Task 1
+Task 1
+P 0 16777
+D 10 16777
+F 10 16777
+P 0 16777
+Task 1
+Task 1
+P 0 16911
+D 10 16912
+F 10 16912
+P 0 16912
+Task 1
+Task 1
+Task 1
+P 0 17046
+D 10 17046
+R 1 17046
+F 10 17046
+P 0 17047
+D 1 17048
+P 1 17180
+D 10 17180
+F 10 17180
+P 1 17180
+F 1 17274
+P 1 17274
+D 10 17274
+F 10 17274
+P 1 17275
+Task 1
+P 0 17314
+D 10 17314
+F 10 17314
+P 0 17314
+Task 1
+Task 1
+P 0 17448
+D 10 17448
+F 10 17448
+P 0 17449
+Task 1
+Task 1
+Task 1
+P 0 17583
+D 10 17583
+F 10 17583
+P 0 17583
+Task 1
+Task 1
+P 0 17717
+D 10 17717
+F 10 17717
+P 0 17717
+Task 1
+Task 1
+Task 1
+P 0 17851
+D 10 17851
+F 10 17851
+P 0 17851
+Task 1
+Task 1
+P 0 17985
+D 10 17985
+F 10 17985
+P 0 17985
+Task 1
+Task 1
+Task 1
+P 0 18119
+D 10 18119
+R 1 18120
+R 2 18120
+F 10 18120
+P 0 18122
+D 1 18122
+P 1 18254
+D 10 18254
+F 10 18254
+P 1 18254
+F 1 18349
+P 1 18349
+D 10 18349
+F 10 18349
+P 1 18350
+D 2 18351
+P 2 18388
+D 10 18388
+F 10 18388
+P 2 18388
+D 2 18465
+P 2 18465
+D 10 18465
+F 10 18465
+P 2 18466
+Task 1
+P 0 18522
+D 10 18522
+F 10 18522
+P 0 18522
+Task 1
+Task 1
+P 0 18656
+D 10 18656
+F 10 18656
+P 0 18656
+Task 1
+Task 1
+Task 1
+P 0 18791
+D 10 18791
+F 10 18791
+P 0 18791
+Task 1
+Task 1
+P 0 18925
+D 10 18925
+F 10 18925
+P 0 18925
+Task 1
+Task 1
+Task 1
+P 0 19059
+D 10 19059
+R 1 19059
+F 10 19059
+P 0 19060
+D 1 19061
+P 1 19193
+D 10 19193
+F 10 19193
+P 1 19193
+F 1 19287
+P 1 19287
+D 10 19287
+F 10 19287
+P 1 19288
+Task 1
+P 0 19327
+D 10 19327
+F 10 19327
+P 0 19328
+Task 1
+Task 1
+P 0 19462
+D 10 19462
+F 10 19462
+P 0 19462
+Task 1
+Task 1
+Task 1
+P 0 19596
+D 10 19596
+R 2 19596
+F 10 19596
+P 0 19597
+Task 1
+Task 1
+P 0 19730
+D 10 19730
+F 10 19730
+P 0 19730
+Task 1
+Task 1
+Task 1
+P 0 19864
+D 10 19864
+F 10 19864
+P 0 19864
+Task 1
+Task 1
+P 0 19998
+D 10 19999
+F 10 19999
+P 0 19999
+Task 1
+Task 1
+Task 1
+P 0 20133
+D 10 20133
+R 1 20133
+F 10 20133
+P 0 20134
+Task 1
+Task 1
+P 0 20267
+D 10 20267
+F 10 20267
+P 0 20267
+Task 1
+Task 1

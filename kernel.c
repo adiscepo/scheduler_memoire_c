@@ -69,8 +69,6 @@ void task0(void) {
     }
     // printf("[ Fin tâche 1 %d %d\n", scheduler.current_process, NOW);
     gpio_put(LED_PIN_T1, 0);
-    printf("FINAL : %d\n", task0_val);
-    __breakpoint();
     task0_val = 0;
     printf("F %d %d\n", scheduler.current_process, NOW);
 }

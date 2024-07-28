@@ -234,9 +234,6 @@ set_process_idle:
 .global software_interrupt_handler
 .type software_interrupt_handler, %function
 software_interrupt_handler:
-    ldr r0, =0x0
-    msr control, r0
-    isb
 
     ldr r1, =scheduler
     ldr r2, [r1]          
@@ -270,13 +267,7 @@ software_interrupt_handler:
     ldmia r0!, {r4-r7}    
     adds r0, #16
 
-    msr psp, r0   
-    ldr r0, [r0, #20] // On va directement au LR (TOS qui est sur r0 - (5 * 4) => LR)
-    mov lr, r0
-    mrs r0, control
-    ldr r0, =0x2
-    msr control, r0
-    isb
+    msr psp, r0
     ldr r0, =#16
     ldr r1, =#0
     bl irq_set_enabled

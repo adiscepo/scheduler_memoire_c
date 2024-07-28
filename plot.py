@@ -9,7 +9,7 @@ def read_log_file(filename):
     with open(filename, 'r') as file:
         lines = file.readlines()
 
-    max_tasks = int(lines[0].split(":")[1].strip())
+    max_tasks = int(lines[0].split(":")[1].strip()) + 1
     logs = []
     
     for line in lines[1:]:
@@ -17,7 +17,7 @@ def read_log_file(filename):
         if len(parts) == 3:
             action, task_id, timestamp = parts
             task_id = int(task_id)
-        else:
+        elif len(parts) == 2:
             action, timestamp = parts[0], parts[1]
             task_id = max_tasks if action == "IDLE" else None
         timestamp = int(timestamp)
@@ -27,7 +27,7 @@ def read_log_file(filename):
 
 # Fonction pour traiter les logs et organiser les informations pour le graphe
 def process_logs(max_tasks, logs):
-    task_dict = {i: [] for i in range(max_tasks + 1)}  # Including the IDLE task as max_tasks
+    task_dict = {i: [] for i in range(max_tasks + 2)}  # Including the IDLE task as max_tasks
     current_task = -1
     start_time = 0
     missed_deadlines = []

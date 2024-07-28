@@ -12,14 +12,14 @@ const uint LED_PIN_T1 = 10;
 const uint LED_PIN_T2 = 11;
 const uint LED_PIN_T3 = 12;
 
-int task1_val, task2_val, task3_val;
+int task0_val, task1_val, task2_val;
 static int turn = 0;
+static uint32_t task0_stack[128];
+void task0();
 static uint32_t task1_stack[128];
 void task1();
 static uint32_t task2_stack[128];
 void task2();
-static uint32_t task3_stack[128];
-void task3();
 void end_task(void);
 
 // Fonctions définies en assembleur
@@ -44,9 +44,9 @@ int main() {
     init_scheduler();
 
     __asm("CPSID I");
-    create_process(7000, 7000, task1);
-    create_process(1000, 1000, task2);
-    create_process(1500, 1500, task3);
+    create_process(8000, 8000, task0);
+    create_process(1000, 1000, task1);
+    create_process(1500, 1500, task2);
     __asm("CPSIE I");
 
     printf("Task: %d\n", scheduler.current_process);
@@ -58,42 +58,44 @@ int main() {
     return 0;
 }
 
-// Task 1
-void task1(void) {
+// Task 0
+void task0(void) {
     // printf("[ Début tâche 1 %d %d\n", schedule.current_process, NOW);
     printf("D %d %d\n", scheduler.current_process, NOW);
     gpio_put(LED_PIN_T1, 1);
-    while (task1_val < 10000000) {
-        task1_val += 1;
-        if (task1_val % 100000 == 0) printf("Task 1\n");
+    while (task0_val < 10000000) {
+        task0_val += 1;
+        if (task0_val % 100000 == 0) printf("Task 0\n");
     }
     // printf("[ Fin tâche 1 %d %d\n", scheduler.current_process, NOW);
     gpio_put(LED_PIN_T1, 0);
+    printf("FINAL : %d\n", task0_val);
+    __breakpoint();
+    task0_val = 0;
+    printf("F %d %d\n", scheduler.current_process, NOW);
+}
+
+// Task 1
+void task1(void) {
+    printf("D %d %d\n", scheduler.current_process, NOW);
+    gpio_put(LED_PIN_T2, 1);
+    while(task1_val < 2000000) {
+        task1_val += 1;
+        // if (task1_val % 100000 == 0) printf("Task 1\n");
+    }
+    // printf("[ Fin tâche 2 %d %d\n", scheduler.current_process, NOW);
+    gpio_put(LED_PIN_T2, 0);
     task1_val = 0;
     printf("F %d %d\n", scheduler.current_process, NOW);
 }
 
+int i = 0;
 // Task 2
 void task2(void) {
     printf("D %d %d\n", scheduler.current_process, NOW);
-    gpio_put(LED_PIN_T2, 1);
-    while(task2_val < 2000000) {
-        task2_val += 1;
-        // if (task2_val % 100000 == 0) printf("Task 2\n");
-    }
-    // printf("[ Fin tâche 2 %d %d\n", scheduler.current_process, NOW);
-    gpio_put(LED_PIN_T2, 0);
-    task2_val = 0;
-    printf("F %d %d\n", scheduler.current_process, NOW);
-}
-
-int i = 0;
-// Task 3
-void task3(void) {
-    printf("D %d %d\n", scheduler.current_process, NOW);
     gpio_put(LED_PIN_T3, 1);
     while (i < 1000000) {
-        // if (i % 100000 == 0) printf("Task 3\n");
+        // if (i % 100000 == 0) printf("Task 2\n");
         i++;
     }
     gpio_put(LED_PIN_T3, 0);

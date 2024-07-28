@@ -10,7 +10,6 @@ typedef enum {
     DEFINED,
     READY,
     RUNNING,
-    BLOCKED,
     FAILED,
     PREEMPTED,
     ENDED

@@ -39,7 +39,12 @@
     "raspberry-pi-pico.python3Path": "${HOME}/.pico-sdk/python/3.12.1/python.exe",
     "files.associations": {
         "systick.h": "c",
-        "gpio.h": "c"
+        "gpio.h": "c",
+        "config.h": "c",
+        "stdint.h": "c",
+        "stdlib.h": "c",
+        "process.h": "c",
+        "scheduler.h": "c"
     },
-    "cortex-debug.variableUseNaturalFormat": false
+    "cortex-debug.variableUseNaturalFormat": true
 }

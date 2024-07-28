@@ -65,14 +65,22 @@ def process_logs(max_tasks, logs):
 def create_gantt_chart(task_dict, missed_deadlines, name):
     fig, ax = plt.subplots(figsize=(15, 8))
     colors = plt.cm.get_cmap('Set2', len(task_dict))
-    legend_elements = [Patch(facecolor=colors(i), edgecolor='k', label=f'Task {i}') for i in range(len(task_dict))]
-    legend_elements.append(Patch(facecolor='white', edgecolor='k', label='Idle'))
-
+    legend_elements = []
     y_labels = []
     y_ticks = []
     
     for i, (task_id, intervals) in enumerate(task_dict.items()):
-        y_labels.append('IDLE' if task_id == -1 else f'Task {task_id}')
+        if task_id > max_tasks:
+            continue
+        if task_id == max_tasks - 1:
+            y_labels.append('IDLE')
+            legend_elements.append(Patch(facecolor=colors(i), edgecolor='k', label=f'IDLE'))
+        elif task_id == max_tasks:
+            y_labels.append('Context Switching')
+            legend_elements.append(Patch(facecolor=colors(i), edgecolor='k', label=f'CS'))
+        else:
+            y_labels.append(f'Tâche {task_id}')
+            legend_elements.append(Patch(facecolor=colors(i), edgecolor='k', label=f'Tâche {i}'))
         y_ticks.append(i)
         for interval in intervals:
             start, end, state = interval
@@ -90,8 +98,8 @@ def create_gantt_chart(task_dict, missed_deadlines, name):
 
     ax.set_yticks(y_ticks)
     ax.set_yticklabels(y_labels)
-    ax.set_xlabel('Time (ms)')
-    ax.set_title('Task Execution Gantt Chart')
+    ax.set_xlabel('Temps (ms)')
+    ax.set_title('Exécution des tâches')
     ax.legend(handles=legend_elements, loc='upper right')
 
     # plt.show()

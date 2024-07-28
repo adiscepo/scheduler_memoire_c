@@ -4,7 +4,6 @@
 #include "hardware/clocks.h"
 #include "hardware/pll.h"
 #include "pico/stdlib.h"
-#include "task.h"
 #include "scheduler.h"
 
 const uint LED_PIN = PICO_DEFAULT_LED_PIN;
@@ -14,19 +13,10 @@ const uint LED_PIN_T3 = 12;
 
 int task0_val, task1_val, task2_val;
 static int turn = 0;
-static uint32_t task0_stack[128];
 void task0();
-static uint32_t task1_stack[128];
 void task1();
-static uint32_t task2_stack[128];
 void task2();
 void end_task(void);
-
-// Fonctions définies en assembleur
-extern void setup_systick(void);
-extern void start_scheduler(void);
-extern void isr_pendsv(void);
-extern void isr_systick(void);
 
 extern scheduler_t scheduler;
 
@@ -40,21 +30,16 @@ int main() {
     gpio_set_dir(LED_PIN_T2, GPIO_OUT);
     gpio_set_dir(LED_PIN_T3, GPIO_OUT);
     stdio_init_all();
-    setup_systick();
     init_scheduler();
 
-    __asm("CPSID I");
-    create_process(8000, 8000, task0);
-    create_process(1000, 1000, task1);
-    create_process(1500, 1500, task2);
-    __asm("CPSIE I");
+    create_process(8000, task0);
+    create_process(1500, task1);
+    create_process(1000, task2);
 
     printf("Task: %d\n", scheduler.current_process);
 
-    // current_task = &tasks[0];
     start_scheduler();
     
-    // while (true);
     return 0;
 }
 
@@ -100,20 +85,4 @@ void task2(void) {
     i = 0;
     printf("D %d %d\n", scheduler.current_process, NOW);
     return;
-}
-
-void link_gpio_put(int pin, int value) {
-    gpio_put(pin, value);
-}
-
-void context_switch_led_on() {
-    gpio_put(LED_PIN, 1);
-}
-
-void context_switch_led_off() {
-    gpio_put(LED_PIN, 0);
-}
-
-task_t* next_task() {
-    return current_task->next;
 }

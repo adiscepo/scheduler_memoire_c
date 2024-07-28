@@ -4,36 +4,33 @@
 #include "pico/time.h"
 #include "hardware/irq.h"
 
-#define SOFTWARE_INTERRUPT_IRQn 16
+#define END_TASK_IRQ 16
 
 scheduler_t scheduler;
 uint32_t tick = 0;
 
 extern void set_process_idle(void);
 extern void end_set_task(void);
-extern void software_interrupt_handler(void);
 
-void setup_software_interrupt() {
-    // Associer le gestionnaire d'interruption à l'interruption logicielle
-    irq_set_exclusive_handler(SOFTWARE_INTERRUPT_IRQn, software_interrupt_handler);
-    // Activer l'interruption logicielle dans le NVIC
-    irq_set_enabled(SOFTWARE_INTERRUPT_IRQn, false);
-    irq_set_priority(SOFTWARE_INTERRUPT_IRQn, 10);
+void setup_end_task_irq() {
+    irq_set_exclusive_handler(END_TASK_IRQ, end_set_task);
+    irq_set_enabled(END_TASK_IRQ, false);
+    irq_set_priority(END_TASK_IRQ, 10);
 }
 
-void trigger_software_interrupt() {
-    irq_set_enabled(SOFTWARE_INTERRUPT_IRQn, true);
+void end_set_task_irq() {
+    irq_set_enabled(END_TASK_IRQ, true);
 }
-
 
 void init_scheduler() {
     __asm("CPSID I");
-    setup_software_interrupt();
+    setup_systick();        // Lance la configuration de SysTick
+    setup_end_task_irq();   // Active l'interruption de fin de tâche
     process_t* idle_process = &scheduler.processes[MAX_PROCESSES];
-    idle_process->stack[PROCESS_STACK_SIZE - 1] = 0x01000000;             // Défini le xPSR sur Thumb
-    idle_process->stack[PROCESS_STACK_SIZE - 2] = (uint32_t)(idle);           // PC de la pile pointe vers le code de la fonction
-    idle_process->stack[PROCESS_STACK_SIZE - 3] = (uint32_t)(end_task);   // LR : Fonction de retour
-    idle_process->tos = &idle_process->stack[PROCESS_STACK_SIZE - 16];      // Défini le pointeur vers le haut de la pile
+    idle_process->stack[PROCESS_STACK_SIZE - 1] = 0x01000000;           // Défini le xPSR sur Thumb
+    idle_process->stack[PROCESS_STACK_SIZE - 2] = (uint32_t)(idle);     // PC de la pile pointe vers le code de la fonction
+    idle_process->stack[PROCESS_STACK_SIZE - 3] = (uint32_t)(end_task); // LR : Fonction de retour
+    idle_process->tos = &idle_process->stack[PROCESS_STACK_SIZE - 16];  // Défini le pointeur vers le haut de la pile
     idle_process->absolute_deadline = UINT32_MAX;
     idle_process->deadline = 0;
     idle_process->state = UNDEFINED;
@@ -41,8 +38,7 @@ void init_scheduler() {
     __asm("CPSIE I");
 }
 
-void create_process(uint32_t deadline, uint32_t absolute_deadline, void(*fn)(void*)) {
-    // printf("[ Création processus ] %d\n", NOW);
+int create_process(uint32_t deadline, void(*fn)(void*)) {
     size_t available_process = -1;
     for (size_t i = 0; i < MAX_PROCESSES; i++) {
         if (scheduler.processes[i].state == UNDEFINED || scheduler.processes[i].state == ENDED) {
@@ -50,7 +46,7 @@ void create_process(uint32_t deadline, uint32_t absolute_deadline, void(*fn)(voi
             break;
         }
     }
-    assert(available_process != -1);  // TODO: modify with prettier error manager
+    if (available_process == -1) return false; // Plus d'espace pour de nouveaux processus
 
     process_t* new_process = &scheduler.processes[available_process];
     new_process->stack[PROCESS_STACK_SIZE - 1] = 0x01000000;             // Défini le xPSR sur Thumb
@@ -69,15 +65,13 @@ void create_process(uint32_t deadline, uint32_t absolute_deadline, void(*fn)(voi
     new_process->stack[PROCESS_STACK_SIZE - 14] = 0x66666666;
     new_process->stack[PROCESS_STACK_SIZE - 15] = 0x55555555;
     new_process->stack[PROCESS_STACK_SIZE - 16] = 0x44444444;
-    // for (size_t i = 17; i < PROCESS_STACK_SIZE; ++i) stack[stack_size - i] = 0xdeadbeef;     // Rempli toute la pile avec des données bidons
     new_process->tos = &new_process->stack[PROCESS_STACK_SIZE - 16];      // Défini le pointeur vers le haut de la pile
 
-    new_process->absolute_deadline = absolute_deadline;
+    new_process->absolute_deadline = deadline;
     new_process->deadline = deadline;
     new_process->fn = (uint32_t*)fn;
     new_process->state = DEFINED;
-    // printf("[ Fin création processus ] %d\n", NOW);
-    return;
+    return true;
 }
 
 void end_task() {
@@ -86,22 +80,23 @@ void end_task() {
     process_t *ended_process = &scheduler.processes[pid];
     ended_process->state = ENDED;
     __asm("CPSIE I");
-    trigger_software_interrupt();
+    end_set_task_irq();
+    // On est pas censé être ici, l'interruption précédente nous emmène vers la tâche suivante directe
     while (true) {
         __asm("WFI");
-        // printf("[ Processus en attente de redémarrage ] %d\n", NOW);
     }
 }
 
 
 size_t schedule() {
-    __asm("CPSID I"); // Disable interrupts
-    printf("P %d %d\n", scheduler.current_process, NOW);
-    printf("D %d %d\n", MAX_PROCESSES + 1, NOW);
+    __asm("CPSID I");
     
     if (scheduler.delay == 0) {
         scheduler.delay = NOW;
         scheduler.timer = 0;
+    } else {
+        printf("P %d %d\n", scheduler.current_process, NOW);
+        printf("D %d %d\n", MAX_PROCESSES + 1, NOW);
     }
     scheduler.timer =  NOW - scheduler.delay;
 
@@ -130,7 +125,7 @@ size_t schedule() {
             process->stack[PROCESS_STACK_SIZE - 14] = 0x66666666;            // R6
             process->stack[PROCESS_STACK_SIZE - 15] = 0x55555555;            // R5
             process->stack[PROCESS_STACK_SIZE - 16] = 0x44444444;            // R4
-            process->tos = &process->stack[PROCESS_STACK_SIZE - 16];         // Set TOS
+            process->tos = &process->stack[PROCESS_STACK_SIZE - 16];         // TOS
             process->state = DEFINED;
             process->release_time = process->absolute_deadline;    
             process->absolute_deadline = process->release_time + process->deadline;
@@ -139,12 +134,10 @@ size_t schedule() {
         if (process->state == DEFINED || process->state == FAILED) {
             if (process->release_time <= NOW) {
                 process->state = READY;
-                // process->absolute_deadline = process->release_time + process->deadline;
-                // process->release_time = process->absolute_deadline;
                 printf("R %d %d\n", i, NOW);
             }
         }
-        
+
         if (process->absolute_deadline < NOW) {
             printf("M %d %d\n", i, NOW);
             process->state = FAILED;
@@ -176,6 +169,5 @@ size_t schedule() {
 }
 
 void idle() {
-    // while (true) printf("[ IDLE ], %d\n", NOW);
     while (true) __asm("NOP");
 }

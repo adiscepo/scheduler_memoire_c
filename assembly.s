@@ -15,7 +15,7 @@
 
 .equ PENDSV_BASE, 0xe000ed04
 
-.equ MAX_PROCESSES, 10
+.equ MAX_PROCESSES, 3
 .equ PROCESS_SIZE, 0x1018   // | TOS      | 4 bytes
                             // | STACK    | 4 * STACK_SIZE (1024) bytes
                             // |   ....   |
@@ -111,11 +111,6 @@ isr_systick:
     cpsid i
     mov r3, lr
     push {r3}
-    
-    ldr r1, =tick
-    ldr r2, [r1]
-    adds r2, #1
-    str r2, [r1]
 
     ldr r1, =PENDSV_BASE    // Charge le registre de gestion des interruptions (pg. 85 rp2040)
     ldr r0, =0x10000000     // Met le 28ème bit à 1 -> Active l'interruption PendSV
@@ -231,9 +226,9 @@ set_process_idle:
     cpsie i
     bx lr
 
-.global software_interrupt_handler
-.type software_interrupt_handler, %function
-software_interrupt_handler:
+.global end_set_task
+.type end_set_task, %function
+end_set_task:
 
     ldr r1, =scheduler
     ldr r2, [r1]          

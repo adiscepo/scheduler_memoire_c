@@ -5,6 +5,12 @@
 #include "stdint.h"
 #include "stddef.h"
 
+// Fonctions définies en assembleur
+extern void setup_systick(void);
+extern void start_scheduler(void);
+extern void isr_pendsv(void);
+extern void isr_systick(void);
+
 typedef enum {
     UNDEFINED,
     DEFINED,
@@ -33,11 +39,10 @@ typedef struct {
 } scheduler_t;
 
 extern scheduler_t scheduler;
-extern uint32_t tick;
 
 
 void init_scheduler();
-void create_process(uint32_t deadline, uint32_t absolute_deadline, void(*fn)(void*));
+int create_process(uint32_t deadline, void(*fn)(void*));
 void end_task();
 void idle();
 

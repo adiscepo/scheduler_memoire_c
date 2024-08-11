@@ -1,1 +1,1 @@
-cmd='/opt/homebrew/Cellar/cmake/3.30.0/bin/cmake;-DCMAKE_MAKE_PROGRAM:FILEPATH=/usr/bin/make;-GUnix Makefiles;-S;<SOURCE_DIR><SOURCE_SUBDIR>;-B;<BINARY_DIR>'
+cmd='/Users/attilio/.pico-sdk/cmake/v3.28.6/CMake.app/Contents/bin/cmake;-DCMAKE_MAKE_PROGRAM:FILEPATH=/opt/homebrew/bin/ninja;-GNinja;-S;<SOURCE_DIR><SOURCE_SUBDIR>;-B;<BINARY_DIR>'

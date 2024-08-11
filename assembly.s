@@ -10,7 +10,7 @@
                                             // C : CALIB -> Pas important dans notre cas
 .equ SYSTICK_RELOAD_VALUE, 0x00ffffff - 1   // Valeur de Reload pour Systick (valeur maximale)
 .equ SYSTICK_SHPR3, 0xe000ed20
-.equ SYSTICK_PRIORITY_MASK, 0xc0000000
+.equ SYSTICK_PRIORITY_MASK, 0xc0000000e
 .equ SYSTICK_PRIORITY, 3
 
 .equ PENDSV_BASE, 0xe000ed04
@@ -23,7 +23,7 @@
                             // | REALDEAD | 4 bytes
                             // | RELEASE  | 4 bytes
                             // | STATE    | 4 bytes
-.equ LR_POS, 0xFFC
+.equ END_TASK_IRQ, 0x10 //
 
 // J'aurais pu utiliser des fonctions proposées par le sdk du rpi pico (pour définir les
 // exceptions, les valeurs de systick, etc.) mais j'ai préféré les faire en assembleur
@@ -230,27 +230,23 @@ set_process_idle:
 .type end_set_task, %function
 end_set_task:
 
-    ldr r1, =scheduler
-    ldr r2, [r1]          
-    ldr r3, =0x1018
+    ldr r1, =scheduler      // On récupère l'ordonnanceur
+    ldr r2, [r1]
+    ldr r3, =PROCESS_SIZE
     muls r3, r2
     adds r3, #4
     str r0, [r1, r3]
-    mov r3, lr            
-    push {r3}             
+    mov r3, lr
+    push {r3}        
     
     bl schedule           
     ldr r1, =scheduler
-    ldr r3, =0x1018
+    ldr r3, =PROCESS_SIZE
     muls r3, r0           
     adds r3, #4
     ldr r0, [r1, r3]      
-    adds r1, r3
-    ldr r3, =0x400
-    adds r1, r3
-    ldr r2, [r1]
-    
-    pop {r3}              
+
+    pop {r3}            // On restaure la pile      
     mov lr, r3
     adds r0, #16          
     ldmia r0!, {r4-r7}    
@@ -262,13 +258,13 @@ end_set_task:
     ldmia r0!, {r4-r7}    
     adds r0, #16
 
-    msr psp, r0
-    ldr r0, =#16
-    ldr r1, =#0
-    bl irq_set_enabled
+    msr psp, r0         // On remet la pile de la tâche
+    ldr r0, =END_TASK_IRQ       // Premier paramètre de la fonction pour activer la fin de tâche : id de la tâche
+    ldr r1, =#0                 // Second paramètre : true
+    bl irq_set_enabled          // Appel à la fonction
     CPSIE I
     
-    ldr r0, =0xfffffffd
+    ldr r0, =0xfffffffd         // Fin d'interruption
     mov lr, r0
     bx lr
 

@@ -34,7 +34,6 @@ typedef struct {
 typedef struct {
     size_t current_process;
     process_t processes[MAX_PROCESSES + 1];
-    uint32_t timer;
     uint32_t delay;
 } scheduler_t;
 

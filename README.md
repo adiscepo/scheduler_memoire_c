@@ -2,7 +2,7 @@
 
 This project is a C implementation of a real-time scheduler using the Earliest Deadline First algorithm.
 
-This code is used as a basis for a translation into the Rust language: [Scheduler EDF in Rst](https://github.com/adiscepo/scheduler_memoire_rust)
+This code is used as a basis for a translation into the Rust language: [Scheduler EDF in Rust](https://github.com/adiscepo/scheduler_memoire_rust)
 
 It was produced as part of my Master's Thesis.
 
@@ -27,3 +27,7 @@ To obtain the code execution logs, the minicom software can be used.
 ```shell
 minicom -b 115200 -o -D /dev/name_chip
 ```
+
+## Plot of the code
+
+The plots of the program can be plotted with [this code](https://github.com/adiscepo/scheduler_memoire_plot)

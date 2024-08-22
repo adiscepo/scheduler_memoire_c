@@ -135,8 +135,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "/Users/attilio/Desktop/Code/rp2040_kernel/build/CMakeFiles/CMakeScratch/TryCompile-CJcBjB"
-      binary: "/Users/attilio/Desktop/Code/rp2040_kernel/build/CMakeFiles/CMakeScratch/TryCompile-CJcBjB"
+      source: "/Users/attilio/Desktop/Code/rp2040_kernel/build/CMakeFiles/CMakeScratch/TryCompile-dHKd07"
+      binary: "/Users/attilio/Desktop/Code/rp2040_kernel/build/CMakeFiles/CMakeScratch/TryCompile-dHKd07"
     cmakeVariables:
       CMAKE_C_FLAGS: "-mcpu=cortex-m0plus -mthumb"
       CMAKE_C_FLAGS_DEBUG: "-Og -g"
@@ -146,12 +146,12 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/Users/attilio/Desktop/Code/rp2040_kernel/build/CMakeFiles/CMakeScratch/TryCompile-CJcBjB'
+        Change Dir: '/Users/attilio/Desktop/Code/rp2040_kernel/build/CMakeFiles/CMakeScratch/TryCompile-dHKd07'
         
-        Run Build Command(s): /opt/homebrew/Cellar/cmake/3.30.0/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_d57d7/fast
-        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_d57d7.dir/build.make CMakeFiles/cmTC_d57d7.dir/build
-        Building C object CMakeFiles/cmTC_d57d7.dir/CMakeCCompilerABI.c.obj
-        /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/arm-none-eabi-gcc   -mcpu=cortex-m0plus -mthumb    -v -o CMakeFiles/cmTC_d57d7.dir/CMakeCCompilerABI.c.obj -c /opt/homebrew/Cellar/cmake/3.30.0/share/cmake/Modules/CMakeCCompilerABI.c
+        Run Build Command(s): /opt/homebrew/Cellar/cmake/3.30.0/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_bec07/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_bec07.dir/build.make CMakeFiles/cmTC_bec07.dir/build
+        Building C object CMakeFiles/cmTC_bec07.dir/CMakeCCompilerABI.c.obj
+        /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/arm-none-eabi-gcc   -mcpu=cortex-m0plus -mthumb    -v -o CMakeFiles/cmTC_bec07.dir/CMakeCCompilerABI.c.obj -c /opt/homebrew/Cellar/cmake/3.30.0/share/cmake/Modules/CMakeCCompilerABI.c
         Using built-in specs.
         COLLECT_GCC=/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/arm-none-eabi-gcc
         Target: arm-none-eabi
@@ -159,8 +159,8 @@ events:
         Thread model: single
         Supported LTO compression algorithms: zlib
         gcc version 13.2.1 20231009 (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) 
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_d57d7.dir/CMakeCCompilerABI.c.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_d57d7.dir/'
-         /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/arm-none-eabi/13.2.1/cc1 -quiet -v -imultilib thumb/v6-m/nofp -iprefix /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/ -isysroot /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi -D__USES_INITFINI__ /opt/homebrew/Cellar/cmake/3.30.0/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_d57d7.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -mlibarch=armv6s-m -march=armv6s-m -version -o /var/folders/wp/brddfq2d1sg_blc0_vr5g4z80000gn/T//ccIAJQhI.s
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_bec07.dir/CMakeCCompilerABI.c.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_bec07.dir/'
+         /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/arm-none-eabi/13.2.1/cc1 -quiet -v -imultilib thumb/v6-m/nofp -iprefix /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/ -isysroot /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi -D__USES_INITFINI__ /opt/homebrew/Cellar/cmake/3.30.0/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_bec07.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -mlibarch=armv6s-m -march=armv6s-m -version -o /var/folders/wp/brddfq2d1sg_blc0_vr5g4z80000gn/T//cc0qp4pj.s
         GNU C17 (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) version 13.2.1 20231009 (arm-none-eabi)
         	compiled by GNU C version Apple LLVM 13.0.0 (clang-1300.0.29.30), GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
         
@@ -177,15 +177,15 @@ events:
          /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include
         End of search list.
         Compiler executable checksum: 18f4550fe29065d7f2478f7cc0cc177e
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_d57d7.dir/CMakeCCompilerABI.c.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_d57d7.dir/'
-         /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/as -v -march=armv6s-m -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_d57d7.dir/CMakeCCompilerABI.c.obj /var/folders/wp/brddfq2d1sg_blc0_vr5g4z80000gn/T//ccIAJQhI.s
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_bec07.dir/CMakeCCompilerABI.c.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_bec07.dir/'
+         /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/as -v -march=armv6s-m -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_bec07.dir/CMakeCCompilerABI.c.obj /var/folders/wp/brddfq2d1sg_blc0_vr5g4z80000gn/T//cc0qp4pj.s
         GNU assembler version 2.41.0 (arm-none-eabi) using BFD version (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) 2.41.0.20231009
         COMPILER_PATH=/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/arm-none-eabi/13.2.1/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/
         LIBRARY_PATH=/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_d57d7.dir/CMakeCCompilerABI.c.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_d57d7.dir/CMakeCCompilerABI.c.'
-        Linking C executable cmTC_d57d7.elf
-        /opt/homebrew/Cellar/cmake/3.30.0/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d57d7.dir/link.txt --verbose=1
-        /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb  -Wl,--build-id=none -nostdlib  -v CMakeFiles/cmTC_d57d7.dir/CMakeCCompilerABI.c.obj -o cmTC_d57d7.elf
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_bec07.dir/CMakeCCompilerABI.c.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_bec07.dir/CMakeCCompilerABI.c.'
+        Linking C executable cmTC_bec07.elf
+        /opt/homebrew/Cellar/cmake/3.30.0/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bec07.dir/link.txt --verbose=1
+        /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb  -Wl,--build-id=none -nostdlib  -v CMakeFiles/cmTC_bec07.dir/CMakeCCompilerABI.c.obj -o cmTC_bec07.elf
         Using built-in specs.
         COLLECT_GCC=/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/arm-none-eabi-gcc
         COLLECT_LTO_WRAPPER=/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/arm-none-eabi/13.2.1/lto-wrapper
@@ -196,10 +196,10 @@ events:
         gcc version 13.2.1 20231009 (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) 
         COMPILER_PATH=/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/arm-none-eabi/13.2.1/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/
         LIBRARY_PATH=/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_d57d7.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_d57d7.elf.'
-         /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/arm-none-eabi/13.2.1/collect2 -plugin /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/arm-none-eabi/13.2.1/liblto_plugin.so -plugin-opt=/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/arm-none-eabi/13.2.1/lto-wrapper -plugin-opt=-fresolution=/var/folders/wp/brddfq2d1sg_blc0_vr5g4z80000gn/T//ccJR3Wl3.res --sysroot=/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi -X -o cmTC_d57d7.elf -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1 -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_d57d7.dir/CMakeCCompilerABI.c.obj
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_bec07.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_bec07.elf.'
+         /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/arm-none-eabi/13.2.1/collect2 -plugin /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/arm-none-eabi/13.2.1/liblto_plugin.so -plugin-opt=/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/arm-none-eabi/13.2.1/lto-wrapper -plugin-opt=-fresolution=/var/folders/wp/brddfq2d1sg_blc0_vr5g4z80000gn/T//ccfnZVhi.res --sysroot=/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi -X -o cmTC_bec07.elf -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1 -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_bec07.dir/CMakeCCompilerABI.c.obj
         /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start; defaulting to 00008000
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_d57d7.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_d57d7.elf.'
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_bec07.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_bec07.elf.'
         
       exitCode: 0
   -
@@ -232,12 +232,12 @@ events:
       Parsed C implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
-        ignore line: [Change Dir: '/Users/attilio/Desktop/Code/rp2040_kernel/build/CMakeFiles/CMakeScratch/TryCompile-CJcBjB']
+        ignore line: [Change Dir: '/Users/attilio/Desktop/Code/rp2040_kernel/build/CMakeFiles/CMakeScratch/TryCompile-dHKd07']
         ignore line: []
-        ignore line: [Run Build Command(s): /opt/homebrew/Cellar/cmake/3.30.0/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_d57d7/fast]
-        ignore line: [/Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_d57d7.dir/build.make CMakeFiles/cmTC_d57d7.dir/build]
-        ignore line: [Building C object CMakeFiles/cmTC_d57d7.dir/CMakeCCompilerABI.c.obj]
-        ignore line: [/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/arm-none-eabi-gcc   -mcpu=cortex-m0plus -mthumb    -v -o CMakeFiles/cmTC_d57d7.dir/CMakeCCompilerABI.c.obj -c /opt/homebrew/Cellar/cmake/3.30.0/share/cmake/Modules/CMakeCCompilerABI.c]
+        ignore line: [Run Build Command(s): /opt/homebrew/Cellar/cmake/3.30.0/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_bec07/fast]
+        ignore line: [/Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_bec07.dir/build.make CMakeFiles/cmTC_bec07.dir/build]
+        ignore line: [Building C object CMakeFiles/cmTC_bec07.dir/CMakeCCompilerABI.c.obj]
+        ignore line: [/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/arm-none-eabi-gcc   -mcpu=cortex-m0plus -mthumb    -v -o CMakeFiles/cmTC_bec07.dir/CMakeCCompilerABI.c.obj -c /opt/homebrew/Cellar/cmake/3.30.0/share/cmake/Modules/CMakeCCompilerABI.c]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/arm-none-eabi-gcc]
         ignore line: [Target: arm-none-eabi]
@@ -245,8 +245,8 @@ events:
         ignore line: [Thread model: single]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 13.2.1 20231009 (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_d57d7.dir/CMakeCCompilerABI.c.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_d57d7.dir/']
-        ignore line: [ /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/arm-none-eabi/13.2.1/cc1 -quiet -v -imultilib thumb/v6-m/nofp -iprefix /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/ -isysroot /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi -D__USES_INITFINI__ /opt/homebrew/Cellar/cmake/3.30.0/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_d57d7.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -mlibarch=armv6s-m -march=armv6s-m -version -o /var/folders/wp/brddfq2d1sg_blc0_vr5g4z80000gn/T//ccIAJQhI.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_bec07.dir/CMakeCCompilerABI.c.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_bec07.dir/']
+        ignore line: [ /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/arm-none-eabi/13.2.1/cc1 -quiet -v -imultilib thumb/v6-m/nofp -iprefix /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/ -isysroot /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi -D__USES_INITFINI__ /opt/homebrew/Cellar/cmake/3.30.0/share/cmake/Modules/CMakeCCompilerABI.c -quiet -dumpdir CMakeFiles/cmTC_bec07.dir/ -dumpbase CMakeCCompilerABI.c.c -dumpbase-ext .c -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -mlibarch=armv6s-m -march=armv6s-m -version -o /var/folders/wp/brddfq2d1sg_blc0_vr5g4z80000gn/T//cc0qp4pj.s]
         ignore line: [GNU C17 (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) version 13.2.1 20231009 (arm-none-eabi)]
         ignore line: [	compiled by GNU C version Apple LLVM 13.0.0 (clang-1300.0.29.30)  GMP version 6.2.1  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.15-1-g835ea3a-GMP]
         ignore line: []
@@ -263,15 +263,15 @@ events:
         ignore line: [ /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 18f4550fe29065d7f2478f7cc0cc177e]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_d57d7.dir/CMakeCCompilerABI.c.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_d57d7.dir/']
-        ignore line: [ /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/as -v -march=armv6s-m -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_d57d7.dir/CMakeCCompilerABI.c.obj /var/folders/wp/brddfq2d1sg_blc0_vr5g4z80000gn/T//ccIAJQhI.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_bec07.dir/CMakeCCompilerABI.c.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_bec07.dir/']
+        ignore line: [ /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/as -v -march=armv6s-m -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_bec07.dir/CMakeCCompilerABI.c.obj /var/folders/wp/brddfq2d1sg_blc0_vr5g4z80000gn/T//cc0qp4pj.s]
         ignore line: [GNU assembler version 2.41.0 (arm-none-eabi) using BFD version (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) 2.41.0.20231009]
         ignore line: [COMPILER_PATH=/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/arm-none-eabi/13.2.1/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/]
         ignore line: [LIBRARY_PATH=/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_d57d7.dir/CMakeCCompilerABI.c.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_d57d7.dir/CMakeCCompilerABI.c.']
-        ignore line: [Linking C executable cmTC_d57d7.elf]
-        ignore line: [/opt/homebrew/Cellar/cmake/3.30.0/bin/cmake -E cmake_link_script CMakeFiles/cmTC_d57d7.dir/link.txt --verbose=1]
-        ignore line: [/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb  -Wl --build-id=none -nostdlib  -v CMakeFiles/cmTC_d57d7.dir/CMakeCCompilerABI.c.obj -o cmTC_d57d7.elf]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_bec07.dir/CMakeCCompilerABI.c.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_bec07.dir/CMakeCCompilerABI.c.']
+        ignore line: [Linking C executable cmTC_bec07.elf]
+        ignore line: [/opt/homebrew/Cellar/cmake/3.30.0/bin/cmake -E cmake_link_script CMakeFiles/cmTC_bec07.dir/link.txt --verbose=1]
+        ignore line: [/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/arm-none-eabi-gcc -mcpu=cortex-m0plus -mthumb  -Wl --build-id=none -nostdlib  -v CMakeFiles/cmTC_bec07.dir/CMakeCCompilerABI.c.obj -o cmTC_bec07.elf]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/arm-none-eabi-gcc]
         ignore line: [COLLECT_LTO_WRAPPER=/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/arm-none-eabi/13.2.1/lto-wrapper]
@@ -282,17 +282,17 @@ events:
         ignore line: [gcc version 13.2.1 20231009 (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) ]
         ignore line: [COMPILER_PATH=/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/arm-none-eabi/13.2.1/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/]
         ignore line: [LIBRARY_PATH=/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_d57d7.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_d57d7.elf.']
-        link line: [ /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/arm-none-eabi/13.2.1/collect2 -plugin /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/arm-none-eabi/13.2.1/liblto_plugin.so -plugin-opt=/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/arm-none-eabi/13.2.1/lto-wrapper -plugin-opt=-fresolution=/var/folders/wp/brddfq2d1sg_blc0_vr5g4z80000gn/T//ccJR3Wl3.res --sysroot=/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi -X -o cmTC_d57d7.elf -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1 -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_d57d7.dir/CMakeCCompilerABI.c.obj]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_bec07.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_bec07.elf.']
+        link line: [ /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/arm-none-eabi/13.2.1/collect2 -plugin /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/arm-none-eabi/13.2.1/liblto_plugin.so -plugin-opt=/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/arm-none-eabi/13.2.1/lto-wrapper -plugin-opt=-fresolution=/var/folders/wp/brddfq2d1sg_blc0_vr5g4z80000gn/T//ccfnZVhi.res --sysroot=/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi -X -o cmTC_bec07.elf -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1 -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_bec07.dir/CMakeCCompilerABI.c.obj]
           arg [/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/arm-none-eabi/13.2.1/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/arm-none-eabi/13.2.1/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/arm-none-eabi/13.2.1/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/var/folders/wp/brddfq2d1sg_blc0_vr5g4z80000gn/T//ccJR3Wl3.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/var/folders/wp/brddfq2d1sg_blc0_vr5g4z80000gn/T//ccfnZVhi.res] ==> ignore
           arg [--sysroot=/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi] ==> ignore
           arg [-X] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_d57d7.elf] ==> ignore
+          arg [cmTC_bec07.elf] ==> ignore
           arg [-L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp] ==> dir [/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp]
           arg [-L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp] ==> dir [/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp]
           arg [-L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp] ==> dir [/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp]
@@ -301,10 +301,10 @@ events:
           arg [-L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib] ==> dir [/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib]
           arg [-L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi/lib] ==> dir [/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi/lib]
           arg [--build-id=none] ==> ignore
-          arg [CMakeFiles/cmTC_d57d7.dir/CMakeCCompilerABI.c.obj] ==> ignore
+          arg [CMakeFiles/cmTC_bec07.dir/CMakeCCompilerABI.c.obj] ==> ignore
         ignore line: [/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start]
         ignore line: [ defaulting to 00008000]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_d57d7.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_d57d7.elf.']
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_bec07.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_bec07.elf.']
         ignore line: []
         ignore line: []
         collapse library dir [/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp] ==> [/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp]
@@ -329,8 +329,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "/Users/attilio/Desktop/Code/rp2040_kernel/build/CMakeFiles/CMakeScratch/TryCompile-jA753t"
-      binary: "/Users/attilio/Desktop/Code/rp2040_kernel/build/CMakeFiles/CMakeScratch/TryCompile-jA753t"
+      source: "/Users/attilio/Desktop/Code/rp2040_kernel/build/CMakeFiles/CMakeScratch/TryCompile-qFgyOy"
+      binary: "/Users/attilio/Desktop/Code/rp2040_kernel/build/CMakeFiles/CMakeScratch/TryCompile-qFgyOy"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "-mcpu=cortex-m0plus -mthumb"
       CMAKE_CXX_FLAGS_DEBUG: "-Og -g"
@@ -341,12 +341,12 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: '/Users/attilio/Desktop/Code/rp2040_kernel/build/CMakeFiles/CMakeScratch/TryCompile-jA753t'
+        Change Dir: '/Users/attilio/Desktop/Code/rp2040_kernel/build/CMakeFiles/CMakeScratch/TryCompile-qFgyOy'
         
-        Run Build Command(s): /opt/homebrew/Cellar/cmake/3.30.0/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_03f71/fast
-        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_03f71.dir/build.make CMakeFiles/cmTC_03f71.dir/build
-        Building CXX object CMakeFiles/cmTC_03f71.dir/CMakeCXXCompilerABI.cpp.obj
-        /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/arm-none-eabi-g++   -mcpu=cortex-m0plus -mthumb    -v -o CMakeFiles/cmTC_03f71.dir/CMakeCXXCompilerABI.cpp.obj -c /opt/homebrew/Cellar/cmake/3.30.0/share/cmake/Modules/CMakeCXXCompilerABI.cpp
+        Run Build Command(s): /opt/homebrew/Cellar/cmake/3.30.0/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_31266/fast
+        /Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_31266.dir/build.make CMakeFiles/cmTC_31266.dir/build
+        Building CXX object CMakeFiles/cmTC_31266.dir/CMakeCXXCompilerABI.cpp.obj
+        /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/arm-none-eabi-g++   -mcpu=cortex-m0plus -mthumb    -v -o CMakeFiles/cmTC_31266.dir/CMakeCXXCompilerABI.cpp.obj -c /opt/homebrew/Cellar/cmake/3.30.0/share/cmake/Modules/CMakeCXXCompilerABI.cpp
         Using built-in specs.
         COLLECT_GCC=/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/arm-none-eabi-g++
         Target: arm-none-eabi
@@ -354,8 +354,8 @@ events:
         Thread model: single
         Supported LTO compression algorithms: zlib
         gcc version 13.2.1 20231009 (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) 
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_03f71.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_03f71.dir/'
-         /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/arm-none-eabi/13.2.1/cc1plus -quiet -v -imultilib thumb/v6-m/nofp -iprefix /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/ -isysroot /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi -D__USES_INITFINI__ /opt/homebrew/Cellar/cmake/3.30.0/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_03f71.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -mlibarch=armv6s-m -march=armv6s-m -version -o /var/folders/wp/brddfq2d1sg_blc0_vr5g4z80000gn/T//cc0myAcM.s
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_31266.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_31266.dir/'
+         /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/arm-none-eabi/13.2.1/cc1plus -quiet -v -imultilib thumb/v6-m/nofp -iprefix /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/ -isysroot /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi -D__USES_INITFINI__ /opt/homebrew/Cellar/cmake/3.30.0/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_31266.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -mlibarch=armv6s-m -march=armv6s-m -version -o /var/folders/wp/brddfq2d1sg_blc0_vr5g4z80000gn/T//ccerzg5T.s
         GNU C++17 (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) version 13.2.1 20231009 (arm-none-eabi)
         	compiled by GNU C version Apple LLVM 13.0.0 (clang-1300.0.29.30), GMP version 6.2.1, MPFR version 3.1.6, MPC version 1.0.3, isl version isl-0.15-1-g835ea3a-GMP
         
@@ -378,15 +378,15 @@ events:
          /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include
         End of search list.
         Compiler executable checksum: 4ff2f957a4f92f408126d7aa1ec592f3
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_03f71.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_03f71.dir/'
-         /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/as -v -march=armv6s-m -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_03f71.dir/CMakeCXXCompilerABI.cpp.obj /var/folders/wp/brddfq2d1sg_blc0_vr5g4z80000gn/T//cc0myAcM.s
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_31266.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_31266.dir/'
+         /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/as -v -march=armv6s-m -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_31266.dir/CMakeCXXCompilerABI.cpp.obj /var/folders/wp/brddfq2d1sg_blc0_vr5g4z80000gn/T//ccerzg5T.s
         GNU assembler version 2.41.0 (arm-none-eabi) using BFD version (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) 2.41.0.20231009
         COMPILER_PATH=/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/arm-none-eabi/13.2.1/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/
         LIBRARY_PATH=/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_03f71.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_03f71.dir/CMakeCXXCompilerABI.cpp.'
-        Linking CXX executable cmTC_03f71.elf
-        /opt/homebrew/Cellar/cmake/3.30.0/bin/cmake -E cmake_link_script CMakeFiles/cmTC_03f71.dir/link.txt --verbose=1
-        /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/arm-none-eabi-g++ -mcpu=cortex-m0plus -mthumb  -Wl,--build-id=none -nostdlib  -v CMakeFiles/cmTC_03f71.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_03f71.elf
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_31266.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_31266.dir/CMakeCXXCompilerABI.cpp.'
+        Linking CXX executable cmTC_31266.elf
+        /opt/homebrew/Cellar/cmake/3.30.0/bin/cmake -E cmake_link_script CMakeFiles/cmTC_31266.dir/link.txt --verbose=1
+        /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/arm-none-eabi-g++ -mcpu=cortex-m0plus -mthumb  -Wl,--build-id=none -nostdlib  -v CMakeFiles/cmTC_31266.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_31266.elf
         Using built-in specs.
         COLLECT_GCC=/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/arm-none-eabi-g++
         COLLECT_LTO_WRAPPER=/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/arm-none-eabi/13.2.1/lto-wrapper
@@ -397,10 +397,10 @@ events:
         gcc version 13.2.1 20231009 (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) 
         COMPILER_PATH=/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/arm-none-eabi/13.2.1/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/
         LIBRARY_PATH=/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi/lib/
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_03f71.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_03f71.elf.'
-         /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/arm-none-eabi/13.2.1/collect2 -plugin /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/arm-none-eabi/13.2.1/liblto_plugin.so -plugin-opt=/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/arm-none-eabi/13.2.1/lto-wrapper -plugin-opt=-fresolution=/var/folders/wp/brddfq2d1sg_blc0_vr5g4z80000gn/T//ccejfrHd.res --sysroot=/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi -X -o cmTC_03f71.elf -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1 -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_03f71.dir/CMakeCXXCompilerABI.cpp.obj
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_31266.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_31266.elf.'
+         /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/arm-none-eabi/13.2.1/collect2 -plugin /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/arm-none-eabi/13.2.1/liblto_plugin.so -plugin-opt=/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/arm-none-eabi/13.2.1/lto-wrapper -plugin-opt=-fresolution=/var/folders/wp/brddfq2d1sg_blc0_vr5g4z80000gn/T//cc4WLUim.res --sysroot=/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi -X -o cmTC_31266.elf -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1 -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_31266.dir/CMakeCXXCompilerABI.cpp.obj
         /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start; defaulting to 00008000
-        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_03f71.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_03f71.elf.'
+        COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_31266.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_31266.elf.'
         
       exitCode: 0
   -
@@ -439,12 +439,12 @@ events:
       Parsed CXX implicit link information:
         link line regex: [^( *|.*[/\\])(ld[0-9]*(\\.[a-z]+)?|CMAKE_LINK_STARTFILE-NOTFOUND|([^/\\]+-)?ld|collect2)[^/\\]*( |$)]
         linker tool regex: [^[ 	]*(->|")?[ 	]*(([^"]*[/\\])?(ld[0-9]*(\\.[a-z]+)?))("|,| |$)]
-        ignore line: [Change Dir: '/Users/attilio/Desktop/Code/rp2040_kernel/build/CMakeFiles/CMakeScratch/TryCompile-jA753t']
+        ignore line: [Change Dir: '/Users/attilio/Desktop/Code/rp2040_kernel/build/CMakeFiles/CMakeScratch/TryCompile-qFgyOy']
         ignore line: []
-        ignore line: [Run Build Command(s): /opt/homebrew/Cellar/cmake/3.30.0/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_03f71/fast]
-        ignore line: [/Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_03f71.dir/build.make CMakeFiles/cmTC_03f71.dir/build]
-        ignore line: [Building CXX object CMakeFiles/cmTC_03f71.dir/CMakeCXXCompilerABI.cpp.obj]
-        ignore line: [/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/arm-none-eabi-g++   -mcpu=cortex-m0plus -mthumb    -v -o CMakeFiles/cmTC_03f71.dir/CMakeCXXCompilerABI.cpp.obj -c /opt/homebrew/Cellar/cmake/3.30.0/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
+        ignore line: [Run Build Command(s): /opt/homebrew/Cellar/cmake/3.30.0/bin/cmake -E env VERBOSE=1 /usr/bin/make -f Makefile cmTC_31266/fast]
+        ignore line: [/Library/Developer/CommandLineTools/usr/bin/make  -f CMakeFiles/cmTC_31266.dir/build.make CMakeFiles/cmTC_31266.dir/build]
+        ignore line: [Building CXX object CMakeFiles/cmTC_31266.dir/CMakeCXXCompilerABI.cpp.obj]
+        ignore line: [/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/arm-none-eabi-g++   -mcpu=cortex-m0plus -mthumb    -v -o CMakeFiles/cmTC_31266.dir/CMakeCXXCompilerABI.cpp.obj -c /opt/homebrew/Cellar/cmake/3.30.0/share/cmake/Modules/CMakeCXXCompilerABI.cpp]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/arm-none-eabi-g++]
         ignore line: [Target: arm-none-eabi]
@@ -452,8 +452,8 @@ events:
         ignore line: [Thread model: single]
         ignore line: [Supported LTO compression algorithms: zlib]
         ignore line: [gcc version 13.2.1 20231009 (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) ]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_03f71.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_03f71.dir/']
-        ignore line: [ /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/arm-none-eabi/13.2.1/cc1plus -quiet -v -imultilib thumb/v6-m/nofp -iprefix /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/ -isysroot /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi -D__USES_INITFINI__ /opt/homebrew/Cellar/cmake/3.30.0/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_03f71.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -mlibarch=armv6s-m -march=armv6s-m -version -o /var/folders/wp/brddfq2d1sg_blc0_vr5g4z80000gn/T//cc0myAcM.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_31266.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_31266.dir/']
+        ignore line: [ /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/arm-none-eabi/13.2.1/cc1plus -quiet -v -imultilib thumb/v6-m/nofp -iprefix /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/ -isysroot /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi -D__USES_INITFINI__ /opt/homebrew/Cellar/cmake/3.30.0/share/cmake/Modules/CMakeCXXCompilerABI.cpp -quiet -dumpdir CMakeFiles/cmTC_31266.dir/ -dumpbase CMakeCXXCompilerABI.cpp.cpp -dumpbase-ext .cpp -mcpu=cortex-m0plus -mthumb -mfloat-abi=soft -mlibarch=armv6s-m -march=armv6s-m -version -o /var/folders/wp/brddfq2d1sg_blc0_vr5g4z80000gn/T//ccerzg5T.s]
         ignore line: [GNU C++17 (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) version 13.2.1 20231009 (arm-none-eabi)]
         ignore line: [	compiled by GNU C version Apple LLVM 13.0.0 (clang-1300.0.29.30)  GMP version 6.2.1  MPFR version 3.1.6  MPC version 1.0.3  isl version isl-0.15-1-g835ea3a-GMP]
         ignore line: []
@@ -476,15 +476,15 @@ events:
         ignore line: [ /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/include]
         ignore line: [End of search list.]
         ignore line: [Compiler executable checksum: 4ff2f957a4f92f408126d7aa1ec592f3]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_03f71.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_03f71.dir/']
-        ignore line: [ /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/as -v -march=armv6s-m -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_03f71.dir/CMakeCXXCompilerABI.cpp.obj /var/folders/wp/brddfq2d1sg_blc0_vr5g4z80000gn/T//cc0myAcM.s]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_31266.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_31266.dir/']
+        ignore line: [ /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/as -v -march=armv6s-m -mfloat-abi=soft -meabi=5 -o CMakeFiles/cmTC_31266.dir/CMakeCXXCompilerABI.cpp.obj /var/folders/wp/brddfq2d1sg_blc0_vr5g4z80000gn/T//ccerzg5T.s]
         ignore line: [GNU assembler version 2.41.0 (arm-none-eabi) using BFD version (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) 2.41.0.20231009]
         ignore line: [COMPILER_PATH=/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/arm-none-eabi/13.2.1/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/]
         ignore line: [LIBRARY_PATH=/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_03f71.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_03f71.dir/CMakeCXXCompilerABI.cpp.']
-        ignore line: [Linking CXX executable cmTC_03f71.elf]
-        ignore line: [/opt/homebrew/Cellar/cmake/3.30.0/bin/cmake -E cmake_link_script CMakeFiles/cmTC_03f71.dir/link.txt --verbose=1]
-        ignore line: [/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/arm-none-eabi-g++ -mcpu=cortex-m0plus -mthumb  -Wl --build-id=none -nostdlib  -v CMakeFiles/cmTC_03f71.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_03f71.elf]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-v' '-o' 'CMakeFiles/cmTC_31266.dir/CMakeCXXCompilerABI.cpp.obj' '-c' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'CMakeFiles/cmTC_31266.dir/CMakeCXXCompilerABI.cpp.']
+        ignore line: [Linking CXX executable cmTC_31266.elf]
+        ignore line: [/opt/homebrew/Cellar/cmake/3.30.0/bin/cmake -E cmake_link_script CMakeFiles/cmTC_31266.dir/link.txt --verbose=1]
+        ignore line: [/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/arm-none-eabi-g++ -mcpu=cortex-m0plus -mthumb  -Wl --build-id=none -nostdlib  -v CMakeFiles/cmTC_31266.dir/CMakeCXXCompilerABI.cpp.obj -o cmTC_31266.elf]
         ignore line: [Using built-in specs.]
         ignore line: [COLLECT_GCC=/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/arm-none-eabi-g++]
         ignore line: [COLLECT_LTO_WRAPPER=/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/arm-none-eabi/13.2.1/lto-wrapper]
@@ -495,17 +495,17 @@ events:
         ignore line: [gcc version 13.2.1 20231009 (Arm GNU Toolchain 13.2.rel1 (Build arm-13.7)) ]
         ignore line: [COMPILER_PATH=/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/arm-none-eabi/13.2.1/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/]
         ignore line: [LIBRARY_PATH=/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/:/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi/lib/]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_03f71.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_03f71.elf.']
-        link line: [ /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/arm-none-eabi/13.2.1/collect2 -plugin /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/arm-none-eabi/13.2.1/liblto_plugin.so -plugin-opt=/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/arm-none-eabi/13.2.1/lto-wrapper -plugin-opt=-fresolution=/var/folders/wp/brddfq2d1sg_blc0_vr5g4z80000gn/T//ccejfrHd.res --sysroot=/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi -X -o cmTC_03f71.elf -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1 -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_03f71.dir/CMakeCXXCompilerABI.cpp.obj]
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_31266.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_31266.elf.']
+        link line: [ /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/arm-none-eabi/13.2.1/collect2 -plugin /Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/arm-none-eabi/13.2.1/liblto_plugin.so -plugin-opt=/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/arm-none-eabi/13.2.1/lto-wrapper -plugin-opt=-fresolution=/var/folders/wp/brddfq2d1sg_blc0_vr5g4z80000gn/T//cc4WLUim.res --sysroot=/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi -X -o cmTC_31266.elf -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1 -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib -L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi/lib --build-id=none CMakeFiles/cmTC_31266.dir/CMakeCXXCompilerABI.cpp.obj]
           arg [/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/arm-none-eabi/13.2.1/collect2] ==> ignore
           arg [-plugin] ==> ignore
           arg [/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/arm-none-eabi/13.2.1/liblto_plugin.so] ==> ignore
           arg [-plugin-opt=/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../libexec/gcc/arm-none-eabi/13.2.1/lto-wrapper] ==> ignore
-          arg [-plugin-opt=-fresolution=/var/folders/wp/brddfq2d1sg_blc0_vr5g4z80000gn/T//ccejfrHd.res] ==> ignore
+          arg [-plugin-opt=-fresolution=/var/folders/wp/brddfq2d1sg_blc0_vr5g4z80000gn/T//cc4WLUim.res] ==> ignore
           arg [--sysroot=/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi] ==> ignore
           arg [-X] ==> ignore
           arg [-o] ==> ignore
-          arg [cmTC_03f71.elf] ==> ignore
+          arg [cmTC_31266.elf] ==> ignore
           arg [-L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp] ==> dir [/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp]
           arg [-L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp] ==> dir [/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib/thumb/v6-m/nofp]
           arg [-L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp] ==> dir [/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi/lib/thumb/v6-m/nofp]
@@ -514,10 +514,10 @@ events:
           arg [-L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib] ==> dir [/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/lib]
           arg [-L/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi/lib] ==> dir [/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../arm-none-eabi/lib]
           arg [--build-id=none] ==> ignore
-          arg [CMakeFiles/cmTC_03f71.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
+          arg [CMakeFiles/cmTC_31266.dir/CMakeCXXCompilerABI.cpp.obj] ==> ignore
         ignore line: [/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/../../../../arm-none-eabi/bin/ld: warning: cannot find entry symbol _start]
         ignore line: [ defaulting to 00008000]
-        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_03f71.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_03f71.elf.']
+        ignore line: [COLLECT_GCC_OPTIONS='-mcpu=cortex-m0plus' '-mthumb' '-nostdlib' '-v' '-o' 'cmTC_31266.elf' '-mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6s-m' '-dumpdir' 'cmTC_31266.elf.']
         ignore line: []
         ignore line: []
         collapse library dir [/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/bin/../lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp] ==> [/Users/attilio/.pico-sdk/toolchain/13_2_Rel1/lib/gcc/arm-none-eabi/13.2.1/thumb/v6-m/nofp]

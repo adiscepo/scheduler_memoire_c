@@ -12,10 +12,9 @@ add_compile_options(-DPICO_CMSIS_RENAME_EXCEPTIONS=1)
 pico_sdk_init()
 
 add_executable(kernel
-    assembly.s
-    kernel.c
-    scheduler.c
-    process.c
+    src/assembly.s
+    src/kernel.c
+    src/scheduler.c
 )
 
 

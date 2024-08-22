@@ -1,1 +1,0 @@
-rustc-LLVM ERROR: Global variable '__INTERRUPTS' has an invalid section specifier '.vector_table.interrupts': mach-o section specifier requires a segment and section separated by a comma.

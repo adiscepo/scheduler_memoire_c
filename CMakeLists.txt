@@ -12,15 +12,18 @@ add_compile_options(-DPICO_CMSIS_RENAME_EXCEPTIONS=1)
 pico_sdk_init()
 
 add_executable(kernel
-    assembly.s
-    kernel.c
-    scheduler.c
-    process.c
+    src/assembly.s
+    src/kernel.c
+    src/scheduler.c
 )
+
 
 # set(RUST_LIB_PATH "${CMAKE_SOURCE_DIR}/rust_lib/target/thumbv6m-none-eabi/release")
 # set(LIB_EXCEPTIONS "/Users/attilio/Desktop/MA2-INFO/Memoire/Brol/pico-sdk/src/rp2_common/hardware_exception/include/hardware/exception.h")
 # set(RUST_LIB "rust_lib")
+add_definitions(-DDEBUG)
+target_compile_options(kernel PRIVATE -O2)
+
 
 target_link_libraries(kernel pico_stdlib 
 # ${RUST_LIB_PATH}/lib${RUST_LIB}.a

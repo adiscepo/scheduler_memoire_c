@@ -1,5 +1,0 @@
-cargo:rustc-cfg=cortex_m
-cargo:rustc-cfg=armv6m
-cargo:rustc-link-search=/Users/attilio/Desktop/Code/rp2040_kernel/rust_lib/target/thumbv6m-none-eabi/debug/build/cortex-m-rt-c5ee792165a8cddc/out
-cargo:rerun-if-changed=build.rs
-cargo:rerun-if-changed=link.x.in

@@ -1,3 +1,0 @@
-cargo:rustc-link-search=/Users/attilio/Desktop/MA2-INFO/Memoire/Brol/rp2040_kernel/rust_lib/target/debug/build/cortex-m-rt-ad71af3bffe25e89/out
-cargo:rerun-if-changed=build.rs
-cargo:rerun-if-changed=link.x.in
